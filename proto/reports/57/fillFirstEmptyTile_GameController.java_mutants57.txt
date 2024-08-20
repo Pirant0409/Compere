@@ -1,0 +1,13 @@
+ First, we need to understand what the method does. The method `fillFirstEmptyTile()` is trying to fill the first empty tile in the grid with a value. It checks each tile in the grid to see if it's empty, and if it is, it sets the tile to a new Tile with a value of 2 or 4 depending on some condition.
+
+    Now, let's focus on the mutated line. The mutated line is `this.tileAdded * 10` which is a multiplication operation instead of the original `this.tileAdded % 10` which is a modulo operation. This change could potentially affect the behavior of the method.
+
+    To generate a test suite that would kill this mutant, we need to come up with test cases that would expose the incorrect behavior of the mutated method. Here are some steps to guide you in generating such test cases:
+
+    1. Identify the input conditions that could lead to the mutated line being executed with different values of `this.tileAdded`. For example, if the grid is initially empty, then `this.tileAdded` would be 0, and the mutated line would evaluate to 0. But if `this.tileAdded` is a multiple of 10, then the mutated line would evaluate to a non-zero value.
+
+    2. Come up with test cases that would exercise these input conditions. For example, you could create a test case where the grid is initially empty, and then call `fillFirstEmptyTile()` multiple times to make `this.tileAdded` a multiple of 10. Or you could create a test case where the grid has some empty tiles, and then call `fillFirstEmptyTile()` to fill the first empty tile, and then call it again to fill another empty tile, making `this.tileAdded` a multiple of 10.
+
+    3. For each test case, verify that the original method behaves correctly, while the mutated method does not. For example, you could verify that the original method fills the first empty tile with a value of 2 or 4, while the mutated method fills the first empty tile with a value that is not expected based on the condition in the method.
+
+    4. Repeat the above steps for other mutants as well. The general approach remains the same, but the specific test cases

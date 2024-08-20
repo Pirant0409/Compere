@@ -1,0 +1,37 @@
+ First, we need to understand the context of this method and the mutated line. This method, named moveRight, takes a boolean argument checkingAvailableMoves. It calls another method move with some arguments.
+
+    The mutated line is where an incorrect value (-1) is passed instead of the expected value (0). This error might lead to unexpected behavior in the program.
+
+    To generate a test suite that can kill this mutant and other similar mutants, follow these steps:
+
+    1. Understand the method:
+        a. Read the method name and arguments.
+        b. Check the method documentation or comments, if available.
+        c. Understand the purpose of the method and its expected behavior.
+
+    2. Identify the input domain:
+        a. Determine the valid input values for each argument.
+        b. Determine the invalid input values for each argument.
+        c. Determine the boundary values for each argument.
+
+    3. Create test cases:
+        a. Create test cases for valid inputs.
+        b. Create test cases for invalid inputs.
+        c. Create test cases for boundary values.
+
+    4. Test edge cases:
+        a. Test the method with the minimum and maximum values for each argument.
+        b. Test the method with combinations of minimum and maximum values for multiple arguments.
+
+    5. Test negative scenarios:
+        a. Test the method with negative values for each argument.
+        b. Test the method with combinations of negative values for multiple arguments.
+
+    6. Test the method with the mutated line:
+        a. Test the method with the mutated line to verify that it fails.
+        b. Modify the test case to make it pass again.
+
+    7. Test the method with other mutated lines:
+        a. Repeat the process for other mutated lines in the codebase.
+
+    By following these steps, you will be able to generate a comprehensive test suite that can effectively kill mutants like the one you've provided and others with similar issues.

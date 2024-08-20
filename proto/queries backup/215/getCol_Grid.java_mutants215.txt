@@ -1,0 +1,22 @@
+ The mutated line is causing the method to return an extra element in the column array when the column index is at the edge of the board. This means that the mutant is likely to fail a test case that checks the size of the returned array or the validity of the elements at the end of the array.
+
+    To generate a test suite that would kill this mutant, follow these steps:
+
+    1. Identify the potential failure scenarios:
+       a. Check the size of the returned array when the column index is at the edge of the board.
+       b. Check the validity of the elements at the end of the returned array when the column index is at the edge of the board.
+
+    2. Write test cases to cover these scenarios:
+       a. Test the size of the returned array when the column index is at the edge of the board.
+       b. Test the validity of the elements at the end of the returned array when the column index is at the edge of the board.
+
+    3. Write test cases to cover other scenarios as well:
+       a. Test the method with valid column indices within the board limits.
+       b. Test the method with invalid column indices, such as negative numbers or indices greater than the board size.
+       c. Test the method with different types of Tile objects.
+
+    4. Run the test suite and observe the results:
+       a. If the mutant is killed, great! The test suite is effective.
+       b. If the mutant survives, analyze the test cases that passed and identify any weaknesses. Refine the test cases and add new ones to cover the missed scenarios.
+
+    By following these steps, you can generate a test suite that would effectively kill not only this mutant but also other mutants that may arise in the future. Remember, the key to good testing is thoroughness and coverage.

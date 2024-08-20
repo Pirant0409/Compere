@@ -1,0 +1,19 @@
+ First, we need to understand the mutated method and the original method. The original method is supposed to return an array of Tile objects representing the columns of the game board. The mutated method, however, returns null instead.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would expose the null return value and verify that the actual return value is not null. Here are the steps to generate such test cases:
+
+    1. Create a test case for an invalid column index. This test case should call the getCol method with an index that is out of bounds of the game board. The expected result is that the method should return null.
+
+    2. Create a test case for a valid column index. This test case should call the getCol method with a valid index. The expected result is that the method should return an array of Tile objects representing the column of the game board.
+
+    3. Create a test case for a null game board. This test case should call the getCol method with a valid index on a null game board. The expected result is that the method should return null.
+
+    4. Create a test case for a partially initialized game board. This test case should call the getCol method with a valid index on a game board that has only been partially initialized. The expected result is that the method should return an array of Tile objects representing the column of the game board up to the point of initialization.
+
+    5. Create a test case for a game board with no tiles. This test case should call the getCol method with a valid index on a game board with no tiles. The expected result is that the method should return an empty array.
+
+    6. Create a test case for a game board with null tiles. This test case should call the getCol method with a valid index on a game board with null tiles. The expected result is that the method should return null.
+
+    7. Create a test case for a game board with tiles of different types. This test case should call the getCol method with a valid index on a game board with a mix of different tile types. The expected result is that the method should return an array of Tile objects representing the column of the game board with the correct tile types.
+
+    8. Create a test case for a game board with tiles of the same type. This test case should call the getCol method with

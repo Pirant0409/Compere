@@ -1,0 +1,12 @@
+ The mutated line changes the argument passed to the move method from a positive value to a negative one. This could potentially lead to the method moving in the wrong direction, or even causing an ArrayIndexOutOfBoundsException if the board dimensions are not accounted for.
+
+ To generate a test suite that would kill this mutant, you should focus on testing the edge cases and boundary conditions of the moveRight method. Here are some suggestions:
+
+ 1. Test when checkingAvailableMoves is false: This will ensure that the method does not attempt to move when it should not.
+ 2. Test when the board dimensions are small: This will help you catch any potential ArrayIndexOutOfBoundsException.
+ 3. Test when the starting position is at the edge of the board: This will ensure that the method behaves correctly when moving to the edge.
+ 4. Test when the target position is at the edge of the board: This will ensure that the method behaves correctly when trying to move to the edge.
+ 5. Test when the target position is occupied: This will ensure that the method does not attempt to move into an occupied space.
+ 6. Test with various input values for the move method: This will help you ensure that the method behaves correctly with different input values.
+
+ By testing these edge cases and boundary conditions, you should be able to generate a test suite that would kill this mutant and potentially other similar mutants as well. Remember, the goal is to ensure that the method behaves correctly under various conditions, and testing the edge cases is an effective way to do that.

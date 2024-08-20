@@ -1,0 +1,19 @@
+ First, we need to understand the behavior of the original method and the mutated method.
+
+    The original method, fillFirstEmptyTile(), checks all the tiles in the grid to find the first empty one and fills it with a new tile. The value of the new tile depends on whether the number of tiles added so far is a multiple of 10. If it is, the new tile is assigned a value of 4, otherwise it is assigned a value of 2.
+
+    The mutated method is similar, but the condition for assigning a value of 4 to the new tile is different. Instead of checking if the number of tiles added so far is a multiple of 10, it checks if the quotient of the number of tiles added so far divided by 10 is equal to 0.
+
+    Now, let's try to generate a test suite that would kill this mutant. To do that, we need to find a test case that would expose the difference in behavior between the original and mutated methods.
+
+    One way to do that is to test the method with different input sizes and different starting values for tileAdded. We can create a test suite with various test cases that cover different scenarios.
+
+    For example, we can test the method with an empty grid, a grid with some tiles already filled, and a grid that is almost full. We can also test the method with different starting values for tileAdded, such as 0, 10, 20, 30, and so on.
+
+    We can also test the method with boundary values, such as a grid with a side length of 1 and a grid with a side length of the maximum possible value.
+
+    To ensure that our test suite is effective, we need to make sure that it covers all possible scenarios and edge cases. We can use techniques such as equivalence partitioning, boundary value analysis, and decision table testing to help us design our test cases.
+
+    By testing the method with a comprehensive test suite, we can increase the chances of finding a test case that would expose the difference in behavior between the original and mutated methods and kill the mutant.
+
+    It's important to note that this approach can be applied to other mutants as well. The key is to understand the behavior of the original and mutated methods and design test cases that would expose any differences in behavior.

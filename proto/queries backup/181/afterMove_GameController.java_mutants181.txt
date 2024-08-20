@@ -1,0 +1,16 @@
+ First, we need to understand the behavior of the original method. The method `afterMove()` is called after a move is made in the game. It checks if the current highest score is less than the target score. If it is, then it clears the merged tiles, fills the first empty tile, and checks if there are no more moves available. If there are no more moves available, then the game state is set to "over". If the highest score is equal to the target score, then the game state is set to "won".
+
+    Now, let's examine the mutated line. Instead of checking if the highest score is less than the target score, it checks if the highest score is not equal to the target score. This means that the method will continue to execute even if the highest score is equal to the target score.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover the following scenarios:
+
+    1. Test if the method correctly sets the game state to "over" when there are no more moves available and the highest score is less than the target score.
+    2. Test if the method correctly sets the game state to "won" when the highest score is equal to the target score.
+    3. Test if the method correctly sets the game state to "over" when there are no more moves available and the highest score is equal to the target score (this should be covered by the mutant, but we need to make sure that the mutant is behaving as expected).
+    4. Test if the method correctly sets the game state to "won" when there are moves available and the highest score is equal to the target score.
+
+    To generate these test cases, you would need to create a test class with methods that simulate making moves in the game and checking the game state after the `afterMove()` method is called. You would also need to set up the initial game state, including the highest score and the target score, and ensure that the game has a finite number of moves.
+
+    In general, to generate a test suite for a method, you need to understand the behavior of the method and create test cases that cover all possible scenarios, including edge cases and error conditions. You also need to ensure that the test cases are independent, meaning that each test case should not depend on the outcome of another test case.
+
+    By following these steps

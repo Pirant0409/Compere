@@ -1,0 +1,15 @@
+ First, we need to understand what the method does and what the mutated line does. The method `colEqual` takes a grid, a column number, and an array of expected values as arguments. It returns a boolean value indicating whether the tiles in the given column have the expected values.
+
+    The mutated line is where the method `GridHelper.lineEqual` is called. This method is presumably checking if the arrays are equal line by line. The original line returns true if the arrays are equal, but the mutated line always returns false.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would expose the incorrect behavior of the mutated line. Here are some steps to guide you:
+
+    1. Create test data: Generate test data that includes different grid sizes, column numbers, and expected values. Make sure that some of the test data includes columns with tiles having the expected values, while others do not.
+
+    2. Create test cases: Write test cases that call the `colEqual` method with the generated test data. Make sure that the test cases cover different scenarios, such as when the column has the expected values and when it does not.
+
+    3. Verify the test results: Run the test suite and verify that the mutated line causes the method to return false even when the column has the expected values. This will help you confirm that the mutated line is indeed incorrect and that your test cases are effective in exposing its incorrect behavior.
+
+    4. Refactor the test cases: Once you have confirmed that the test cases are effective in killing the mutant, refactor them to make them more robust and maintainable. This may involve using test data generators, parameterized tests, or other test design techniques.
+
+    5. Repeat the process: Keep generating test data and writing test cases until you have a comprehensive test suite that covers all possible scenarios and can effectively kill any mutants that may arise. Remember, the goal is not just to kill this particular mutant, but to ensure that your code is thoroughly tested and free of defects.

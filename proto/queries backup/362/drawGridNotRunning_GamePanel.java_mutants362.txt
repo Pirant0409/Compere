@@ -1,0 +1,14 @@
+ First, we need to understand the behavior of the original method. The method 'drawGridNotRunning' is responsible for drawing the grid and some text on the JPanel. It takes a Graphics2D object as a parameter and uses it to draw the required components.
+
+    Now, let's focus on the mutated line. The mutated line has a value of -115 instead of the original value of 115. This means that the 'fillRoundRect' method call will be executed with incorrect x and y coordinates.
+
+    To generate a test suite that can kill this mutant, we need to create test cases that can detect this incorrect behavior. Here are some steps to guide you:
+
+    1. Create a JPanel subclass with a reference to the controller.
+    2. Override the paintComponent method to call the 'drawGridNotRunning' method with a Graphics2D object.
+    3. Create test cases that cover different states of the game and verify that the 'drawGridNotRunning' method is drawing the components at the correct positions.
+    4. Create a test case that checks the position of the 'You win!' or 'You loose!' text based on the game state.
+    5. Create a test case that checks the position of the 'Click to start a new game' and '(Use arrow keys to move tiles)' text.
+    6. Run the test suite and observe the results. If the mutant is still alive, modify the test cases to make them more specific and cover more edge cases.
+
+    By following these steps, you should be able to generate a test suite that can kill this mutant and prevent similar mutants from surviving in the future. Remember, the key to effective testing is thorough coverage and attention to detail.

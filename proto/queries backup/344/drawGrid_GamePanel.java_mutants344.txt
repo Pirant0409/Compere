@@ -1,0 +1,27 @@
+ First, we need to understand the behavior of the original method. The method `drawGrid` is responsible for drawing a grid on the given Graphics2D object `g`. It sets the color to the grid color, then it draws a filled round rectangle with the given dimensions and rounded corners. After that, depending on the game state, it either calls `drawGridRunning` or `drawGridNotRunning` methods.
+
+    Now, let's analyze the mutated line. The mutated line changes the x-coordinate of the round rectangle's position from 200 to -200. This means that the round rectangle will be drawn outside the visible area of the graphics context.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would cover the following scenarios:
+
+    1. Test the method with the correct input and verify that the grid is drawn correctly within the visible area.
+    2. Test the method with incorrect input (e.g., null Graphics2D object, negative width or height, or invalid rounded corner radii) and verify that the method throws the appropriate exceptions.
+    3. Test the method with different game states and verify that the correct method is called based on the game state.
+
+    To create the test cases, you can use a testing framework like JUnit. You can write test methods for each scenario and use assertions to verify the expected behavior. For example, you can write a test method to verify that the grid is drawn correctly within the visible area:
+
+    ```java
+    @Test
+    public void testDrawGrid() {
+        Graphics2D g = mock(Graphics2D.class);
+        when(g.getColor()).thenReturn(ColorPalette.gridColor);
+        when(controller.getGamestate()).thenReturn(GameState.running);
+
+        drawGrid(g);
+
+        // Verify that the round rectangle is drawn within the visible area
+        verify(g).fillRoundRect(eq(200), eq(100), eq(500), eq(500), eq(15), eq(15));
+    }
+    ```
+
+    Similarly, you can write test methods to verify the behavior of the method with incorrect inputs and different game states. By writing comprehensive test cases that cover various scenarios, you can ensure that

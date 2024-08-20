@@ -1,0 +1,15 @@
+ First, we need to understand what the original code does. The original code calculates the position of a tile in a 2D array based on its row and column indices. It uses the modulo operator (%), which returns the remainder of the division of the first operand by the second operand. This is used to ensure that the row and column indices are within the bounds of the 2D array.
+
+    Now, let's see what the mutated code does. The mutated code subtracts the side length of the game board from the position. This will likely result in negative indices, which will lead to an ArrayIndexOutOfBoundsException if not handled properly.
+
+    To generate a test suite that would kill this mutant, we need to test the edge cases of the method, specifically when the row or column indices are at the boundaries of the 2D array. Here are some test cases that could help us identify the problem:
+
+    1. Test when the row index is at the minimum value (0) and the column index is at the maximum value (sideLength-1).
+    2. Test when the row index is at the maximum value (sideLength-1) and the column index is at the minimum value (0).
+    3. Test when both the row and column indices are at the minimum or maximum values.
+    4. Test when the row index is at the minimum value and the column index is a value other than the maximum.
+    5. Test when the column index is at the minimum value and the row index is a value other than the maximum.
+
+    These test cases should cover the edge cases of the method and help us identify the problem with the mutated code. By testing these cases, we can ensure that the method returns the correct tile for all valid indices and throws an exception for invalid indices.
+
+    In general, when generating a test suite to kill a mutant, it's important to test the edge cases of the method, specifically when input values are at their minimum or maximum allowed values. This can help identify issues with boundary conditions and ensure that the method behaves correctly for all valid input values.

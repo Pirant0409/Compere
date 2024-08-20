@@ -1,0 +1,12 @@
+ First, we need to understand the context of the method and the mutated line. This method, `drawGridNotRunning`, is responsible for drawing the grid and some text on the screen. The mutated line is the one setting the string "You loose!" at the x and y coordinates (400, 350) when the game state is "over".
+
+    Now, to generate a test suite that would kill this mutant, we need to create test cases that would cover different scenarios and ensure that the method behaves as expected when the game state is not "over" or "won". Here are some suggestions:
+
+    1. Test when the game state is neither "over" nor "won". In this case, no text should be drawn at the (400, 350) coordinates.
+    2. Test when the game state is "won". In this case, the text "You win!" should be drawn at the (390, 350) coordinates.
+    3. Test when the game state is "over" but the method is called before the game state has been updated. In this case, no text should be drawn at the (400, 350) coordinates.
+    4. Test when the game state is "over" and the method is called after the game state has been updated. In this case, the text "You loose!" should be drawn at the (400, 350) coordinates.
+
+    To generate these test cases, you can use a testing framework like JUnit and write test methods for each scenario. In each test method, you can create a mock controller that returns the appropriate game state and call the `drawGridNotRunning` method with a mock Graphics2D object. You can then use assertions to check that the method behaves as expected based on the game state.
+
+    By covering different scenarios and ensuring that the method behaves correctly, we can create a test suite that would kill this mutant and prevent similar mutants from surviving in the future.

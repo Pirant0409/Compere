@@ -1,0 +1,30 @@
+ The mutated line changes the value from 7 to -7. This indicates that the method `drawGridRunning` might be expecting an index to be within the bounds of an array or a list. In this case, it seems like we're dealing with a 2D grid represented by the `controller.getGrid()` object.
+
+    To generate a test suite that would kill this mutant, follow these steps:
+
+    1. Understand the context:
+        - Familiarize yourself with the `GameParams` class and its `sideLength` property.
+        - Study the `controller` class and its `getGrid()` method.
+        - Learn about the `drawTile` method and what it does.
+
+    2. Create test data:
+        - Generate test cases that cover the edge cases of the grid size.
+        - Test with a grid size of 1x1, 2x2, and larger grids.
+        - Test with a grid size that is a multiple of 2 and 3.
+        - Test with a grid size that is a prime number.
+
+    3. Create test cases:
+        - Write test cases that check if the `drawGridRunning` method correctly handles the case when the grid is empty.
+        - Write test cases that check if the `drawGridRunning` method correctly handles the case when the grid is not empty.
+        - Write test cases that check if the `drawGridRunning` method correctly handles the case when the grid size is not a multiple of 2 or 3.
+
+    4. Test the test suite:
+        - Run the test suite and observe the results.
+        - If the test suite passes, generate more test cases to cover different scenarios.
+        - If the test suite fails, analyze the failure and adjust the test cases accordingly.
+
+    5. Refactor and improve:
+        - Once you have a solid test suite, refactor and improve the code to make it more efficient and maintainable.
+        - Continuously add new test cases to ensure the code remains stable and functional.
+
+    Remember, the goal is not just to kill this particular mutant, but to create a robust test suite that can detect and prevent similar mutants from surviving in the future.

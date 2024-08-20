@@ -1,0 +1,17 @@
+ The mutated line is calculating the y-coordinate for drawing the string. The original line is doing the same thing but in a different way. The mutated line is dividing the difference between the total height of the rectangle and the sum of the ascender and descender of the string by 2, and then adding the ascender to the result. The original line is adding the ascender and then dividing the difference between the total height of the rectangle and the sum of the ascender and descender by 2.
+
+    The difference between the mutated and original line is the order of the operations. In the mutated line, the division is done before the addition, while in the original line, the addition is done before the division. This can lead to different results, depending on the input values.
+
+    To generate a test suite that would kill this mutant, you need to find test cases that would expose the difference in behavior between the mutated and original line. Here are some steps you can follow:
+
+    1. Identify the inputs that can cause a difference in behavior between the mutated and original line. In this case, the string length and the size of the rectangle are the inputs that can affect the calculation of the y-coordinate.
+
+    2. Generate test cases that cover a wide range of input values for these variables. For example, you can test strings of different lengths and rectangles of different sizes.
+
+    3. Use a test generation tool or write test cases manually to verify that the mutated line produces different results than the original line for some input values.
+
+    4. Once you have identified test cases that expose the difference in behavior, you can write test cases to verify that the original line produces the expected results, while the mutated line does not.
+
+    5. Repeat the process for other mutants as well. Remember that different mutants may require different test cases to expose their differences in behavior.
+
+    In summary, to generate a test suite that would kill a mutant, you need to identify the inputs that can affect the mutated line, generate test cases that cover a wide range of input values, and verify that the mutated line produces different results than the original line for some input values. Repeat this process for other mutants as well.

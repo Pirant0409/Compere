@@ -1,0 +1,39 @@
+ First, we need to understand the context of the method and the mutated line. This method, named moveRight, takes a boolean argument checkingAvailableMoves. It calls another method move with some arguments.
+
+    The mutated line is the first argument passed to the move method, which is initially set to 0. The mutant version of the code has changed this value to 1.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover different scenarios and edge cases, focusing on the input value of the first argument to the move method.
+
+    Here are some guidelines to create test cases:
+
+    1. Test with valid input values:
+       Create test cases with valid input values for the checkingAvailableMoves argument. For example, you can test with true and false.
+
+    2. Test with boundary values:
+       Test the method with the minimum and maximum possible values for the checkingAvailableMoves argument.
+
+    3. Test with negative values:
+       Test the method with negative values for the checkingAvailableMoves argument.
+
+    4. Test with null values:
+       Test the method with null values for the checkingAvailableMoves argument.
+
+    5. Test with unexpected values:
+       Test the method with unexpected values for the checkingAvailableMoves argument, such as a value that is not a boolean.
+
+    6. Test the method with different combinations of input values:
+       Test the method with different combinations of input values for the checkingAvailableMoves argument and the other arguments passed to the move method.
+
+    7. Test the method in different contexts:
+       Test the method in different contexts, such as when the game state is different or when other methods are called before or after the moveRight method.
+
+    8. Test the method with different objects:
+       Test the method with different objects that implement the same interface or extend the same class as the object used in the original code.
+
+    9. Test the method with different data structures:
+       Test the method with different data structures, such as arrays, linked lists, or hash maps.
+
+    10. Test the method with different algorithms:
+       Test the method with different algorithms that could be used to implement the moveRight method.
+
+    By following these guidelines, you should be able to create a comprehensive test suite that covers different scenarios and edge cases

@@ -1,0 +1,19 @@
+ First, we need to understand what the method does. This method, named getLength, returns the length of an array called tiles.
+
+    Now, let's focus on the mutated line. The mutated line is simply the original line, but without the getter method call. Instead, it directly uses the array variable, tiles, without accessing its length property.
+
+    To create a test suite that would kill this mutant, we need to find a scenario where the mutated line behaves differently than the original line. In other words, we need to find an input that would make the mutated line return an incorrect length.
+
+    To do this, let's consider the following steps:
+
+    1. Identify the preconditions and postconditions of the method. Preconditions are the conditions that must be true before the method is called, and postconditions are the conditions that must be true after the method is called. In this case, the precondition is that the tiles array must be initialized, and the postcondition is that the method should return the correct length of the tiles array.
+
+    2. Create test cases that cover various edge cases and normal cases. For example, you could test the method with an empty array, a null array, an array with one element, an array with many elements, and so on.
+
+    3. For each test case, check if the mutated line and the original line produce the same output. If they do, then the test case is not sufficient to kill the mutant. If they don't, then you have found a test case that can be used to kill the mutant.
+
+    4. Once you have found a test case that kills the mutant, add it to your test suite. This test case will ensure that the mutated line is always tested and that it produces the correct output.
+
+    5. Repeat steps 3 and 4 for other mutants as well. The process of creating a test suite that kills a mutant is the same, regardless of the specific mutation. The key is to identify the preconditions and postconditions of the method, create test cases that cover various scenarios, and check if the mutated line and the original line produce the same output for each test case.
+
+    By following these steps, you can create a robust test suite that ensures the correctness of the code, even in the presence of mutations.

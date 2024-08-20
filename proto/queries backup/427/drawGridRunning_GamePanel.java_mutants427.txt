@@ -1,0 +1,17 @@
+ The mutated line changes the offset of the drawing position for the grid from 115 to -115. This means that the grid will be drawn 115 pixels higher than its intended position.
+
+    To create a test suite that would kill this mutant, we need to test the behavior of the method when the grid is drawn outside the visible area of the window. In other words, we need to test the edge cases of the grid drawing.
+
+    Here's a general approach to generate tests for this situation:
+
+    1. Understand the method's behavior: In this case, the method is responsible for drawing the grid based on the game parameters and the controller's grid data.
+
+    2. Identify edge cases: Since the mutated line causes the grid to be drawn outside the visible area, we need to test this edge case.
+
+    3. Create test data: Generate test data that covers the edge case. In this case, we can create test data where the grid's side length is equal to or greater than the window size, and the grid's position is at the very edge of the window.
+
+    4. Create test cases: Write test cases that cover the edge cases. The test cases should verify that the grid is not drawn outside the visible area.
+
+    5. Run the test suite: Execute the test suite and observe the results. If the mutant is killed, the test suite is effective. If not, refine the test data and test cases to cover more edge cases.
+
+    Remember, the goal is to create a comprehensive test suite that covers various edge cases and scenarios, not just the one mutant. This approach will help you create a robust test suite that can detect and prevent similar mutants in the future.

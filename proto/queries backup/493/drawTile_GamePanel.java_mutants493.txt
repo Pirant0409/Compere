@@ -1,0 +1,13 @@
+ The mutated line changes the comparison operator from "<" to "<=". This means that the method now draws the color based on a different condition. In order to create a test suite that would kill this mutant, we need to find a test case where the original behavior is correct, but the mutated behavior is not.
+
+ First, we need to understand the original behavior. The method draws a tile based on its value. If the value is less than 128, it uses the first color from the color palette. Otherwise, it uses the second color.
+
+ Now, let's try to find a test case where the original behavior is correct, but the mutated behavior is not. We can do this by providing a value that is equal to or greater than 128, but should have been drawn with the first color based on the original behavior.
+
+ For example, if we have a tile with a value of 128, it should be drawn with the first color according to the original behavior. However, with the mutated behavior, it will be drawn with the second color, which is incorrect.
+
+ Therefore, we need to create a test case that checks the color of a tile with a value of 128. If the test case fails and the tile is drawn with the second color, then we have found a test case that can kill the mutant.
+
+ To create a test case, we would typically write a JUnit test method that calls the drawTile method with a tile having a value of 128 and checks the color that is drawn. If the color is not the expected one, then the test fails and we have found a test case that can kill the mutant.
+
+ In general, to generate a test suite that can kill other mutants, we need to understand the original behavior and find test cases where the mutated behavior is incorrect but the original behavior is correct. We can do this by providing input values that should have been handled differently according to the original behavior but are handled differently with the mutated behavior.

@@ -1,0 +1,17 @@
+ The mutated line changes the condition for entering the if statement that sets the tile value. This means that the method will now fill the first empty tile with a value of 2, regardless of the current value of tileAdded.
+
+    To generate a test suite that would kill this mutant, we need to find a test case that would expose this incorrect behavior. Here are some steps to help you:
+
+    1. Understand the method: Make sure you understand what the method does, its inputs, outputs, and any preconditions or postconditions. In this case, the method fillFirstEmptyTile() tries to fill the first empty tile with a value of 2 or 4 depending on a certain condition.
+
+    2. Identify the problem: The mutated line changes the behavior of the method, causing it to fill the first empty tile with a value of 2, even if tileAdded is 0. This is incorrect because the method should not be able to fill a tile if tileAdded is 0.
+
+    3. Create test cases: To create test cases that would kill the mutant, we need to find test cases that would expose the incorrect behavior. In this case, we can create a test case where the method is called with an empty grid and no tiles have been added yet. The original method would not fill any tile because tileAdded is 0, but the mutated method would fill the first empty tile with a value of 2.
+
+    4. Test the test cases: Once you have created the test cases, run them against both the original and mutated methods to see the difference in behavior. If the test cases expose the incorrect behavior of the mutated method, then you have successfully generated test cases that would kill the mutant.
+
+    5. Generalize the approach: The approach to generating test cases that would kill a mutant can be generalized to other mutants as well. The key is to understand the behavior of the method and identify how the mutation changes that behavior. Then, create test cases that would expose the incorrect behavior of the mutated method.
+
+    6. Repeat the process: Keep generating test cases and running them against both the original and mutated methods until all the mutants have been killed. This is an iterative process, and you may need to create multiple test cases to cover all the possible scenarios.
+
+    7. Refactor the test cases: Once all the mutants

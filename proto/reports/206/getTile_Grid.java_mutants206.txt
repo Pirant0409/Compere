@@ -1,0 +1,24 @@
+ First, we need to understand what the method does. This method returns the Tile object located at the given row and column indexes in the 2D array called "tiles".
+
+    Now, let's focus on the mutated line. The mutated line uses the addition operator (+) instead of the modulo operator (%). This change will affect the calculation of the row and column indexes when calling this method.
+
+    To generate a test suite that would kill this mutant, we need to find a test case that would expose the incorrect behavior of the mutated method. In other words, we need to find a test case that would return a Tile object that is not supposed to be returned based on the original method implementation.
+
+    To do this, we need to understand the boundary conditions and edge cases of the method. Let's consider some test cases:
+
+    1. Valid indexes: Test with valid row and column indexes to ensure that the method returns the correct Tile object.
+    2. Negative indexes: Test with negative row and column indexes to ensure that the method returns null or throws an exception.
+    3. Indexes at the edges of the array: Test with indexes that are at the edges of the array to ensure that the method wraps around correctly.
+
+    Based on the mutated line, we can see that the calculation of the row and column indexes will be incorrect when the indexes are at the edges of the array. Specifically, the mutated method will calculate the indexes as if they were "pos + GameParams.sideLength" instead of "pos % GameParams.sideLength".
+
+    Therefore, we need to test the method with indexes that are at the edges of the array to ensure that the mutated method returns the correct Tile object. Here's an example of how to test the method with edge cases:
+
+    // Test case for the bottom-right corner of the array
+    Tile expectedTile = new Tile(Type.WALL);
+    Tile actualTile = getTile(-1, GameParams.sideLength - 1);
+    assertNull(actualTile); // The original method should return null for negative row index
+
+    expectedTile = new Tile(Type.EMPTY);
+    actualTile = getTile(GameParams.sideLength, GameParams.sideLength - 1);
+   

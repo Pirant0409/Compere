@@ -1,0 +1,17 @@
+ First, we need to understand the behavior of the method. The method `fillFirstEmptyTile()` is trying to fill the first empty tile in the grid with a value. It checks each position in the grid to see if it's empty, and if it is, it sets the tile at that position to a new Tile with a value of either 2 or 4, depending on some condition.
+
+    Now, let's focus on the mutated line. The mutated line returns `false` instead of `true`. This means that the method is not filling any tile, even when there is an empty one available.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover all possible scenarios where the method should fill a tile. Here are some suggestions:
+
+    1. Test when the grid is empty: Create a test case where the grid is initialized with no tiles, and call the `fillFirstEmptyTile()` method. The expected result is that the method should fill the first empty tile with a value of 2.
+
+    2. Test when there is only one empty tile: Create a test case where the grid has only one empty tile, and call the `fillFirstEmptyTile()` method. The expected result is that the method should fill the empty tile with a value of 2.
+
+    3. Test when there are multiple empty tiles: Create a test case where the grid has multiple empty tiles, and call the `fillFirstEmptyTile()` method. The expected result is that the method should fill the first empty tile it encounters with a value of 2.
+
+    4. Test when the condition for a value of 4 is met: Create a test case where the condition for a value of 4 is met (i.e., `tileAdded` is a multiple of 10), and call the `fillFirstEmptyTile()` method. The expected result is that the method should fill the first empty tile it encounters with a value of 4.
+
+    5. Test when the grid is full: Create a test case where the grid is full, and call the `fillFirstEmptyTile()` method. The expected result is that the method should return false, since there are no empty tiles left to fill.
+
+    By creating test cases that cover all these scenarios, we can ensure that the method behaves correctly and kills the mut

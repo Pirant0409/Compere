@@ -1,0 +1,15 @@
+ First, we need to understand what the code does. This method is responsible for drawing the grid and some text on the screen. The mutated line is causing an ArrayIndexOutOfBoundsException at the line where it is located. This error occurs because we are trying to access an array index that is out of bounds.
+
+    To generate tests that would kill this mutant, we need to find a way to ensure that the method is only called with valid arguments, specifically, arguments that will not cause an ArrayIndexOutOfBoundsException. Here are some steps you can follow:
+
+    1. Identify the input to the method: In this case, the method takes one argument of type Graphics2D.
+
+    2. Determine valid inputs: Since the method is only drawing on the screen, the Graphics2D argument should not be null.
+
+    3. Write tests to cover invalid inputs: Write tests to ensure that the method is not called with an invalid input, such as a null Graphics2D argument.
+
+    4. Write tests to cover edge cases: Write tests to cover edge cases, such as the minimum and maximum possible values for the x and y coordinates that can be passed to the Graphics2D object.
+
+    5. Write tests to cover the functionality of the method: Write tests to ensure that the method correctly draws the grid and text on the screen.
+
+    By following these steps, you should be able to generate a test suite that would kill this mutant and prevent similar mutants from arising in the future. Remember, the key is to test all possible inputs and edge cases to ensure that the method behaves correctly under all circumstances.

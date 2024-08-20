@@ -1,0 +1,19 @@
+ The mutant line changes the value of the side length from the original value to 1. This means that the for loop that iterates through the steps to find the next position to move the tile, will now iterate one more time than before. This could potentially lead to out of bounds errors or unexpected behavior.
+
+ To create a test suite that would kill this mutant, you would want to test the edge cases of the method. You should test what happens when the firstStartPos, lastStartPos, startPosIncr, and nextPosIncr are at their minimum and maximum values. You should also test what happens when the grid contains tiles that can't merge with each other or null tiles.
+
+ To create a test case, you would first create a GameState object with the running state. You would then create a Grid object with the appropriate size and initial tile configuration. You would then call the move method with different input values and check the return value and the state of the grid after the method call.
+
+ For example, you could test the method with the following inputs:
+
+ - firstStartPos = 0, lastStartPos = 0, startPosIncr = 1, nextPosIncr = 1, checkingAvailableMoves = false
+ - firstStartPos = 0, lastStartPos = 0, startPosIncr = 1, nextPosIncr = 2, checkingAvailableMoves = false
+ - firstStartPos = 0, lastStartPos = 0, startPosIncr = 1, nextPosIncr = 2, checkingAvailableMoves = true
+ - firstStartPos = 0, lastStartPos = GameParams.sideLength - 1, startPosIncr = 1, nextPosIncr = 1, checkingAvailableMoves = false
+ - firstStartPos = 0, lastStartPos = GameParams.sideLength - 1, startPosIncr = 1, nextPosIncr = 2, checkingAvailableMoves = false
+ - firstStartPos = 0, lastStartPos = GameParams.sideLength - 1, startPosIncr = 1, nextPosIncr = 2, checkingAvailableMoves = true
+
+ You should also test the method with different tile configurations and edge cases, such as:
+
+ - grid with only null tiles
+ - grid with tiles that can't merge with each other

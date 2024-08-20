@@ -1,0 +1,23 @@
+ The mutated line changes the sign of the number 121 to -121. This means that the x-coordinate of the fillRoundRect method call will be decreased by 121 pixels. Since the x-coordinate is calculated based on the column index, this will cause the drawing to occur outside the grid boundaries.
+
+ To generate a test suite that would kill this mutant, you should focus on testing the edge cases of the grid drawing. Here are some suggestions:
+
+ 1. Test the case where the grid is empty: Create a test case where the grid is empty and ensure that no drawing occurs outside the grid boundaries.
+
+ 2. Test the case where the grid is at its maximum size: Create a test case where the grid is at its maximum size and ensure that no drawing occurs outside the grid boundaries.
+
+ 3. Test the case where there is only one tile: Create a test case where there is only one tile in the grid and ensure that it is drawn correctly and no drawing occurs outside the grid boundaries.
+
+ 4. Test the case where there are tiles at the edges: Create test cases where there are tiles at the edges of the grid and ensure that they are drawn correctly and no drawing occurs outside the grid boundaries.
+
+ 5. Test the case where there are tiles in the corners: Create test cases where there are tiles in the corners of the grid and ensure that they are drawn correctly and no drawing occurs outside the grid boundaries.
+
+ 6. Test the case where there are tiles in the middle: Create test cases where there are tiles in the middle of the grid and ensure that they are drawn correctly and no drawing occurs outside the grid boundaries.
+
+ 7. Test the case where there are tiles in diagonal positions: Create test cases where there are tiles in diagonal positions and ensure that they are drawn correctly and no drawing occurs outside the grid boundaries.
+
+ 8. Test the case where the grid size is odd: Create test cases where the grid size is odd and ensure that no drawing occurs outside the grid boundaries.
+
+ 9. Test the case where the grid size is even: Create test cases where the grid size is even and ensure that no drawing occurs outside the grid boundaries.
+
+ By testing these edge cases, you will be able to cover a wide range of possible scenarios and increase the chances of finding a test case that will kill the mutant. Remember, the goal is to ensure

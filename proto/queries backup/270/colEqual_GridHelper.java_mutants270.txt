@@ -1,0 +1,39 @@
+ The mutated line is causing the method to return null instead of an array of Tiles. This means that the GridHelper.lineEqual() method is not receiving the expected input.
+
+ To generate a test suite that would kill this mutant, follow these steps:
+
+ 1. Understand the method signature and its purpose:
+    - The method colEqual() takes a Grid, an integer representing a column number, and an array of expected Integer values.
+    - Its purpose is to check if the tiles in the given column of the Grid match the expected Integer values.
+
+ 2. Identify the preconditions:
+    - The Grid object should not be null.
+    - The column number should be valid (within the Grid's dimensions).
+    - The expectedValues array should not be null and should have the same length as the number of tiles in the given column.
+
+ 3. Write test cases to cover the preconditions:
+    - Test with a valid Grid and valid column number.
+    - Test with a null Grid.
+    - Test with an invalid column number.
+    - Test with a null expectedValues array.
+    - Test with an expectedValues array of the wrong length.
+
+ 4. Write test cases to cover the normal behavior:
+    - Test with a valid Grid, valid column number, and valid expectedValues array where the tiles in the column match the expected values.
+
+ 5. Write test cases to cover the error behavior:
+    - Test with a valid Grid, valid column number, and an expectedValues array containing values that do not match the tiles in the column.
+
+ 6. Write test cases to cover edge cases:
+    - Test with a Grid containing only one column.
+    - Test with a Grid containing a column with only one tile.
+
+ 7. Write test cases to cover the mutated behavior:
+    - Test with a valid Grid and an invalid column number that would cause grid.getCol(col) to return null.
+
+ 8. Run the test suite and analyze the results:
+    - If the mutant is killed, great! The test suite is effective.
+    - If the mutant survives, analyze the test cases that did not identify the issue and refine them.
+
+ 9. Repeat the process:
+    - Generate new mutants and repeat the process to ensure comprehensive test coverage.

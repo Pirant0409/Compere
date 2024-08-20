@@ -1,0 +1,17 @@
+ First, we need to understand the context of the method and the mutated line. The method 'drawGridNotRunning' is responsible for drawing the grid and some text on the screen. The mutated line is a no-op statement, which means it doesn't change the program's behavior. However, it's located near the line that draws the score "2048" on the screen.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would prove that the mutation affects the program's behavior. Since the mutation is a no-op statement, it doesn't change the behavior directly. Instead, it might indirectly affect the behavior by changing the state of the program or the data it uses.
+
+    To find such test cases, we need to analyze the method's flow and the data it uses. In this case, the method uses the 'controller' object to get the game state and the 'g' object to draw on the screen. The score "2048" is drawn based on the game state.
+
+    To create test cases, we can follow these steps:
+
+    1. Create test cases that cover different game states. For example, test cases for 'won' and 'over' states.
+    2. For each test case, check if the score is drawn correctly. If the mutation affects the game state or the data used to draw the score, it might cause the score to be drawn incorrectly.
+    3. Create test cases that cover different screen sizes or resolutions. The mutation might affect the positioning of the score or the font size, which could cause it to be drawn incorrectly on different screen sizes.
+    4. Create test cases that cover different fonts or font sizes. The mutation might affect the font used to draw the score, which could cause it to be drawn incorrectly if a different font or font size is used.
+    5. Create test cases that cover different colors or color palettes. The mutation might affect the color used to draw the score, which could cause it to be drawn incorrectly if a different color or color palette is used.
+
+    By creating test cases that cover different scenarios and checking if the score is drawn correctly in each case, we can ensure that the mutation doesn't affect the program's behavior and kill the mutant.
+
+    Remember,

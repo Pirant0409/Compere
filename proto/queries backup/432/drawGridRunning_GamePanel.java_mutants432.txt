@@ -1,0 +1,20 @@
+ The mutated line is causing an issue by subtracting 121 instead of adding it to the row coordinate. This means that the for loop is iterating over the wrong coordinates, which could lead to out-of-bounds errors or incorrect drawing of the grid.
+
+ To generate a test suite that would kill this mutant, you need to create test cases that cover the edge cases and boundary values of the input parameters. Here are some suggestions:
+
+ 1. Test with the minimum and maximum values of the side length:
+    - Create a test case with a side length of 1 to ensure that the method handles the case where there is only one row and column.
+    - Create a test case with a side length that is larger than the maximum allowed value to ensure that the method handles the case where the grid size is too large.
+
+ 2. Test with empty and full grids:
+    - Create a test case with an empty grid (all tiles are null) to ensure that the method correctly handles the case where there are no tiles to draw.
+    - Create a test case with a full grid (all tiles are not null) to ensure that the method correctly handles the case where all tiles need to be drawn.
+
+ 3. Test with edge cases:
+    - Create a test case with a side length of 2 and test the cases where the first and last rows and columns are empty and full.
+    - Create a test case with a side length of 3 and test the cases where the first, last, and corner tiles are empty and full.
+
+ 4. Test with a mix of empty and full tiles:
+    - Create a test case with a grid that has a mix of empty and full tiles to ensure that the method correctly handles the case where some tiles need to be drawn and others do not.
+
+ By creating test cases that cover these edge cases and boundary values, you can ensure that the mutated line is killed and the method behaves correctly for all input values. Remember, the goal is to create a comprehensive test suite that covers all possible scenarios, not just the one mutated line.

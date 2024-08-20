@@ -1,0 +1,17 @@
+ The mutated line is causing the issue, so we need to understand what it does and how it affects the program.
+
+    The original line is adding a constant value (115) to the product of row and 121. This is likely used to calculate the y-coordinate for drawing the grid.
+
+    The mutated line is performing a modulo operation on the sum of 115 and the product of row and 121. This means that the y-coordinate will be the remainder of the sum divided by 121.
+
+    To generate a test suite that would kill this mutant, we need to find test cases that expose the incorrect behavior introduced by the mutation.
+
+    First, we should consider edge cases. What happens when row is 0 or the side length - 1? In the original code, the y-coordinate would be 115 and 1265 respectively. With the mutated line, the y-coordinates would be 115 and 1264. This difference might not seem significant, but it could lead to unexpected behavior in the drawing of the grid.
+
+    Second, we should consider test cases that cover a range of values for row. We want to ensure that the grid is drawn correctly for all possible values of row.
+
+    Third, we should consider test cases that cover the interaction between row and col. The mutation only affects the calculation of the y-coordinate, but the x-coordinate is also being calculated based on col. We want to ensure that the grid is drawn correctly for all combinations of row and col.
+
+    To generate these test cases, we could write unit tests for the `drawGridRunning` method. We would create test data for various values of row and col, and then verify that the method correctly draws the grid based on that data. We could also write integration tests that simulate the interaction between the controller, view, and model, and verify that the grid is drawn correctly in that context.
+
+    In general, to generate a test suite that would kill mutants, we need to think about the behavior of the code and the potential ways in which it could be incorrect. We should consider edge cases, boundary values, and interactions between different parts of the system. We should write tests that cover these scenarios and verify that the code behaves correctly in those situations.

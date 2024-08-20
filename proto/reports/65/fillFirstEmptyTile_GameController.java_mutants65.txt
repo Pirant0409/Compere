@@ -1,0 +1,12 @@
+ The mutated line is a logical operator combination that checks if the tileAdded variable is not less than zero and if the remainder of tileAdded when divided by 10 is equal to zero. The original line checks if tileAdded is greater than or equal to zero and if the remainder of tileAdded when divided by 10 is equal to zero.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would expose the difference between the mutated and original code. Let's consider some test cases that would fail with the mutated code but pass with the original code:
+
+    1. Test case for adding tiles when tileAdded is less than zero:
+       Create a test case that initializes the game with a negative value for tileAdded and tries to add a tile using fillFirstEmptyTile() method. With the original code, this test case would fail because tileAdded is less than zero and the method would return false. However, with the mutated code, the test case might pass because the condition (this.tileAdded >= 0) would be true, but the rest of the condition (this.tileAdded % 10 == 0) would be false, and the method would still return false.
+
+    2. Test case for adding tiles when tileAdded is a multiple of 10:
+       Create a test case that initializes the game with a value for tileAdded that is a multiple of 10 and tries to add a tile using fillFirstEmptyTile() method. With the original code, this test case would add a tile and return true. However, with the mutated code, the test case might still add a tile and return true because both conditions (this.tileAdded >= 0) and (this.tileAdded % 10 == 0) would be true.
+
+    3. Test case for adding tiles when tileAdded is not a multiple of 10:
+       Create a test case that initializes the game with a value for tileAdded that is not a multiple of 10 and tries to add a tile using fillFirstEmptyTile() method. With the original code, this test case would not add a tile and return false. However, with the mutated code, the test case might still add a tile and return true because the condition (this.tileAdded >= 0) would be true, but the rest of the condition (this.tileAdded %

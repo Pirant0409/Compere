@@ -1,0 +1,14 @@
+ First, we need to understand the method's functionality. This method, named moveDown, takes a boolean argument checkingAvailableMoves. It calls another method move with some arguments: 0, 3, 1, 4, and checkingAvailableMoves.
+
+    Now, let's focus on the mutated line. The mutated line has the value 1 instead of the original value 0. This change might seem insignificant, but it could potentially lead to different method behavior.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover different scenarios and edge cases. Here's a general approach:
+
+    1. Create test cases for the happy path: Test the method with valid inputs that should result in the expected output.
+    2. Create test cases for edge cases: Test the method with inputs that are at the boundaries of the acceptable range.
+    3. Create test cases for negative scenarios: Test the method with inputs that are expected to cause errors or unexpected behavior.
+    4. Create test cases for combinations of inputs: Test the method with multiple inputs to ensure that the method handles them correctly.
+
+    In this specific case, since the mutated line is affecting the method call to move, we need to test the move method with different inputs to ensure that the method behaves correctly when called with the mutated argument.
+
+    To summarize, to generate a test suite that would kill this mutant, we need to create test cases that cover different scenarios and edge cases of the move method, focusing on the inputs that are passed to it. This approach will help us ensure that the method behaves correctly under various conditions and will help us kill not only this mutant but also other mutants that might arise in the future.

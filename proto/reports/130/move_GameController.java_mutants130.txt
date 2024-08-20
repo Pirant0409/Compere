@@ -1,0 +1,33 @@
+ The mutated line is causing the loop to iterate one position further than intended. This means that the condition for the loop to terminate is not being met correctly.
+
+    To create a test suite that would kill this mutant, we need to focus on the loop condition and the loop body. We want to ensure that the loop terminates at the correct index.
+
+    First, let's create a test case that checks the loop termination condition. We can do this by providing an input where the loop should terminate at a specific index but the mutant causes it to iterate one more time.
+
+    Here's a general approach to creating a test case:
+    1. Create a test class for the method under test.
+    2. Write a test method for the method under test.
+    3. Provide input values that would cause the loop to terminate at a specific index.
+    4. Assert that the method returns the expected result.
+    5. Provide input values that would cause the loop to terminate one index earlier due to the mutant.
+    6. Assert that the method returns a different result.
+
+    For example, let's assume that the `move` method is part of a `Player` class and the `GameParams.sideLength` is 5. We can create a test case as follows:
+
+    ```java
+    @Test
+    public void testMove() {
+        Player player = new Player(new GameState(GameState.running), new Grid(5, 5), new Scoreboard());
+        int firstStartPos = 0;
+        int lastStartPos = 2;
+        int startPosIncr = 1;
+        int nextPosIncr = 1;
+
+        // Test case 1: Loop terminates at the correct index
+        List<int[]> expectedHistory = Arrays.asList(new int[]{1, 2}, new int[]{2, 3});
+        player.move(firstStartPos, lastStartPos, startPosIncr, nextPosIncr, false);
+        List<int[]> actualHistory = player.getHistory();
+        assertEquals(expectedHistory, actualHistory);
+
+        // Test case 2: Loop terminates one index earlier due to the mutant
+        List<int[]> unexpectedHistory = Arrays.asList

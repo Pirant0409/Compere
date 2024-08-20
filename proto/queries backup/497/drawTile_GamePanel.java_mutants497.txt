@@ -1,0 +1,21 @@
+ First, we need to understand the mutated line and its context. The mutated line is a constant value of -1, which is not valid in this context. The method `drawTile` is responsible for drawing a tile on the grid based on its value. The value is obtained from the controller and is used to determine the color palette index and the text color.
+
+    The mutated line is located in the line where the text color is set based on the value. Since the value is not valid (-1), the color is not being set correctly. This could lead to unexpected behavior in the application, such as drawing tiles with incorrect colors or text.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover all possible scenarios, including invalid ones. Here are some steps to guide you in creating such test cases:
+
+    1. Identify all possible inputs to the method `drawTile`. In this case, the inputs are the Graphics2D object `g`, the row `r`, and the column `c`.
+
+    2. Create test cases for valid inputs. For example, you could create test cases where the value of the tile is within the valid range (0 to 127 or 128 to 255).
+
+    3. Create test cases for invalid inputs. For example, you could create test cases where the value of the tile is less than 0 or greater than 255. In the mutated case, the test case with an invalid input (-1) has not been able to kill the mutant.
+
+    4. Create test cases that cover edge cases. For example, you could create test cases where the row or column is at the edge of the grid or where multiple tiles overlap.
+
+    5. Create test cases that cover different scenarios. For example, you could create test cases where the tile value is the same for multiple tiles or where the tiles have different values.
+
+    6. Create test cases that cover different combinations of inputs. For example, you could create test cases where the row and column are the same or where they are far apart.
+
+    7. Create test cases that cover different states of the application. For example, you could create test cases where the grid is empty or where it is full.
+
+    8. Create test cases that cover different conditions. For example, you could create test cases where the

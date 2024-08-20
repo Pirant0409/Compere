@@ -1,0 +1,28 @@
+ The mutated line is adding 2 to the result of (106 - fm.stringWidth(s)). This means that the x-coordinate of the string's drawing position is being shifted to the right by 2 pixels.
+
+    To create a test suite that can kill this mutant, we need to find a test case where the string width is such that the addition of 2 pixels to the calculated position results in the string being drawn outside the bounds of the rectangle.
+
+    First, we need to understand the context of the method. It's drawing a tile on a grid, with each tile having a value. The value is used to determine the color of the tile and the position of the string representing the value.
+
+    To generate a test case, we can create a test grid with various values and test the method with each value. We can also create test cases with edge cases, such as the minimum and maximum values, and values close to the edge of the grid.
+
+    For example, we can create a test grid with the following values:
+
+    int[][] testGrid = {
+            {0, 1, 2, 3, 4},
+            {5, 6, 7, 8, 9},
+            {10, 11, 12, 13, 14},
+            {15, 16, 17, 18, 19},
+            {20, 21, 22, 23, 24}
+    };
+
+    We can then test the method with each value in the test grid and check if the string is being drawn outside the bounds of the rectangle. If the method behaves differently with the mutated line than with the original line, we have found a test case that can kill the mutant.
+
+    To check if the string is being drawn outside the bounds of the rectangle, we can add a check in our test method to verify the x and y coordinates of the string's drawing position. For example:
+
+    @Test
+    public void testDrawTile() {
+        Graphics2D g = mock(Graphics2D.class);
+        when(g.getFontMetrics()).thenReturn(mock(FontMetrics.class));
+
+        TileController controller = mock(TileController.class);

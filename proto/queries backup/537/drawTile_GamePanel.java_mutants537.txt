@@ -1,0 +1,19 @@
+ The mutated line is causing an issue by dividing instead of multiplying the row number by 121. This means that the x and y coordinates for drawing the tile are being calculated incorrectly.
+
+ To generate a test suite that would kill this mutant, follow these steps:
+
+ 1. Identify the input values that would cause the incorrect behavior. In this case, any row number that results in an incorrect x or y coordinate would be a valid input.
+
+ 2. Create test cases that cover these input values. For example, you could create a test case with a row number that results in an x or y coordinate that is outside the bounds of the drawing area, or a test case with a row number that results in an x or y coordinate that places two tiles on top of each other.
+
+ 3. Write test cases that specifically check the x and y coordinates of the drawn tile. You can use the getX() and getY() methods of the Graphics2D object to check these values.
+
+ 4. Write test cases that check the color of the drawn tile. You can use the getColor() method of the Graphics2D object to check the color of the tile.
+
+ 5. Write test cases that check the value of the tile. You can use the getValue() method of the Tile object to check the value of the tile.
+
+ 6. Write test cases that check the behavior of the application as a whole. For example, you could write a test case that checks the rendering of the entire grid, or a test case that checks the user interaction with the grid.
+
+ 7. Run the test suite and observe the results. If the mutant is killed, then the test suite is effective. If not, then you may need to add more test cases or modify existing ones to cover more edge cases.
+
+ Remember, the goal is to create a comprehensive test suite that covers as many edge cases as possible. This will help ensure that the application behaves correctly under a wide range of conditions.

@@ -1,0 +1,38 @@
+ First, we need to understand what this method does. It resets the data of the game, setting the score, highest score, game state, and tile added counter to their initial values.
+
+    Now, let's focus on the mutated line. The mutated line is setting the score to a value less than zero, which is not valid for this game. This means that the mutant version of the method is not behaving as the original one.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover the following scenarios:
+
+    1. Test the method when it is called with valid inputs. This will ensure that the method resets the data correctly when it is supposed to.
+    2. Test the method when it is called with invalid inputs. In this case, we want to ensure that the method does not allow the score to be set to a negative value.
+
+    To create test cases for the valid input scenario, we can write a test case that calls the method and checks that the data has been reset correctly. For example:
+
+    ```java
+    @Test
+    public void testResetData() {
+        Game game = new Game();
+        game.resetData();
+        assertEquals(0, game.getScore());
+        assertEquals(0, game.getHighestScore());
+        assertEquals(GameState.running, game.getGameState());
+        assertEquals(0, game.getTileAdded());
+    }
+    ```
+
+    To create a test case for the invalid input scenario, we can write a test case that tries to call the method with a negative score and checks that the score is not changed. For example:
+
+    ```java
+    @Test(expected = IllegalArgumentException.class)
+    public void testResetDataWithNegativeScore() {
+        Game game = new Game();
+        game.resetData();
+        game.setScore(-1); // This should not be possible after the method call
+        fail("Expected an IllegalArgumentException when setting the score to a negative value.");
+    }
+    ```
+
+    By writing test cases for both valid and invalid input scenarios, we can ensure that the method behaves correctly and does not allow the score to be set to a negative value, even in the presence of mutants.
+
+    Remember, the key to generating effective test suites is to

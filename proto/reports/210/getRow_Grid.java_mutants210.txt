@@ -1,0 +1,14 @@
+ First, we need to understand the method and its purpose. This method, `getRow`, returns a copy of a specific row from a 2D array of `Tile` objects. The original implementation uses the `clone()` method to create a copy of the row.
+
+    Now, let's analyze the mutated line. The mutated line returns `null` instead of a cloned row. This means that when we call `getRow` method with a valid row index, we'll receive a `null` value instead of a valid `Tile` array.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover all possible scenarios where the method should not return `null`. Here are some suggestions:
+
+    1. Test with valid row indices: Create test cases with valid row indices that exist within the bounds of the 2D array.
+    2. Test with out-of-bounds row indices: Create test cases with row indices that are out of bounds of the 2D array.
+    3. Test with empty 2D array: Create a test case where the 2D array is empty.
+    4. Test with null 2D array: Create a test case where the 2D array is `null`.
+
+    By creating test cases for these scenarios, we can ensure that the `getRow` method returns the expected `Tile` array and not `null`. This will help us kill the mutant and prevent similar issues in the future.
+
+    Remember, the goal is to create a comprehensive test suite that covers all possible scenarios, not just the one we're currently dealing with. This approach will help you in testing other mutants as well.

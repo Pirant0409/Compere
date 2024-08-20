@@ -1,0 +1,33 @@
+ First, we need to understand the behavior of the original method and the mutated line.
+
+    The original method, updateScore, takes an integer value as an argument and updates the score and highestScore variables accordingly. The highestScore variable is updated only when the new value is greater than the current highestScore.
+
+    The mutated line is a no-op (no operation) line, which means it doesn't change the program's flow or the value of any variable. In this case, it doesn't affect the highestScore variable assignment in the original method.
+
+    Now, to generate a test suite that would kill this mutant, we need to find a test case that would expose the difference in behavior between the original and mutated methods.
+
+    Let's consider the following test case scenario:
+
+    1. Initialize the score and highestScore variables to some initial values.
+    2. Call the updateScore method with a value greater than the initial highestScore.
+    3. Verify that the highestScore variable has been updated to the new value.
+
+    With the original method, this test case would pass because the highestScore variable is updated when the new value is greater than the current highestScore.
+
+    However, with the mutated method, this test case would not kill the mutant because the no-op line doesn't affect the highestScore variable assignment.
+
+    To generate a test suite that would kill the mutant, we need to find a test case that would expose the difference in behavior between the original and mutated methods.
+
+    One possible test case scenario is:
+
+    1. Initialize the score and highestScore variables to some initial values.
+    2. Call the updateScore method with a value equal to the initial highestScore.
+    3. Verify that the highestScore variable has not been updated.
+
+    With the original method, this test case would fail because the highestScore variable is updated when the new value is greater than or equal to the current highestScore.
+
+    With the mutated method, this test case would pass because the no-op line doesn't affect the highestScore variable assignment.
+
+    However, the mutant is still alive because the test suite doesn't cover all possible scenarios. To kill the mutant, we need to find more test cases that would expose the difference in behavior between the original and mutated methods.
+
+    In

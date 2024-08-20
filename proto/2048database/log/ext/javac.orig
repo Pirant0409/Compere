@@ -1,0 +1,17 @@
+-d
+C:\Users\32491\Documents\Uni\MA2\Memoire\MuTEd\SUT\2048\target
+-classpath
+C:\Users\32491\Documents\Uni\MA2\Memoire\MuTEd\SUT\2048\target;C:\Users\32491\Documents\Uni\MA2\Memoire\major-latest\major\lib\major.jar
+-sourcepath
+C:\Users\32491\Documents\Uni\MA2\Memoire\MuTEd\SUT\2048\src\main
+-g:none
+-Xplugin:MajorPlugin 
+C:\Users\32491\Documents\Uni\MA2\Memoire\MuTEd\SUT\2048\src\main\java\be\unamur\game2048\Game.java
+C:\Users\32491\Documents\Uni\MA2\Memoire\MuTEd\SUT\2048\src\main\java\be\unamur\game2048\controllers\GameController.java
+C:\Users\32491\Documents\Uni\MA2\Memoire\MuTEd\SUT\2048\src\main\java\be\unamur\game2048\helpers\GridHelper.java
+C:\Users\32491\Documents\Uni\MA2\Memoire\MuTEd\SUT\2048\src\main\java\be\unamur\game2048\models\GameParams.java
+C:\Users\32491\Documents\Uni\MA2\Memoire\MuTEd\SUT\2048\src\main\java\be\unamur\game2048\models\GameState.java
+C:\Users\32491\Documents\Uni\MA2\Memoire\MuTEd\SUT\2048\src\main\java\be\unamur\game2048\models\Grid.java
+C:\Users\32491\Documents\Uni\MA2\Memoire\MuTEd\SUT\2048\src\main\java\be\unamur\game2048\models\Tile.java
+C:\Users\32491\Documents\Uni\MA2\Memoire\MuTEd\SUT\2048\src\main\java\be\unamur\game2048\views\ColorPalette.java
+C:\Users\32491\Documents\Uni\MA2\Memoire\MuTEd\SUT\2048\src\main\java\be\unamur\game2048\views\GamePanel.java

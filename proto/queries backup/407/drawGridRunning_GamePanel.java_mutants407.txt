@@ -1,0 +1,17 @@
+ First, we need to understand what the mutated line is doing. The mutated line is changing the condition for the for loop that iterates through rows. Instead of checking if the row is less than the side length, it checks if the row is not equal to the side length. This means that the loop will now iterate one more time than it should, causing an out-of-bounds error when trying to access an element in the grid that doesn't exist.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover the edge cases and boundary conditions. In this case, we want to test what happens when we try to access an element outside the grid.
+
+    Here are some steps to guide you in creating a test suite:
+
+    1. Create a test case for a valid grid size. This test case should call the drawGridRunning method with a valid grid size and verify that all tiles are drawn correctly.
+
+    2. Create a test case for an empty grid. This test case should call the drawGridRunning method with an empty grid and verify that all empty spaces are drawn correctly.
+
+    3. Create a test case for a grid size that is one larger than the expected size. This test case should call the drawGridRunning method with a grid size that is one larger than the expected size and verify that an out-of-bounds error is thrown when trying to access an element outside the grid.
+
+    4. Create a test case for a grid size that is one smaller than the expected size. This test case should call the drawGridRunning method with a grid size that is one smaller than the expected size and verify that all tiles are drawn correctly, even though there will be an empty space at the edge of the grid.
+
+    5. Create a test case for a grid with a mix of empty and filled tiles. This test case should call the drawGridRunning method with a grid that has a mix of empty and filled tiles and verify that all tiles are drawn correctly.
+
+    By creating test cases that cover these edge cases and boundary conditions, we can ensure that the mutated line is killed and the original behavior of the method is restored. This approach can be applied to other mutants as well, by understanding the mutated line and creating test cases that cover the edge cases and boundary conditions that the mutation affects.

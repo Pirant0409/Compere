@@ -1,0 +1,17 @@
+ First, we need to understand the behavior of the original method. The method 'drawGrid' is responsible for drawing a grid on the given Graphics2D object 'g'. It sets the color to the grid color, then it draws a filled round rectangle with the given dimensions and rounding. After that, it checks the game state and based on that, it either calls 'drawGridRunning' or 'drawGridNotRunning'.
+
+    Now, let's analyze the mutated line. The mutated line is '-499'. This means that the width of the round rectangle is being decreased by 499 pixels. This change could potentially affect the drawing of the grid, especially if the new width is negative or too small to properly draw the grid.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would expose the defect introduced by the mutation. Here are some steps to guide you through the process:
+
+    1. Identify the expected behavior of the method: In this case, the expected behavior is that the method should draw a grid on the given Graphics2D object with the correct dimensions and colors.
+
+    2. Create test cases that cover the normal behavior: You should create test cases that cover the normal behavior of the method, i.e., when the game state is 'running'. These test cases should verify that the grid is drawn correctly with the expected dimensions and colors.
+
+    3. Create test cases that cover the edge cases: You should also create test cases that cover the edge cases, i.e., when the game state is not 'running'. These test cases should verify that the method does not draw anything when it is not supposed to.
+
+    4. Create test cases that cover the defect: To expose the defect introduced by the mutation, you should create test cases that cover the situation where the width of the round rectangle is too small to properly draw the grid. This could be achieved by setting the width to a very small value, such as 0 or a negative value, and verifying that the method does not draw anything or draws an incorrect grid.
+
+    5. Create test cases that cover other possible defects: You should also create test cases that cover other possible defects that could be introduced by the mutation, such as incorrect colors, incorrect rounding, or incorrect game state checks.
+
+    By following these steps, you should be able

@@ -1,0 +1,13 @@
+ First, we need to understand the original method and its purpose. The getNearestPower2 method takes an integer value as an argument and returns the nearest power of 2. It does this by calculating the log base 2 of the value, rounding the result to the nearest integer, and then raising 2 to that power.
+
+    Now, let's focus on the mutated line. The mutated line is line 0, but since Java uses zero-based indexing, this actually refers to the entire method body. This means the mutation affects the entire method, not just a single line.
+
+    To generate a test suite that would kill this mutant, we need to find test cases that expose the incorrect behavior of the mutated method. Since the mutation affects the entire method, we need to consider all possible scenarios and edge cases.
+
+    1. Positive test cases: Test the method with various positive integer values to ensure it returns the correct nearest power of 2.
+
+    Example: Test cases: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152, 4194304, 8388608, 16777216, 33554432, 67108864, 134217728, 268435456, 536870912, 1073741824, 2147483647.
+
+   2. Negative test cases: Test the method with various negative integer values to ensure it correctly handles negative numbers by returning 0.
+
+    Example: Test cases: -1, -2, -4, -8, -16, -32, -64,

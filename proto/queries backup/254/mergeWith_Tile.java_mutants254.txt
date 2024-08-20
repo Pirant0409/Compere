@@ -1,0 +1,15 @@
+ First, we need to understand the behavior of the original method and the mutated line.
+
+    The original method `mergeWith` checks if two Tiles can merge using the helper method `canMergeWith`. If they can merge, it adds the values of the two Tiles and sets the merged flag. If they cannot merge, it returns -1.
+
+    The mutated line is a empty statement, which means it does not execute any code. In other words, the method continues its execution as if the line was not there.
+
+    To generate a test suite that would kill this mutant, we need to find a test case that would expose the side effect of the mutated line. A side effect is a change in the state of the program that is not directly related to the return value of the method.
+
+    In this case, the side effect is the return value of -1 when the tiles cannot merge. If we can find a test case where the method is expected to return -1 but instead continues its execution, we have found a test case that would kill the mutant.
+
+    To generate such a test case, we need to find a scenario where the `canMergeWith` method returns false, but the method does not return -1 as expected. This can be achieved by testing the method with invalid input or by testing the method in a different context where the expected behavior might be different.
+
+    For example, we could test the method with two Tiles that cannot merge, but the method is called in a context where the return value of -1 is not expected. This could be a method that merges multiple Tiles, and the method is called with a pair of Tiles that cannot merge, but the other pairs can. In this case, the method continuing its execution instead of returning -1 would lead to unexpected behavior and a potential bug.
+
+    To summarize, to generate a test suite that would kill a mutant, we need to understand the behavior of the original method and the mutated line, find a test case that would expose the side effect of the mutated line, and design the test case to cover a scenario where the method's behavior is different from the expected behavior. This approach can be applied to other mutants as well.

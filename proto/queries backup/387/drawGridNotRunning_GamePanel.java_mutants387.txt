@@ -1,0 +1,14 @@
+ First, we need to understand what the method does. It's responsible for drawing the grid and some text on the screen. The mutated line seems to be an offset value for the y-coordinate where the text "Click to start a new game" is drawn. The original value is 350, but the mutated one is -350.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would expose the incorrect behavior of the method when the mutated line is executed. Here are some suggestions:
+
+    1. Test the method with valid input and verify that the text "Click to start a new game" is drawn at the correct position when the game is not won or over.
+    2. Test the method with valid input and verify that no other text is drawn on the screen when the game is not won or over.
+    3. Test the method with valid input and verify that the text "You win !" or "You loose !" is drawn at the correct position when the game is won or over, respectively.
+    4. Test the method with valid input and verify that no other text is drawn on the screen when the game is won or over.
+    5. Test the method with invalid input and verify that the method throws an appropriate exception.
+    6. Test the method with valid input and different gamestate values and verify that the correct text is drawn at the correct position.
+
+    By creating test cases that cover these scenarios, we can ensure that the method behaves correctly with the original line and fails with the mutated line. This will help us identify and fix the issue.
+
+    It's important to note that this approach can be applied to other mutants as well. The key is to understand the behavior of the method and create test cases that expose any incorrect behavior caused by the mutated line.

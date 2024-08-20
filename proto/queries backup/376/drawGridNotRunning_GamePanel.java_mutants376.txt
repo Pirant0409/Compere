@@ -1,0 +1,19 @@
+ First, we need to understand the context of this method. It's a drawing method that sets the color, font, and draws strings on the screen based on the game state. The mutated line is the one where the string "You win !" or "You loose!" is drawn, depending on the game state.
+
+    To generate tests that can potentially kill this mutant, we need to focus on the conditions that change the game state and the strings that are drawn based on that state. Here are some steps to guide you:
+
+    1. Identify the conditions that change the game state: In this case, it seems that the game state can be either "won" or "over". We need to find out how these states are set and how the method interacts with them.
+
+    2. Create test cases that cover all possible states: We should write test cases that cover both the "won" and "over" states. This can be done by setting the game state in the controller and then calling the method with the appropriate input.
+
+    3. Test the strings drawn based on the game state: We should write test cases that verify the strings drawn based on the game state. This can be done by checking the output of the method using a testing framework or by manually inspecting the screen.
+
+    4. Test the interaction between the method and the game state: We should write test cases that verify the method's behavior when the game state is changed. This can be done by setting the game state in the controller, then calling the method, and checking the output.
+
+    5. Test the edge cases: We should also test the edge cases, such as what happens when the game state is neither "won" nor "over". This can be done by setting the game state to an invalid value and checking the method's behavior.
+
+    6. Test the method's interaction with other methods: We should also test the method's interaction with other methods that may change the game state or the method's input. This can be done by calling those methods before or after the method under test and checking the output.
+
+    7. Test the method's behavior with invalid input: We should test the method's behavior with invalid input, such as a null Graphics2D object or an empty string. This can be done by passing those inputs to the method and checking the output.
+
+    8. Test the method

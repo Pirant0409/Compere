@@ -1,0 +1,23 @@
+ First, we need to understand what the method does. This method, `drawGridRunning`, is responsible for drawing the grid of a game. It does this by iterating through each cell in the grid and either drawing an empty cell or drawing a tile based on the cell's content.
+
+    Now, let's focus on the mutated line. A <NO-OP> statement is a harmless instruction that does nothing. In this case, it's being inserted into the `else` block, which means it's being added after the call to `drawTile(g, row, col)`. Since `drawTile` is a method that presumably does something important, like drawing a tile, this mutation is likely to cause a problem.
+
+    To generate a test suite that would kill this mutant, we need to find a test case that exercises the `else` block and verifies that the expected outcome occurs when `drawTile` is called. Here are some steps you can take to generate such a test case:
+
+    1. Identify the preconditions of the method. In this case, the method takes no arguments, so there are no explicit preconditions. However, we can assume that the `controller` and `GameParams` objects are in a valid state, and that the grid contains at least one non-null tile.
+
+    2. Create a test case that sets up the preconditions. This might involve creating a `controller` and `GameParams` object, setting their properties, and populating the grid with a non-null tile.
+
+    3. Exercise the method with the test case. Call `drawGridRunning` with the test case as the argument.
+
+    4. Verify the postconditions. After the method call, check that the expected tile was drawn at the correct position. You can do this by checking the pixel values of the image produced by the method call.
+
+    5. Run the test case with the mutation. Repeat steps 3 and 4 with the mutated method.
+
+    6. Verify that the mutation caused a failure. If the expected tile was not drawn at the correct position, then the mutation has been successfully killed.
+
+    To generalize this process to other mutants, follow these steps:
+
+    1. Understand the method and its purpose.
+    2. Identify the preconditions of the method.
+    3

@@ -1,0 +1,21 @@
+ First, we need to understand what the method does. It's filling the first empty tile in the grid with a value of 2 by default, but if some condition is met, it fills it with a value of 4 instead. The condition is that the number of tiles added to the grid so far is a multiple of 10.
+
+    Now, let's focus on the mutated line. The mutator has changed the line that checks the condition to increment the tileAdded by 10 instead of checking if it's a multiple of 10. This change might lead to incorrect behavior in the method.
+
+    To generate a test suite that would kill this mutant, we need to find test cases that would expose this incorrect behavior. Here's a general approach:
+
+    1. Identify the preconditions and postconditions of the method. Preconditions are the conditions that must be true before the method is called, and postconditions are the conditions that must be true after the method is called. In this case, the precondition is that the grid is not full, and the postcondition is that a tile is added to the grid.
+
+    2. Create test cases that cover various scenarios of the method's behavior. For example:
+       a. Test when the grid is empty.
+       b. Test when the grid has only one empty tile.
+       c. Test when the grid has multiple empty tiles.
+       d. Test when the grid is almost full.
+       e. Test when the condition for filling a tile with a value of 4 is met.
+       f. Test when the condition for filling a tile with a value of 4 is not met.
+
+    3. For each test case, check if the mutant's behavior is different from the original method's behavior. If it is, then you have found a test case that can kill the mutant.
+
+    4. Once you have found a test case that kills the mutant, you can use it to create a test case that specifically targets the mutated line. This test case should ensure that the condition for filling a tile with a value of 4 is not met, but the mutant still increments tileAdded by 10 instead of checking the condition.
+
+    5. Repeat the process for other mutants as well. The general approach remains the same, but the specifics of the test cases

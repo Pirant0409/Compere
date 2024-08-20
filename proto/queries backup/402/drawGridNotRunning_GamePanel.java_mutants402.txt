@@ -1,0 +1,27 @@
+ First, we need to understand the mutated method and its behavior. The method 'drawGridNotRunning' is responsible for drawing the grid and some text on the screen. It checks the game state and displays appropriate messages based on the state.
+
+    Now, let's focus on the mutated line. The mutated line is the last line of the method, and it's a simple string draw statement. The string being drawn is "Click to start a new game (Use arrow keys to move tiles)".
+
+    To generate a test suite that would kill this mutant, we need to find a condition under which the mutated line should not be executed. In other words, we need to find a situation where the game state is neither 'won' nor 'over'.
+
+    To achieve this, we can create test cases that cover all possible game states except 'won' and 'over'. For instance, we can create test cases for 'inProgress', 'paused', and 'loading' game states. These test cases should ensure that the method behaves correctly when the game state is not 'won' or 'over'.
+
+    Here are some steps to create test cases:
+
+    1. Create a test class for the 'drawGridNotRunning' method.
+    2. Create test methods for each possible game state.
+    3. In each test method, set the game state using a setter method or a constructor.
+    4. Call the 'drawGridNotRunning' method with a valid Graphics2D object.
+    5. Use assertions to verify that the method behaves correctly based on the game state.
+
+    For example, to test the 'inProgress' game state, you can create a test method like this:
+
+    @Test
+    public void testDrawGridNotRunning_InProgress() {
+        controller.setGamestate(GameState.inProgress);
+        Graphics2D g = new BufferedImage(500, 500, BufferedImage.TYPE_INT_RGB).createGraphics();
+        drawGridNotRunning(g);
+        // Add assertions to verify that the method behaves correctly for the inProgress state
+    }
+
+    By creating test cases for all possible game states, we can ensure that the method behaves correctly under all conditions and the mutated line is not executed when it shouldn't be.

@@ -1,0 +1,15 @@
+ The mutated line is causing an issue by subtracting 121 instead of multiplying it. This means that the coordinates for drawing the tile are being calculated incorrectly.
+
+ To generate a test suite that would kill this mutant, you would want to test the method with various input values for r and c, focusing on the edge cases and values that would cause the incorrect calculation of the coordinates.
+
+ Here are some suggestions for test cases:
+
+ 1. Test with r = 0 and c = 0 to ensure the method correctly handles the origin point.
+ 2. Test with r = 0 and c = maximum value to ensure the method correctly handles the last column.
+ 3. Test with r = maximum value and c = 0 to ensure the method correctly handles the last row.
+ 4. Test with r = maximum value and c = maximum value to ensure the method correctly handles the last cell.
+ 5. Test with negative values for r and c to ensure the method correctly handles out-of-bounds conditions.
+
+ These test cases should cover the edge cases and help identify if the mutated line is causing incorrect behavior. Remember, the goal is to generate a test suite that would kill the mutant, meaning that it would expose the incorrect behavior of the mutated line.
+
+ In general, when generating test cases for mutated code, focus on the edge cases, boundary values, and out-of-bounds conditions. These test cases will help ensure that the code is behaving correctly and will help identify any incorrect behavior caused by mutations.

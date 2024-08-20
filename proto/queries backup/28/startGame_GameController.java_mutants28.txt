@@ -1,0 +1,17 @@
+ First, we need to understand what this method does. The `startGame()` method initializes the game if it's not already running. It does this by resetting the data, creating a new grid, and filling the first `GameParams.nbStartTileFilled` empty tiles with pieces.
+
+    Now, let's focus on the mutated line. A <NO-OP> mutation means that the mutant version of the code does nothing, it just skips the line. In this case, the mutant version of the `startGame()` method doesn't fill the first empty tile when initializing the game.
+
+    To create a test suite that would kill this mutant, we need to find a test case that covers the execution path where the `fillFirstEmptyTile()` method is called. Here's a general approach:
+
+    1. Identify the preconditions: What should be the state of the object before the method is called? In this case, the `gamestate` should be `GameState.notRunning`, and the grid should have no pieces filled.
+
+    2. Create a test case that sets up the preconditions: Write a test method that initializes an instance of the class under test and sets the `gamestate` to `GameState.notRunning` and the grid to an empty state.
+
+    3. Test the method's postconditions: Write assertions that check the state of the object after the method is called. In this case, you would check that the `gamestate` is now `GameState.running`, and that the first `GameParams.nbStartTileFilled` tiles in the grid are filled with pieces.
+
+    4. Run the test case: Execute the test case and verify that it fails when the mutant is present. If the test passes, then the test case is not effective in killing the mutant. Refactor the test case to make it more precise.
+
+    5. Refactor the test case: To make the test case more precise, you can add more assertions or test more edge cases. For example, you can test that the pieces are placed in the correct positions, or that the `resetData()` method is called before filling the tiles.
+
+    6. Repeat the process: Create multiple test cases that cover different execution paths and edge cases. The more test cases

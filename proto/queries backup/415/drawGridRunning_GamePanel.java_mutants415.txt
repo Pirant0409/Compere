@@ -1,0 +1,12 @@
+ The mutated line changes the value of the x-coordinate in the fillRoundRect method call from 215 to -215. This means that the drawing position will be shifted significantly to the left.
+
+    To create a test suite that would kill this mutant, you should focus on testing the correct positioning of the grid tiles. Here's a general approach:
+
+    1. Create a test case that initializes the controller and the graphics context, and calls the drawGridRunning method with an empty grid. This will ensure that all tiles are drawn as empty spaces.
+    2. Create a test case that initializes the controller with a grid containing at least one tile, and calls the drawGridRunning method. Verify that the tile is drawn at the correct position.
+    3. Create a test case that initializes the controller with a grid containing multiple tiles, and calls the drawGridRunning method. Verify that all tiles are drawn at their correct positions.
+    4. Create a test case that initializes the controller with a grid containing tiles along the edges, and calls the drawGridRunning method. Verify that the tiles are drawn correctly, without any overlap or misalignment with the grid edges.
+    5. Create a test case that initializes the controller with a grid containing tiles in the corners, and calls the drawGridRunning method. Verify that the tiles are drawn correctly, without any overlap or misalignment with the grid corners.
+    6. Create a test case that initializes the controller with a grid containing tiles in the center, and calls the drawGridRunning method. Verify that the tiles are drawn correctly, without any overlap or misalignment with other tiles.
+
+    By thoroughly testing the correct positioning of the grid tiles, you'll be able to detect and kill this mutant, as well as other mutants that may affect the positioning of the tiles. Remember, the key to effective testing is to think systematically and methodically, and to cover all possible scenarios.

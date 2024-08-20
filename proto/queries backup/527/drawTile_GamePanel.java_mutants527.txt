@@ -1,0 +1,15 @@
+ The mutated line is calculating the x-coordinate for drawing the string. The original line is doing the same thing, but with a slight difference. The mutated line is performing the arithmetic operation inside the parentheses in a wrong order.
+
+    To generate a test suite that would kill this mutant, you need to focus on the difference between the mutated and original lines. The mutation is causing an arithmetic operation to be performed in the wrong order, which could lead to incorrect x-coordinates being calculated for the string.
+
+    To test this behavior, you can create test cases that check the x-coordinate of the string being drawn. You can create test cases with different string lengths and grid positions to ensure comprehensive coverage.
+
+    Here are some steps you can follow to generate test cases:
+
+    1. Create a test class for the `drawTile` method.
+    2. Write a test method for each possible input combination of `r` and `c` values, and for each possible string length.
+    3. In each test method, set up the `Graphics2D` object and call the `drawTile` method with the appropriate `r` and `c` values and a test string.
+    4. Assert that the x-coordinate of the string being drawn is as expected based on the original line calculation.
+    5. Repeat for all possible input combinations.
+
+    By testing the x-coordinate of the string being drawn, you can ensure that the mutated line's incorrect calculation order is caught and the mutant is killed. This approach can be generalized to other mutants as well, by focusing on the differences between the mutated and original lines and creating test cases that cover those differences.

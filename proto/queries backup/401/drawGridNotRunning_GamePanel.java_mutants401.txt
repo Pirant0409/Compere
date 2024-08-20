@@ -1,0 +1,9 @@
+ The mutated line changes the x-coordinate of the string "Click to start a new game" from 310 to -310. This means the string will be drawn outside the visible area of the grid. To create a test that would kill this mutant, we need to test the condition when the string is drawn outside the grid boundaries.
+
+ First, we need to create a test case that sets up the controller with a valid game state and a graphics context with the correct size. We can use a JUnit test case for this.
+
+ Next, we need to test the drawing of the string "Click to start a new game" in the original method. We can do this by checking if the string is drawn at the correct position using the Graphics2D's drawString method and the getStringBounds method.
+
+ Finally, we need to test the mutated method and verify that the string "Click to start a new game" is not drawn outside the grid boundaries. We can do this by checking the position of the string in the graphics context before and after the call to the mutated method. If the position has changed, then the test has failed and the mutant is killed.
+
+ To generalize this approach to other mutants, we need to understand the behavior of the mutated code and identify the conditions that would cause it to fail. We then need to create test cases that cover those conditions and verify that the mutated code behaves as expected. This involves testing the input and output of the method, as well as any intermediate states or conditions. By systematically testing the code in this way, we can ensure that it functions correctly and that any mutants are killed.

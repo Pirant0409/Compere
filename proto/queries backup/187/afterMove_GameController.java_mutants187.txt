@@ -1,0 +1,14 @@
+ First, we need to understand what this method does. It's called after a move is made in the game. The method checks if the current highest score is less than the target score. If it is, then it clears any merged tiles, fills the first empty tile, and checks if there are any moves left available. If there are no moves left, then the game state is set to "over".
+
+    Now, let's focus on the mutated line. It's a no-op, which means it doesn't do anything. However, it's located in an if statement that checks if the highest score is less than the target score. This means that the no-op line is not being executed when the condition is true. But, it could potentially be executed when the condition is false.
+
+    To create a test suite that would kill this mutant, we need to find a test case that would cause the condition to be false and then verify that the game state is not set to "over" when it should be.
+
+    Here are some steps to help you generate a test suite:
+
+    1. Create test cases that set the highest score to the target score and verify that the game state is set to "won".
+    2. Create test cases that set the highest score to a value greater than the target score and verify that the game state is not set to "over" or "won".
+    3. Create test cases that set the highest score to a value less than the target score and verify that the game state is set to "over" only when there are no moves left available.
+    4. Create test cases that set the highest score to a value less than the target score and verify that there are moves left available. In this case, the game state should not be set to "over".
+
+    By following these steps, you should be able to create a test suite that would kill this mutant and help ensure the correct behavior of the method for other similar mutants as well. Remember, the key is to thoroughly understand the method's behavior and the impact of the mutation before generating test cases.

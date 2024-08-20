@@ -1,0 +1,17 @@
+ First, we need to understand the context of the method and the mutated line. The method `drawGrid` is responsible for drawing the grid on the graphics object `g`. It checks the game state and based on that, it either calls either `drawGridNotRunning` or `drawGridRunning`. The mutated line is a no-op statement, which means it doesn't do anything.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would expose the side effects of the mutated line. Since the mutated line is a no-op statement, it doesn't have any side effects on its own. However, it is part of a conditional statement, and the absence of this line might affect the behavior of the method when the game state is not running.
+
+    To generate effective test cases, follow these steps:
+
+    1. Identify the preconditions and postconditions of the method. In this case, the precondition is the `Graphics2D g` object, and the postcondition is the drawn grid.
+
+    2. Create test cases that cover all possible branches of the conditional statement. In this case, we need test cases for when the game state is running and when it is not running.
+
+    3. For each test case, ensure that the preconditions are met, and the expected postconditions are achieved. If the mutated line is causing any unexpected behavior, it will be revealed through these test cases.
+
+    4. To create test cases for the game state not running, you can simulate this condition by setting the game state in the controller to `GameState.notRunning` before calling the `drawGrid` method.
+
+    5. Repeat the process for other mutants as well. The key is to understand the context of each method and the mutated line, and create test cases that cover all possible branches and edge cases.
+
+    Remember, the goal is not just to kill this particular mutant, but to ensure the entire system is robust and free of defects. Happy testing!

@@ -1,0 +1,13 @@
+ First, we need to understand the behavior of the method without the mutation. The method is responsible for drawing the grid and some text on the given Graphics2D object. It checks the game state and displays a winning or losing message accordingly. It also provides some instructions to the user.
+
+    Now, let's focus on the mutated line. The line number is 0, but since Java uses zero-based indexing, it actually means that the mutated line is the first line in the method body. This line is empty, which means the mutation has removed the original code that sets the color of the text to be drawn to the grid color.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover the following scenarios:
+
+    1. The method is called with a valid Graphics2D object, and the game state is won. The method should display "You win !" message in the grid color.
+    2. The method is called with a valid Graphics2D object, and the game state is over. The method should display "You loose !" message in the grid color.
+    3. The method is called with a valid Graphics2D object, and the game state is neither won nor over. The method should display "Click to start a new game" and "Use arrow keys to move tiles" messages in the grid color.
+
+    To create such test cases, you can use a testing framework like JUnit. You would write test methods for each scenario, create a mock Graphics2D object, set the game state accordingly, and then call the method with the mock object as an argument. After that, you can use assertions to check if the text is displayed in the correct color.
+
+    By writing test cases that cover these scenarios, you ensure that the original behavior of the method is preserved, and the mutation is killed. This approach can be applied to other mutants as well. The key is to understand the behavior of the method without the mutation and then create test cases that cover the scenarios where the mutation can affect the behavior.

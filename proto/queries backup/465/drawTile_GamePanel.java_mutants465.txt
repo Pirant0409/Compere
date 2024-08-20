@@ -1,0 +1,18 @@
+ The mutated line is causing an arithmetic expression error. The original line is adding a constant value to the product of 'c' and '121'. To generate a test suite that would kill this mutant, we need to find a test case that would cause the mutated line to evaluate to a value that is not an integer.
+
+ First, we need to understand the context of the method. The method 'drawTile' is responsible for drawing a tile on the grid based on its value. The value of each tile is represented as an integer. The method uses the value to determine the color palette index and the position to draw the tile.
+
+ To generate a test case that would cause the mutated line to evaluate to a non-integer value, we can test the method with a negative or a very large value for 'c'. Since the method is using multiplication and addition operations, a negative value for 'c' would result in a negative value for the product 'c * 121'. Multiplying a negative number by another number results in a negative number. Adding a constant value to a negative number results in a larger negative number. Therefore, the mutated line would evaluate to a non-integer value when 'c' is a negative number.
+
+ To generate a test case, we can create a test class with a test method that calls the 'drawTile' method with a negative value for 'c'. We can use a JUnit test framework to write the test case. The test case should assert that an exception is thrown when the method is called with a negative value for 'c'.
+
+ Here are the steps to generate the test case:
+
+ 1. Create a new Java class named 'DrawTileTest'.
+ 2. Import the necessary classes, including 'java.awt.Graphics2D', 'java.awt.ColorPalette', and 'junit.framework.TestCase'.
+ 3. Extend the 'TestCase' class to create a test case class.
+ 4. Create a private instance variable of 'Graphics2D' type named 'g'.
+ 5. Create a private instance variable of 'Controller' type named 'controller'.
+ 6. Initialize the 'g' and 'controller' variables in the 'setUp()' method.
+ 7. Create a test method named 'testDrawTileWithNegativeC'.
+ 8. In the 'testDrawTileWithNegativeC'

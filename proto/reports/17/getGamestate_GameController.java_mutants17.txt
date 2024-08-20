@@ -1,0 +1,23 @@
+ First, we need to understand what the method does and what the mutated line does.
+
+    The original method returns the current game state. It's a getter method, which means it doesn't change the state of the object, it only retrieves it.
+
+    The mutated line changes the game state to null. This is a significant change, as it could potentially break the application if the method is called when the game state is supposed to be non-null.
+
+    To create a test suite that would kill this mutant, we need to think about how we can test the method's behavior when it's supposed to return a non-null game state, but instead returns null due to the mutated line.
+
+    Here are some steps to guide you in creating a test suite:
+
+    1. Identify the preconditions and postconditions of the method. Preconditions are the conditions that must be true before the method is called, and postconditions are the conditions that must be true after the method is called. In this case, the precondition is that the method is called on an object with a valid game state, and the postcondition is that the method returns the current game state.
+
+    2. Create test cases that cover the happy path, where the method is called with valid input and returns the expected output. This will help ensure that the method is working correctly when the game state is non-null.
+
+    3. Create test cases that cover edge cases, where the method is called with invalid input or unexpected conditions. For example, you could test what happens when the method is called on an object with a null game state, or when the method is called multiple times in a row.
+
+    4. Create test cases that specifically test the mutated line. For example, you could create a test case that checks if the method returns null when the game state is set to null before the method is called.
+
+    5. Create test cases that test the method's behavior in the context of the application. For example, you could create a test case that simulates a user making a move in a game, and then checks if the game state is updated correctly.
+
+    6. Run the test suite and verify that all test cases pass. If any test cases fail, you'll need to debug the issue and modify the test cases or the code as necessary.
+
+    7. Repeat the process

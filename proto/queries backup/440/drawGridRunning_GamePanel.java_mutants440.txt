@@ -1,0 +1,12 @@
+ First, we need to understand what this method does. It's responsible for drawing the grid of the game. It does this by iterating through each cell in the grid and either drawing an empty cell or a cell with a tile.
+
+    To generate tests that can potentially kill this mutant, we need to focus on the conditions that can make the if statement false. In this case, the if statement checks if the tile at the given row and column is null. If it is, then an empty cell is drawn.
+
+    To generate tests, we need to create test cases that cover different scenarios. Here are some suggestions:
+
+    1. Test when the grid is empty: Create a test case where the grid is initialized with no tiles. This will ensure that the if statement is executed for every cell in the grid and the empty condition is met.
+    2. Test when the grid has tiles: Create a test case where the grid has tiles in some cells. This will ensure that the if statement is not executed for those cells and the else block is executed instead.
+    3. Test when the grid has null values: Create a test case where the grid has null values in some cells. This will ensure that the if statement is executed with a null value and the empty condition is met.
+    4. Test when the controller returns a null value: Create a test case where the controller returns a null value for the grid. This will ensure that the if statement is executed with a null value for the grid and the empty condition is met.
+
+    By creating test cases that cover these scenarios, we can ensure that the mutant is killed and the original behavior of the method is preserved. Remember, the goal is not just to kill this mutant, but to generate a comprehensive test suite that can cover a wide range of scenarios and potential mutants.

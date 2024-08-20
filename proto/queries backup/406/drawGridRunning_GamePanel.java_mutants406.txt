@@ -1,0 +1,13 @@
+ First, we need to understand the context of the method and the mutated line. This method, `drawGridRunning`, is responsible for drawing the grid in the game. It does this by iterating through each cell in the grid and either drawing an empty cell or a cell with a tile. The mutated line is where the condition for drawing an empty cell is checked. The original condition checks if the cell is null, but the mutated line has been changed to check if the cell is -1.
+
+    Now, let's generate a test suite that would kill this mutant. To do this, we need to create test cases that would expose the incorrect behavior of the mutated line. Here are some steps to guide you:
+
+    1. Identify the expected behavior: In the original code, the method checks if the cell is null before drawing an empty cell. The expected behavior is that the method should only draw an empty cell if the cell is indeed null.
+
+    2. Create test cases that cover the edge cases: Since the mutated line checks for -1 instead of null, we need to create test cases that cover the edge cases where the cell should be null but is assigned -1 instead. This could happen due to a bug in the controller's getGrid() method or in the way the grid is initialized.
+
+    3. Create test cases that cover the normal behavior: We also need to create test cases that cover the normal behavior of the method, where the cell is not null and should be drawn accordingly.
+
+    4. Create test cases that cover the error cases: Finally, we need to create test cases that cover the error cases where the method is passed invalid arguments, such as a null Graphics2D object or negative row or column indices.
+
+    By creating a comprehensive test suite that covers all these cases, we can ensure that the mutated line is killed and the original behavior of the method is restored. This approach can be generalized to other mutants as well, by understanding their context and expected behavior and creating test cases that expose their incorrect behavior.

@@ -1,0 +1,16 @@
+ First, we need to understand what the original line of code does. The original line sets the default close operation of the JFrame to EXIT_ON_CLOSE, which means that when the user closes the window, the JVM will exit.
+
+    Now, let's see what the mutated line does. The mutated line is a no-op, which means it doesn't do anything. So, the question is, how can we write a test case that would expose this mutation and cause the JVM to exit when the window is closed?
+
+    To answer this question, we need to think about what would happen if the default close operation was not set to EXIT_ON_CLOSE. In this case, the JVM would not exit when the window is closed, and we would have a hanging application.
+
+    Therefore, to test for this mutation, we need to write a test case that verifies that the JVM exits when the window is closed. We can do this by simulating a window close event and checking that the JVM exits.
+
+    Here are the steps to write such a test case:
+
+    1. Create a mock JFrame class that extends JFrame and implements a custom interface with a method to simulate a window close event.
+    2. Create a mock GamePanel and GameController class.
+    3. Write a test method that creates an instance of the mock JFrame, sets up the mock GamePanel and GameController, and calls the simulated window close event.
+    4. After the window close event is simulated, check that the JVM has exited.
+
+    By following these steps, you should be able to write a test case that kills the mutant and also covers other similar mutants where the default close operation of a JFrame is changed.

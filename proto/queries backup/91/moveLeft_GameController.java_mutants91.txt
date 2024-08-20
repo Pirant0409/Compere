@@ -1,0 +1,25 @@
+ First, we need to understand the context of this method and the mutated line. The method 'moveLeft' takes a boolean argument 'checkingAvailableMoves'. It calls another method 'move' with some arguments. The mutated line is where the value of the first argument of 'move' is being decreased by 3 instead of the original value of 3.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would expose the incorrect behavior of the mutated method. Here are some general guidelines to help you create effective test cases:
+
+    1. Boundary value testing: Test the method with input values that are at the boundaries of the acceptable range. For example, test the method with the minimum and maximum values of the input parameters.
+
+    2. Equivalence partitioning: Divide the input domain into partitions based on equivalence classes. Test each partition with at least one test case.
+
+    3. Decision table testing: If the method contains complex logic, use a decision table to test all possible combinations of input conditions and expected outputs.
+
+    4. Negative testing: Test the method with invalid or unexpected input values to ensure that it handles errors gracefully.
+
+    5. Code coverage: Use a code coverage tool to ensure that all lines of code are executed during testing.
+
+    6. Mutation testing: Use a mutation testing tool to identify the test cases that can kill the mutant. This will help you ensure that your test suite is effective in detecting defects.
+
+    7. Regression testing: Test the method with the existing test cases to ensure that the changes did not introduce any new defects.
+
+    8. Test case prioritization: Prioritize the test cases based on their importance and impact on the system. Test the critical test cases first.
+
+    9. Test case maintenance: Keep the test cases up-to-date with the changes in the codebase.
+
+    10. Test case documentation: Document the test cases to make them easily understandable and maintainable.
+
+    By following these guidelines, you can create a comprehensive test suite that would kill this mutant and other similar mutants in the future. Remember, the goal is to ensure that the code is correct and reliable, and testing is an essential part of achieving that goal.

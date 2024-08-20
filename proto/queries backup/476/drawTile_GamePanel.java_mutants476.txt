@@ -1,0 +1,13 @@
+ The mutated line is causing an arithmetic operation error. The error is due to the modulus operator (%). This operator returns the remainder of the division of the first operand by the second. In this case, it seems that the programmer intended to multiply r by 121 and add 115, but due to a mistake, he used the modulus operator instead.
+
+ To generate tests that would kill this mutant, we need to find a combination of r and c values that would result in an incorrect calculation of the y-coordinate for the drawTile method.
+
+ First, let's consider the range of possible values for r and c. Since the method accepts integers as arguments, the minimum value for r and c would be 0. The maximum value would depend on the size of the grid. Let's assume the grid size is 10x10 for simplicity. The maximum value for r and c would be 9.
+
+ Now, let's find a combination of r and c values that would result in an incorrect y-coordinate calculation. Since the mutated line is causing an arithmetic operation error, we can try to find values of r and c that would result in a negative number or a number larger than the maximum y-coordinate (1159).
+
+ To find such values, we can use a brute force approach and test all possible combinations of r and c values within the given range. We can write a test case generator that would generate test cases for all possible combinations of r and c values and check if the method behaves correctly for each test case.
+
+ However, this approach might not be efficient for larger grids or more complex methods. In such cases, we can use test case generation techniques like Equivalence Partitioning, Boundary Value Analysis, Decision Table Testing, and others to generate test cases that would cover a larger range of input values and edge cases.
+
+ In summary, to generate tests that would kill this mutant and similar ones, we need to find a combination of r and c values that would result in an incorrect calculation of the y-coordinate for the drawTile method. We can use a brute force approach, test all possible combinations of r and c values, or use more efficient test case generation techniques like Equivalence Partitioning, Boundary Value Analysis, Decision Table Testing, and others.

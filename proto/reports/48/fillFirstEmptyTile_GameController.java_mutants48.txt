@@ -1,0 +1,28 @@
+ The mutated line is causing the method to fill more tiles than it should. This means that there are positions in the grid that should be empty but are being filled instead. To generate a test suite that would kill this mutant, we need to find a test case that would expose this behavior.
+
+ First, we need to understand the contract of the fillFirstEmptyTile() method. It should return true if it successfully fills the first empty tile and false otherwise. We also know that the grid should not have more than GameParams.sideLength * GameParams.sideLength tiles.
+
+ To generate a test case, we can follow these steps:
+
+ 1. Create an empty grid with the correct size.
+ 2. Call the fillFirstEmptyTile() method.
+ 3. Check that exactly one tile has been added to the grid.
+ 4. Call the fillFirstEmptyTile() method again.
+ 5. Check that no tile has been added to the grid.
+
+ Now, let's see how the mutated line affects this test case:
+
+ With the mutated line, the fillFirstEmptyTile() method might fill more than one tile, even if the grid is empty. This means that step 3 in our test case might fail, as more than one tile might have been added.
+
+ To make our test case more robust, we can add a check to ensure that only one tile has been added before checking that no tile has been added in the second call. We can also add a check to ensure that the grid is empty before calling the method for the first time.
+
+ Here are the steps to generate the test case:
+
+ 1. Create an empty grid with the correct size.
+ 2. Check that the grid is empty.
+ 3. Call the fillFirstEmptyTile() method.
+ 4. Check that exactly one tile has been added to the grid.
+ 5. Call the fillFirstEmptyTile() method again.
+ 6. Check that no tile has been added to the grid.
+
+ By following these steps, we can generate a test case that would kill the mutant and ensure that the fillFirstEmptyTile() method behaves correctly for all future mutations as well.

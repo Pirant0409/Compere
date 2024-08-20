@@ -1,0 +1,17 @@
+ The mutated line is causing an arithmetic operation error. The original line is multiplying step and nextPosIncr, while the mutated line is dividing step by nextPosIncr. This is causing an issue because the result of the division might not be an integer, and the Java compiler doesn't support division by an integer and returning an integer as a result.
+
+    To create a test suite that would kill this mutant, we need to focus on the division operation. We want to test the scenario where the divisor (nextPosIncr) is zero or a very small number, which would cause a division by zero or a very large number error.
+
+    First, let's add some test cases to our existing test suite that would cover this scenario. We can add test cases with different values for nextPosIncr, including zero and negative numbers. We should also test the edge cases where nextPosIncr is very large, as this could also cause an issue.
+
+    Here are some suggestions for test cases:
+
+    1. Test with nextPosIncr = 0
+    2. Test with nextPosIncr = -1
+    3. Test with nextPosIncr = Integer.MAX_VALUE
+    4. Test with nextPosIncr = Integer.MIN_VALUE
+    5. Test with a large but finite value for nextPosIncr
+
+    By adding these test cases, we can ensure that the mutated line is caught and the error is handled appropriately. This will help prevent the mutant from being alive in future test runs.
+
+    Remember, the goal is not just to kill this particular mutant, but to create a robust test suite that can catch similar errors in the future. So, always think about edge cases and potential issues when designing your test cases.

@@ -1,0 +1,15 @@
+ The mutated line is causing the method to behave differently than the original line. In this case, the mutated line is allowing the method to add a tile when the number of tiles added is less than or equal to -10 modulo 10. This is clearly incorrect behavior.
+
+ To generate a test suite that would kill this mutant, you need to identify the conditions under which the mutated method behaves differently than the original method. Here are some steps to help you:
+
+ 1. Understand the original method behavior: The original method is supposed to add a tile to the grid only when all the tiles are filled or when there is an empty tile. It checks if the current position in the grid contains a null tile, and if so, it sets the tile at that position with a value of 2 or 4 depending on certain conditions.
+
+ 2. Identify the difference in behavior: The mutated line is allowing the method to add a tile when the number of tiles added is less than or equal to -10 modulo 10. This means that the method is now adding tiles under conditions that it shouldn't.
+
+ 3. Create test cases to cover the new behavior: To generate test cases that would kill the mutant, you need to create test cases that would exercise the new behavior. In this case, you would create test cases where the number of tiles added is less than or equal to -10 modulo 10.
+
+ 4. Create test cases to cover the original behavior: You also need to create test cases that would exercise the original behavior. In this case, you would create test cases where all the tiles are filled or where there is an empty tile.
+
+ 5. Verify the test cases: Run the test suite and verify that the mutated method fails under the new conditions and passes under the original conditions. If the test suite doesn't kill the mutant, you may need to refine your test cases or add more test cases.
+
+ In general, to generate a test suite that would kill a mutant, you need to understand the original behavior, identify the difference in behavior, create test cases to cover the new behavior, create test cases to cover the original behavior, and verify the test cases. This approach should help you generate test suites that would kill other mutants as well.

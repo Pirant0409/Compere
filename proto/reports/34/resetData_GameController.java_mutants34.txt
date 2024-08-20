@@ -1,0 +1,21 @@
+ First, we need to understand what the method does. The `resetData()` method resets the data of the game, including the score, highest score, game state, and tile added counter.
+
+    Now, let's focus on the mutated line. The mutated line has a value of 1, while the original line is 0. This suggests that the mutant version of the method might be incrementing a variable or an array index that it shouldn't.
+
+    To generate a test suite that would kill this mutant, follow these steps:
+
+    1. Identify the variables and data structures that are modified within the method. In this case, we have `score`, `highestScore`, `gamestate`, and `tileAdded`.
+
+    2. Create test cases that cover all possible scenarios for each variable. For example, test the method with valid initial values, test it with zero values, test it with negative values, and test it with null values.
+
+    3. Create test cases that cover edge cases. For instance, test the method when the highest score is the maximum value that can be represented by the data type, or when the game state is already in the `GameState.running` state.
+
+    4. Create test cases that cover the interaction between variables. For example, test the method when the highest score is updated, or when the game state is changed.
+
+    5. Create test cases that cover the interaction between the method and other methods in the class. For instance, test the method after calling other methods that might affect the data being reset.
+
+    6. Create test cases that cover the interaction between the method and external inputs. For example, test the method when the game receives user input or when it interacts with other components in the system.
+
+    7. Run the test suite and analyze the results. If the mutant is still alive, refine your test cases and repeat the process until the mutant is killed.
+
+    By following these steps, you'll be able to generate a comprehensive test suite that covers a wide range of scenarios and interactions, increasing the chances of finding and killing mutants like the one you've been given. Remember, the key is to think systematically and methodically, and to cover all possible scenarios and interactions.

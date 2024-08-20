@@ -1,0 +1,14 @@
+ First, we need to understand the context of the method and the role of the mutated line. The method 'afterMove()' is called after a move is made in the game. It checks if the highest score in the game has reached or exceeded the target score. If it has, the game state is updated accordingly. The mutated line is a call to the method 'movesAvailable()'.
+
+    Now, let's consider what could go wrong if this line is not tested properly. The method 'movesAvailable()' is presumably checking if there are any legal moves left in the game. If it returns 'false' when there should be moves available, the game could end prematurely, or even worse, allow an illegal move.
+
+    To generate effective test cases, we need to think about the different ways this method can fail and design test cases to cover those scenarios. Here are some suggestions:
+
+    1. Test with a valid board state and ensure that legal moves are available and detected correctly.
+    2. Test with an empty board or a board with no legal moves. Ensure that the game state is updated correctly.
+    3. Test with an invalid board state or an illegal move. Ensure that the game state is not updated and an error message is displayed.
+    4. Test with different game configurations and ensure that the game state is updated correctly based on the new configuration.
+
+    These test cases should cover the majority of failure scenarios for this method and its dependencies. However, it's important to remember that testing is an ongoing process and new mutants may appear as the codebase evolves. Therefore, it's crucial to continuously review and update the test suite to ensure that all mutants are killed.
+
+    I hope this explanation helps you understand the importance of thorough testing and how to approach generating effective test suites. If you have any questions or need further clarification, please don't hesitate to ask.

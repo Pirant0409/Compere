@@ -1,0 +1,31 @@
+ The mutated line is causing the string "You win !" to be drawn outside the grid area. This is likely to cause a NullPointerException or an ArrayIndexOutOfBoundsException when the Graphics2D object tries to draw beyond the bounds of the grid.
+
+ To generate a test suite that would kill this mutant, follow these steps:
+
+ 1. Understand the normal behavior of the method:
+    - The method `drawGridNotRunning` is responsible for drawing the grid and various game-related messages on the Graphics2D object.
+    - It checks the game state and draws the appropriate message based on the state.
+    - When the game is won, it draws "You win !" at position (390, 350).
+    - When the game is over, it draws "You loose !" at position (400, 350).
+
+ 2. Identify the impact of the mutation:
+    - The mutated line causes the position of the "You win !" message to be drawn at (-390, 350), which is outside the grid area.
+    - This will likely cause an exception when the method tries to draw the string.
+
+ 3. Create test cases that cover the normal behavior and the mutated behavior:
+    - Test case 1: Test the method with a valid game state (won or over) and ensure the correct messages are drawn within the grid area.
+    - Test case 2: Test the method with a mutated game state (won or over) and ensure the correct messages are not drawn outside the grid area and an exception is thrown.
+
+ 4. Write test cases using a testing framework:
+    - Use a testing framework like JUnit to write and run the test cases.
+    - Write test methods for each test case and use assertions to check the expected behavior.
+
+ 5. Run the test suite:
+    - Run the test suite to check if both test cases pass.
+    - If any test case fails, identify the issue and modify the test case or the code accordingly.
+
+ 6. Repeat the process for other mutants:
+    - Follow the same steps to generate test suites for other mutants.
+    - Ensure each test suite covers the normal behavior and the mutated behavior.
+
+ 7. Continuously improve the test

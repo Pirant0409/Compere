@@ -1,0 +1,29 @@
+ The mutated line is affecting the calculation of the y-coordinate for drawing the string. The mutant is using the modulo operator (%), which may result in unexpected values.
+
+    To generate a test suite that would kill this mutant, you need to focus on the following aspects:
+
+    1. Understand the original behavior: The original code calculates the y-coordinate by adding a constant value to the result of the multiplication of r and 121, and then adding the asc and dec values to adjust for the string height.
+
+    2. Identify the mutation point: The mutated line introduces the modulo operator, which may change the behavior of the y-coordinate calculation.
+
+    3. Create test cases that cover different edge cases:
+
+        a. Test with valid input: Test the method with different values of r and c to ensure that the correct y-coordinate is calculated for each tile.
+
+        b. Test with boundary values: Test the method with the minimum and maximum values of r and c to ensure that the method behaves correctly at the edges.
+
+        c. Test with negative input: Test the method with negative values of r and c to ensure that the method handles them correctly.
+
+        d. Test with zero input: Test the method with r and/or c equal to zero to ensure that the method behaves correctly when dealing with empty cells.
+
+    4. Create test cases that cover unexpected behavior:
+
+        a. Test with large input: Test the method with very large values of r and c to ensure that the method doesn't overflow or behave unexpectedly.
+
+        b. Test with input that results in the same y-coordinate: Test the method with input that results in the same y-coordinate to ensure that the method doesn't draw overlapping strings.
+
+        c. Test with input that results in negative y-coordinates: Test the method with input that results in negative y-coordinates to ensure that the method handles them correctly.
+
+        d. Test with input that results in y-coordinates outside the drawing area: Test the method with input that results in y-coordinates outside the drawing area to ensure that the method doesn't draw strings outside the area.
+
+    5. Verify the test results: Run the test suite and verify that all test cases pass. If any test case fails,

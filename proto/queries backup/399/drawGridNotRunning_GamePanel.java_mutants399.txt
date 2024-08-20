@@ -1,0 +1,11 @@
+ First, we need to understand what the mutated line <NO-OP> means. It is a no-operation statement, which does not execute any code. In this context, it is added to the line that draws the string "Click to start a new game".
+
+    To create a test suite that would kill this mutant, we need to find a test case that would cause the program to behave differently when the mutated line is present compared to when it is not. In other words, we need to find a test case that would cause the "Click to start a new game" string to be drawn differently or not drawn at all when the mutated line is present.
+
+    One possible approach would be to test the event handling when the user clicks the "Click to start a new game" button. We could create a test case that simulates a mouse click event on the button and verifies that the game starts correctly. If the mutated line causes the game to fail to start, then we have found a test case that would kill the mutant.
+
+    Another approach would be to test the rendering of the game screen when the mutated line is present. We could create a test case that verifies that the "Click to start a new game" string is drawn correctly and in the expected location on the screen. If the mutated line causes the string to be drawn incorrectly or not at all, then we have found a test case that would kill the mutant.
+
+    In general, to generate a test suite that would kill a mutant, we need to identify the behavior of the program that is affected by the mutation and create test cases that verify that behavior. We need to ensure that the test cases are comprehensive and cover all possible edge cases to maximize our chances of finding a test case that would kill the mutant.
+
+    It is important to note that this is just one example, and the specific approach would depend on the context of the program and the mutation. The key is to think systematically and methodically about the behavior of the program and the possible ways in which the mutation could affect that behavior.

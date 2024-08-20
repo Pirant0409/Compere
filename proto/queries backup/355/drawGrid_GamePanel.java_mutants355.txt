@@ -1,0 +1,17 @@
+ First, we need to understand what this method does. It's called "drawGrid" and it's supposed to draw a grid on the given Graphics2D object. The method checks the game state and depending on that, it calls either "drawGridRunning" or "drawGridNotRunning".
+
+    Now, let's focus on the mutated line. It's a no-op statement, which means it doesn't do anything. It's just empty code. However, it's located right after the line that draws the grid. This could potentially cause issues, especially if the drawing of the grid relies on some specific state or condition.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover various scenarios and ensure that the mutated line doesn't affect the expected behavior of the method. Here are some suggestions:
+
+    1. Test with the game state running: Create a test case where the game state is running and the method is called to draw the grid. Check that the grid is drawn correctly and that the mutated line doesn't cause any unexpected side effects.
+
+    2. Test with the game state not running: Create a test case where the game state is not running and the method is called to draw the grid. Check that no grid is drawn and that the mutated line doesn't cause any issues.
+
+    3. Test with different grid sizes: Create test cases with different grid sizes and check that the grid is drawn correctly in all cases and that the mutated line doesn't affect the drawing.
+
+    4. Test with different colors: Create test cases with different colors for the grid and check that the correct color is used and that the mutated line doesn't cause any issues.
+
+    5. Test with different graphics contexts: Create test cases with different graphics contexts and check that the grid is drawn correctly and that the mutated line doesn't cause any issues.
+
+    By creating test cases that cover various scenarios, we can ensure that the mutated line doesn't affect the expected behavior of the method and that it can be safely removed. This approach can be applied to other mutants as well. The key is to understand the method's behavior and create test cases that cover various scenarios to ensure that the mutated code doesn't introduce any unexpected side effects.

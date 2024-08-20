@@ -1,0 +1,11 @@
+ The mutated line is causing the x-coordinate of the rectangle to be calculated incorrectly. The issue is with the modulo operator (%). This operator returns the remainder of the division of the first operand by the second operand. In this case, it's being used in an incorrect way.
+
+    To generate a test case that would kill this mutant, we need to find a combination of row and col values that would result in an incorrect x-coordinate. This would cause the rectangle to be drawn in the wrong position or even outside the drawing area, which would be visible and easily detectable.
+
+    To find such values, we can start by considering the edge cases. For example, we can try values that would result in a large remainder when col is a multiple of a number close to sideLength. This is because a large remainder would cause a significant shift in the x-coordinate.
+
+    Another approach would be to try values that would result in a negative x-coordinate. This would cause the rectangle to be drawn outside the drawing area, which is clearly incorrect.
+
+    To systematically generate test cases, we can write a test method that calls the drawGridRunning method with different combinations of row and col values. We can then check the position of each rectangle drawn and verify that it's within the expected drawing area. If we find a combination of values that results in an incorrect position, we have found a test case that would kill the mutant.
+
+    It's important to note that this is just one example of how to generate a test case for this particular mutant. The key is to understand the behavior of the mutated line and how it deviates from the expected behavior, and then find test cases that would expose this deviation. The same approach can be applied to other mutants as well.

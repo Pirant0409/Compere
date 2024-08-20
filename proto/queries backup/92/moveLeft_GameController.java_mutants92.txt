@@ -1,0 +1,22 @@
+ First, we need to understand the method and its purpose. This method, named moveLeft, takes a boolean argument checkingAvailableMoves. It calls another method move with some arguments.
+
+    The original method call is move(3, 15, 4, -1, checkingAvailableMoves). The mutated line is the second argument, which is 15.
+
+    To generate tests that could potentially kill this mutant, we need to consider the possible impact of changing the value of this argument.
+
+    First, let's try to understand the role of this argument in the method call. The method move likely has some parameters that represent the x and y coordinates of a position in a grid or a board. The first argument, 3, might represent the row number, and the second argument, 15, might represent the column number.
+
+    Now, let's think about the potential impact of changing the value of this argument. If we change the column number from 15 to a different value, it could potentially change the behavior of the method. For example, it might move the piece to a different position, or it might cause an out-of-bounds error if the new column number is not within the valid range.
+
+    To generate tests that could potentially kill this mutant, we need to create test cases that cover a wide range of valid and invalid column numbers. We should also test the edge cases, such as the minimum and maximum valid column numbers.
+
+    Here are some suggestions for test cases:
+
+    1. Test with a valid column number close to the original value, for example, 14 or 16.
+    2. Test with a valid column number at the minimum or maximum valid range, for example, 0 or the number of columns in the grid or board.
+    3. Test with an invalid column number, for example, a negative number or a number greater than the number of columns.
+    4. Test with a column number that is within the valid range but close to the edge, for example, the first or last column number.
+
+    By testing with a variety of column numbers, we can increase the chances of finding a test case that will kill the mutant. Remember, the goal is to find a test case that causes the method to behave differently when the mutated line is executed compared to the original line.
+
+    In summary, to generate tests

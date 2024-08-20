@@ -1,0 +1,15 @@
+ First, we need to understand what this method does. It's responsible for drawing a tile on the grid, based on its value. The value is used to determine the color of the tile and the position where to draw it.
+
+    Now, let's focus on the mutated line. The mutated line is setting the value to -1. This means that the method will be trying to draw a tile with a value less than zero. Since the value of a tile can't be negative, this mutation is likely to cause an error.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover all possible scenarios where the method is supposed to receive a valid value, and one test case that covers the scenario where an invalid value (a negative number) is passed.
+
+    Here's a general approach to generate test cases:
+
+    1. Create a test case for each valid value of the tile. This can be done by creating a test method for each possible value and passing it as an argument to the drawTile method.
+    2. Create a test case for the edge cases. For example, test the method with the minimum and maximum values that the tile value can have.
+    3. Create a test case to check the error handling. In this case, we want to test what happens when an invalid value (a negative number) is passed to the method.
+
+    By covering all these scenarios, we can ensure that the mutant is killed and the method behaves correctly for all valid inputs. Remember, the goal is to test the method's behavior under various conditions, not just to pass specific test cases.
+
+    It's also important to note that this approach can be applied to other mutants as well. The key is to understand the behavior of the method and the mutation, and then create test cases that cover all possible scenarios.

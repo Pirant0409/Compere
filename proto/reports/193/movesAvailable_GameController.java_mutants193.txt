@@ -1,0 +1,13 @@
+ The mutated line changes the logical OR operator to a logical NOT operator in the moveUp() call. This means that the movesAvailable() method will now return true only if moveUp() returns false and all other moves return true.
+
+ To create a test suite that can kill this mutant, we need to focus on test cases that can make moveUp() return false and all other moves return true. Here are some steps you can follow:
+
+ 1. Identify the preconditions and postconditions of the movesAvailable() method and the individual move methods (moveUp(), moveDown(), moveLeft(), moveRight()). Preconditions are the conditions that must be true before the method can be called, and postconditions are the conditions that must be true after the method has been executed.
+
+ 2. Create test cases that set up the preconditions for movesAvailable() to call the individual move methods with the desired input. For example, you can create test cases that set up the board state or the player position to make moveUp() return false.
+
+ 3. Verify that all other moves return true in the test cases. You can use assertions or other verification techniques to check the return values of moveDown(), moveLeft(), and moveRight().
+
+ 4. Run the test suite and verify that the mutant is killed. If the mutant is still alive, you may need to refine your test cases or add more test cases to cover different scenarios.
+
+ 5. Generalize the approach to other mutants. The same general approach can be used to create test suites that kill other mutants. The key is to understand the mutation and identify the test cases that can expose the defect.

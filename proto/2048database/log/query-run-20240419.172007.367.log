@@ -1,0 +1,12 @@
+[2024-04-19 17:20:07] This is codeql query run --threads=8 --database=./2048database queries/68/getBody.ql
+[2024-04-19 17:20:07] Log file was started late.
+[2024-04-19 17:20:07] Calling plumbing command: codeql resolve ram --dataset=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\2048database\db-java --format=json
+[2024-04-19 17:20:07] [PROGRESS] resolve ram> Stringpool size measured as 2523514
+[2024-04-19 17:20:07] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx1800M",
+                        "--off-heap-ram=1632"
+                      ]
+[2024-04-19 17:20:07] Spawning plumbing command: execute queries -J-Xmx1800M --off-heap-ram=1632 --verbosity=progress --logdir=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\2048database\log --evaluator-log-level=5 --threads=8 --warnings=show --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml -- C:\Users\32491\Documents\Uni\MA2\Memoire\proto\2048database\db-java path:C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\68\getBody.ql
+[2024-04-19 17:21:07] Plumbing command codeql execute queries terminated with status 0.
+[2024-04-19 17:21:07] Exiting with code 0

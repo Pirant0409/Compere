@@ -1,0 +1,25 @@
+ First, we need to understand what this method does. It checks if there is a valid move to the right based on some conditions. The method takes a boolean argument 'checkingAvailableMoves' which is used internally.
+
+    Now, let's focus on the mutated line. The number '-4' is added to the argument 'checkingAvailableMoves'. This change could potentially affect the logic of the method.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover all possible scenarios where the 'checkingAvailableMoves' argument can be true or false and how it affects the method's return value.
+
+    Here are some guidelines to create test cases:
+
+    1. Test with 'checkingAvailableMoves' set to true:
+        a. Test when there is a valid move to the right.
+        b. Test when there is no valid move to the right.
+
+    2. Test with 'checkingAvailableMoves' set to false:
+        a. Test when there is a valid move to the right.
+        b. Test when there is no valid move to the right.
+
+    By testing all these scenarios, we can ensure that the mutant is killed. The test cases should be designed to cover all possible edge cases and negative scenarios as well.
+
+    Remember, the goal is to create a comprehensive test suite that covers all possible scenarios and kills not just this mutant, but any other mutants that might arise in the future.
+
+    Also, make sure to test the method's behavior with different input values for the other parameters as well, not just 'checkingAvailableMoves'. This will help ensure the method is working correctly under all conditions.
+
+    Lastly, don't forget to test the method's behavior when the input values are at their boundaries or outside the acceptable range. This will help you catch any potential issues related to input validation or boundary conditions.
+
+    Happy testing!

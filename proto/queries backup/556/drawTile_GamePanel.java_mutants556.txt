@@ -1,0 +1,14 @@
+ The mutated line is affecting the calculation of the y-coordinate for drawing the string. The original line is dividing the difference between the total height of the font and the height of the string by 2 to center the string vertically. The mutated line is adding 2 to that difference instead.
+
+    This mutation could potentially cause the string to be drawn outside the bounds of the tile, leading to unexpected behavior or visual artifacts. To create a test suite that would kill this mutant, you would want to test the edge cases of the grid where the string width is very close to the width of the tile or the height of the font is very close to the height of the tile.
+
+    Here are some suggestions for test cases:
+
+    1. Create a grid with a tile size that is very close to the width or height of the string, and test that the string is still drawn correctly and centered within the tile.
+    2. Create a grid with a tile size that is significantly larger than the width or height of the string, and test that the string is still drawn correctly and centered within the tile.
+    3. Create a grid with a tile size that is significantly smaller than the width or height of the string, and test that the string is still drawn correctly and doesn't overflow the tile.
+    4. Create a grid with a tile size that is exactly equal to the width or height of the string, and test that the string is still drawn correctly and centered within the tile.
+    5. Create a grid with a tile size that is a multiple of the width or height of the string, and test that the string is still drawn correctly and centered within the tile.
+    6. Create a grid with a tile size that is a fraction of the width or height of the string, and test that the string is still drawn correctly and centered within the tile.
+
+    By testing these edge cases, you can ensure that the mutation does not affect the correctness or behavior of the drawTile method, and that the method continues to draw strings correctly within the bounds of the tiles.

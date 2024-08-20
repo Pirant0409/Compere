@@ -1,0 +1,19 @@
+ First, we need to understand the behavior of the original code and the mutated code.
+
+    Original code: The method afterMove() is called after each move in the game. It checks if the current highest score is less than the target score. If it is, then it clears the merged tiles, fills the first empty tile, and checks if there are no more moves available. If there are no more moves available, then the game state is set to "over". If the highest score is equal to the target score, then the game state is set to "won".
+
+    Mutated code: The mutated code has the same logic as the original code, but with a small change. Instead of checking if the highest score is equal to the target score, it checks if the highest score is less than or equal to the target score. This small change can lead to unexpected behavior in the game.
+
+    To generate a test suite that would kill this mutant, we need to focus on the conditions that would cause the mutated code to behave differently than the original code. In this case, the difference lies in the condition for setting the game state to "won" or "over".
+
+    To generate effective tests, we need to consider the following:
+
+    1. Test boundary conditions: We should test the behavior of the code when the highest score is exactly equal to the target score, as well as when it is less than and greater than the target score.
+    2. Test input validity: We should test the behavior of the code with valid and invalid inputs.
+    3. Test edge cases: We should test the behavior of the code with edge cases, such as when the highest score is very close to the target score or when it is far away.
+    4. Test interaction with other parts of the system: We should test how the code interacts with other parts of the system, such as the game board or the user interface.
+
+    To generate tests that would kill the mutant, we could write tests that cover the following scenarios:
+
+    1. Test when the highest score is exactly equal to the target score: This test should verify that the game state is set to "won" when the highest score is equal to the target score, regardless of whether the mutated or original code is being executed.
+    2. Test when the highest score is less than the target score: This test should verify that the game state is

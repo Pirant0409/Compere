@@ -1,0 +1,12 @@
+ The mutated line changes the sign of the constant value 121 to -121. This means that the x and y coordinates for drawing the string are now calculated with a negative offset.
+
+    To generate a test suite that would kill this mutant, you should focus on testing the correctness of the x and y coordinates when drawing the string. Here's a general approach:
+
+    1. Create a test case that covers the boundary conditions of the grid. This means testing the first and last row and column, as well as the middle ones.
+    2. Create a test case that covers the case where the value of a tile is zero. This will ensure that the x and y coordinates are calculated correctly when the logarithm result is zero.
+    3. Create a test case that covers the case where the value of a tile is close to the maximum value. This will ensure that the logarithm result is large enough to test the handling of large numbers.
+    4. Create a test case that covers the case where the value of a tile is negative. This will ensure that the test suite catches the error caused by the mutated line.
+
+    By testing these cases, you will be able to cover most of the edge cases and ensure that the mutant is killed. Remember, the goal is to test the behavior of the method when given different inputs, and to ensure that the method behaves correctly even with unexpected inputs.
+
+    Additionally, you can use a testing framework like JUnit to automate the testing process and make it easier to run and analyze the results. This will help you to quickly identify any issues and to ensure that the method is working correctly.

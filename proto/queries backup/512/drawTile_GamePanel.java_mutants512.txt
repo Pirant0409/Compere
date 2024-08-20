@@ -1,0 +1,46 @@
+ The mutated line is causing an issue by subtracting the column index from the x-coordinate instead of adding it. This results in the drawing of the tile being shifted to the left for each column.
+
+ To generate a test suite that would kill this mutant, follow these steps:
+
+ 1. Understand the method's functionality: The method `drawTile` is responsible for drawing a tile on the grid based on its value. It sets the color of the tile based on the value, and then draws the tile with its value displayed.
+
+ 2. Identify the input: The method takes two arguments - the Graphics2D object and the row and column indices.
+
+ 3. Create test cases that cover all possible edge cases and normal cases:
+
+   a. Edge cases:
+      i. Minimum and maximum values for the row and column indices.
+      ii. Invalid values for the Graphics2D object.
+      iii. Negative values for the row and column indices.
+
+   b. Normal cases:
+      i. Valid values for the row and column indices.
+      ii. Various values for the Graphics2D object.
+
+ 4. Create test cases to check the drawing position:
+
+   a. Test cases to check if the tile is drawn at the correct position based on the row and column indices.
+
+ 5. Create test cases to check the color of the tile:
+
+   a. Test cases to check if the tile is drawn with the correct color based on its value.
+
+ 6. Create test cases to check the value displayed:
+
+   a. Test cases to check if the tile's value is displayed correctly.
+
+ 7. Create test cases to check the behavior when the input is invalid:
+
+   a. Test cases to check if the method behaves correctly when the Graphics2D object is invalid.
+
+ 8. Create test cases to check the behavior when the input is out of bounds:
+
+   a. Test cases to check if the method behaves correctly when the row or column index is out of bounds.
+
+ 9. Run the test suite and analyze the results:
+
+   a. If the mutant is killed, the test suite is effective and covers all possible scenarios.
+
+ 10. Refactor and improve the test suite as needed:
+
+   a. Make

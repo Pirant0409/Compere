@@ -1,0 +1,13 @@
+ First, we need to understand the context of the method and the role of the mutated line. The method 'afterMove()' is called after a move is made in the game. It checks if the highest score in the game has reached or exceeded the target score. If it has, the game state is updated accordingly. The mutated line 'movesAvailable()' is a method call that checks if there are any moves available in the game.
+
+    Now, to generate tests that would kill this mutant, we need to think about what could go wrong if this line is executed when it shouldn't be. In other words, we need to find a scenario where the game state should not be updated based on the highest score, but the mutated line is still called and causes the game state to be updated incorrectly.
+
+    To do this, we need to focus on the conditions under which the method 'afterMove()' is called and the conditions under which the mutated line 'movesAvailable()' should return false. Let's consider the following scenarios:
+
+    1. The highest score has not yet reached the target score, but the mutated line 'movesAvailable()' returns false. In this case, the game state should not be updated, and the method should exit without executing the lines following the if statement.
+
+    2. The highest score has reached or exceeded the target score, but the mutated line 'movesAvailable()' still returns false. In this case, the game state should be updated, but the method is not executing the lines following the second if statement, which is a problem.
+
+    To generate tests that would kill this mutant, we need to create test cases that cover these scenarios. We can do this by testing the method 'afterMove()' with different inputs and checking the game state after each call. For example, we can test the method with a target score that is higher than the current highest score and check that the game state is not updated. We can also test the method with a target score that is equal to the current highest score and check that the game state is updated correctly.
+
+    To test the first scenario, we can create a test case where the highest score is less than the target score, but the mutated line 'movesAvailable()' returns false. We can do this by setting up the game state with a target score that is higher than the current highest

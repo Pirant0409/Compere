@@ -1,0 +1,19 @@
+ First, we need to understand what this method does. The `startGame` method initializes the game if it's not already running. It checks the current game state and if it's not running, it resets the data, creates a new grid, and fills the first `GameParams.nbStartTileFilled` empty tiles with pieces.
+
+    Now, let's focus on the mutated line. The mutated line is `-1`, which is not a valid Java code. It seems like there's a mistake in the provided mutated line. However, since we don't have the actual mutated code, we can only assume that the mutated line is supposed to be an integer value.
+
+    To generate a test suite that would kill this mutant, we need to find a test case that would cause an error when the mutated line is executed. Since we don't have the actual mutated code, we can't directly write a test case for it. Instead, we can write test cases for the original method and make sure they fail when the mutated line is executed.
+
+    Here are some steps to generate test cases for the `startGame` method:
+
+    1. Identify the preconditions and postconditions of the method. Preconditions are the conditions that must be true before the method is called, and postconditions are the conditions that must be true after the method is executed.
+
+    2. Write test cases to check the preconditions. For example, you can write a test case to check that the `gamestate` is not running before calling the `startGame` method.
+
+    3. Write test cases to check the postconditions. For example, you can write a test case to check that the `grid` is not null after the `startGame` method is executed.
+
+    4. Write test cases to check the behavior of the method. For example, you can write a test case to check that the first `GameParams.nbStartTileFilled` tiles are filled with pieces after the `startGame` method is executed.
+
+    5. Run the test suite and observe the results. If the mutated line causes an error, the test case that caused the error will fail.
+
+    In general, to generate a test suite for a method, you need to understand the method's behavior, identify its preconditions and postconditions, and

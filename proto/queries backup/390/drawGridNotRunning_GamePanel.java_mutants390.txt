@@ -1,0 +1,11 @@
+ First, we need to understand the behavior of the mutated line and the original line. The mutated line is located at -400, which is before the if condition that checks the game state. This means that the mutated line is being executed before the game state is checked.
+
+    The original line, on the other hand, is located at 400, which is after the if condition. This means that the original line is only executed when the game state is either "won" or "over".
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would cause the game state to be neither "won" nor "over" when the mutated line is executed. This can be achieved by testing the method with invalid inputs or by testing the method during the gameplay when the game state is neither "won" nor "over".
+
+    For example, we can test the method with a null controller or with an invalid game state. We can also test the method during the gameplay by checking the game state before and after the method call and ensuring that it is not "won" or "over" during the test.
+
+    In general, to generate a test suite for any mutant, we need to understand the behavior of the mutated line and the original line, and then create test cases that would cause the program to behave differently when the mutated line is executed compared to the original line. This can be achieved by testing the method with invalid inputs, testing the method during the program execution, or by testing the method with edge cases.
+
+    It's important to note that generating a comprehensive test suite requires a good understanding of the program's logic and behavior, as well as a thorough analysis of the potential impact of the mutated line on the program's output. Therefore, it's essential to have a solid foundation in programming concepts, data structures, and algorithms to effectively generate test cases that would kill mutants.

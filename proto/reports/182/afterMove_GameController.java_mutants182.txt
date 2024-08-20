@@ -1,0 +1,11 @@
+ First, we need to understand the behavior of the original code and the mutated code.
+
+    Original code: The method afterMove() is called after each move. It checks if the highestScore is less than the GameParams.scoreTarget. If it is, then it clears the merged tiles, fills the first empty tile, and checks if there are no more moves available. If there are no more moves available, then the game state is set to GameState.over. If the highestScore equals the GameParams.scoreTarget, then the game state is set to GameState.won.
+
+    Mutated code: The mutated code is similar to the original code, but with a small change. Instead of checking if highestScore is less than GameParams.scoreTarget, it checks if highestScore is less than or equal to GameParams.scoreTarget. This small change can lead to different behavior in certain scenarios.
+
+    To generate a test suite that would kill this mutant, we need to find a test case that would expose the difference in behavior between the original and mutated code. Here are some steps to guide you through the process:
+
+    1. Identify the input conditions that would cause the original code to behave differently from the mutated code. In this case, we can see that the original code checks for a strict inequality (<), while the mutated code checks for a weak inequality (<=). This means that the mutated code would consider a score equal to the target as a valid condition for setting the game state to won, while the original code would not.
+    2. Generate test cases that cover the input conditions identified in step 1. For example, you could create a test case where the highestScore is initially set to the GameParams.scoreTarget, and then you make a move that increases the highestScore by 1. In the original code, the game state would not be set to won, since the highestScore is still greater than the target. However, in the mutated code, the game state would be set to won, since the highestScore is now less than or equal to the target.
+    3. Verify that the test case identified in step 2 indeed kills the mutant. You can do this by running the test case against both the original and mutated code, and observing the different behavior. If the test case causes the mutated code to behave incorrectly, while the original code behaves correctly,

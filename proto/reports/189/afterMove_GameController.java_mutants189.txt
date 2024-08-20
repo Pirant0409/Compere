@@ -1,0 +1,15 @@
+ First, we need to understand the behavior of the original code and the mutated code.
+
+    Original code: The method afterMove() is called after each move is made in the game. It checks if the highest score in the game board has reached or exceeded the target score defined in GameParams. If it has, then the game state is set to "won". If not, then the method clears merged tiles, fills the first empty tile, and checks if there are any moves available. If there are no moves available, then the game state is set to "over".
+
+    Mutated code: The mutated code has a small change in the if condition for checking the game state when the highest score equals the target score. Instead of using "==", it uses ">=". This means that the method will now set the game state to "won" only when the highest score is not just equal to the target score, but also when it is greater than or equal to the target score.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover the edge cases where the highest score is exactly equal to the target score and where it is greater than the target score. Here are some steps to help you generate such test cases:
+
+    1. Identify the input parameters and their expected outputs for the afterMove() method. In this case, the method does not take any explicit input parameters, but it implicitly uses the game board state and the GameParams object.
+
+    2. Create test cases that cover the edge cases where the highest score is exactly equal to the target score. For example, you can create a test case where the game board is in a state where the highest score is equal to the target score, and then call the afterMove() method to check if the game state is set to "won".
+
+    3. Create test cases that cover the edge cases where the highest score is greater than the target score. For example, you can create a test case where the game board is in a state where the highest score is greater than the target score, and then call the afterMove() method to check if the game state is not set to "won" and instead remains in its previous state or is set to "over" if there are no moves available.
+
+    4. Create test cases that cover the normal cases where the highest score is less than the target score. For example,

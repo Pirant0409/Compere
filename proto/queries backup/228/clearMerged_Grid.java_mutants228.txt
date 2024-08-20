@@ -1,0 +1,25 @@
+ First, we need to understand the behavior of the original method and the mutated method.
+
+    The original method, clearMerged(), iterates through all the tiles in the 2D array, and for each non-null tile, sets its merged property to false.
+
+    The mutated method, which has the mutated line marked as 'true', behaves differently. It still iterates through all the tiles, but for each non-null tile, it sets its merged property to 'true' instead of 'false'.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would expose the incorrect behavior of the mutated method.
+
+    Here's a general approach to generating test cases for such a situation:
+
+    1. Identify the expected behavior of the original method. In this case, the expected behavior is that all merged properties are set to false.
+
+    2. Create test cases that cover various scenarios, including edge cases and boundary conditions. For example, you could test an empty tiles array, a tiles array with one row, a tiles array with one column, a tiles array with multiple rows and columns, and so on.
+
+    3. For each test case, verify that the original method behaves as expected. In other words, for each test case, call the original clearMerged() method and check that all merged properties are indeed set to false.
+
+    4. Now, for each test case, call the mutated clearMerged() method instead and verify that it behaves incorrectly. In other words, for each test case, call the mutated clearMerged() method and check that at least one merged property is set to true instead of false.
+
+    5. If you find a test case where the mutated method behaves incorrectly, then you have found a test case that can kill the mutant.
+
+    6. Repeat steps 3-5 for as many test cases as you can create. The more test cases you have, the more confident you can be that you have found all the bugs in the mutated method.
+
+    7. Once you have identified a test case that kills the mutant, you can use that test case as a starting point to create more test cases that specifically target the incorrect behavior of the mutated method.
+
+    8. Continue this process until you are confident that all the mutants

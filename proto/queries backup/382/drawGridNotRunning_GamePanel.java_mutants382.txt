@@ -1,0 +1,12 @@
+ First, we need to understand what the original code does. This method, `drawGridNotRunning`, is responsible for drawing the grid and some text on the screen. The `g` object is a Graphics2D context that we use to draw on.
+
+    The original code starts by setting the color to the start color and filling a round rectangle with that color. Then, it sets the color to the grid color (darker), sets the font to a bold SansSerif font of size 128, and draws the string "2048" at the specified coordinates. After that, it sets the font back to a bold SansSerif font of size 20 and checks the game state. Depending on the state, it draws either "You win!" or "You loose!" at the specified coordinates. Finally, it sets the color back to the grid color and draws two strings at the specified coordinates.
+
+    Now, let's see what the mutated code does. The mutated code subtracts 20 from the original line number, so it actually tries to execute the line that is 20 lines before the original line. However, since there is no line 20 lines before the original line, the mutant will not be able to execute that line and will throw a `ArrayIndexOutOfBoundsException` at runtime.
+
+    To generate a test suite that would kill this mutant, we need to find a test case that exercises the code around the mutated line and causes the mutant to throw the expected exception. Here are some steps to help you generate such a test case:
+
+    1. Identify the inputs and outputs of the method. In this case, the method takes a Graphics2D object as an argument and does not return anything.
+    2. Create a test case that initializes the necessary objects and calls the method with valid inputs. For example, you can create a test class with a test method that sets up a controller and a graphics context, and then calls the `drawGridNotRunning` method with that context as an argument.
+    3. Verify that the method executes correctly with the valid input. You can do this by checking that the expected output is drawn on the screen.
+    4. Create a test case that initializes the necessary objects with invalid inputs or in an invalid state, and then calls the method with that input. For example, you can create

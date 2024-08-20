@@ -1,0 +1,19 @@
+ The mutated line changes the initial value of the 'pos' variable from 0 to -10. This means that the loop condition 'pos < GameParams.sideLength * GameParams.sideLength' will be false from the start, and the method will never enter the loop.
+
+    To generate a test suite that can kill this mutant, we need to create test cases that cover all possible edge cases and boundary conditions of the method. Here are some suggestions:
+
+    1. Test when the grid is empty: Create a test case where the grid is initialized with no tiles, and call the fillFirstEmptyTile() method. The expected result is that the method should return true and fill the first empty tile with a value.
+
+    2. Test when the grid has only one empty tile: Create a test case where the grid has only one empty tile, and call the fillFirstEmptyTile() method. The expected result is that the method should return true and fill the empty tile with a value.
+
+    3. Test when the grid has multiple empty tiles: Create a test case where the grid has multiple empty tiles, and call the fillFirstEmptyTile() method. The expected result is that the method should fill the first empty tile and return true.
+
+    4. Test when the grid is full: Create a test case where the grid is full, and call the fillFirstEmptyTile() method. The expected result is that the method should return false, as there are no empty tiles left to fill.
+
+    5. Test when the method is called multiple times: Create a test case where the fillFirstEmptyTile() method is called multiple times, and check that each call returns true until the grid is full.
+
+    6. Test when the method is called with an invalid grid size: Create a test case where the grid size is set to a negative number or zero, and call the fillFirstEmptyTile() method. The expected result is that the method should throw an exception or return false.
+
+    7. Test when the method is called with a null grid: Create a test case where the grid is null, and call the fillFirstEmptyTile() method. The expected result is that the method should throw an exception.
+
+    8. Test when the method is called with a grid that has tiles of different sizes: Create a test case where the grid has tiles of different sizes, and call the fillFirstEmptyTile() method. The

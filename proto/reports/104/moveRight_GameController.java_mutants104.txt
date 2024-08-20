@@ -1,0 +1,13 @@
+ First, we need to understand what this method does. It checks if there is a valid move to the right based on certain conditions. The method takes a boolean argument 'checkingAvailableMoves' which is used to determine if we should only check for available moves or actually make the move.
+
+    Now, let's focus on the mutated line. The mutated line is the first line of the method, where an integer value '0' is passed as an argument instead of a boolean value. This is clearly an error, as the method expects a boolean argument.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover all possible scenarios, including invalid input. Here's a general approach:
+
+    1. Test with valid boolean input: Create a test case that checks if the method returns the correct value when a valid boolean input is provided.
+    2. Test with invalid boolean input: Create a test case that checks if the method throws an exception or returns a default value when an invalid boolean input is provided.
+    3. Test with other valid input: Depending on the context of the method, you may need to test with other valid inputs, such as different values for the other arguments.
+    4. Test edge cases: Test the method with edge cases, such as the minimum and maximum values for boolean data types.
+    5. Test negative cases: Test the method with negative or unexpected input, such as null values or values outside the expected range.
+
+    By creating test cases that cover all these scenarios, we can ensure that the method behaves correctly and kills any mutants that may arise from incorrect input. Remember, the goal is to create a comprehensive test suite that covers all possible scenarios, not just the one mutant you're currently dealing with.

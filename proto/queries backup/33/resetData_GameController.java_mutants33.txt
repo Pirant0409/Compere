@@ -1,0 +1,13 @@
+ First, we need to understand what the method `resetData()` does. It resets the data of the game to its initial state. The original line sets the score to 0. The mutated line, however, is a no-op, which means it does nothing.
+
+    To generate a test suite that would kill this mutant, we need to find a test case that verifies the score is indeed reset to 0 when the `resetData()` method is called. Here are some general steps to generate such a test case:
+
+    1. Identify the preconditions and postconditions of the method. In this case, the precondition is that the game is in a running state, and the postcondition is that the score is reset to 0, highestScore is reset to 0, gamestate is still running, and tileAdded is reset to 0.
+
+    2. Create a test case that sets up the preconditions. This could involve creating an instance of the game object and setting its state to running.
+
+    3. Exercise the method by calling `resetData()`.
+
+    4. Verify the postconditions. This could involve checking that the score is indeed 0, highestScore is 0, gamestate is still running, and tileAdded is 0.
+
+    To generalize this approach to other mutants, the process would be similar. Identify the preconditions and postconditions of the method or line in question, create a test case that sets up the preconditions, exercise the method or line, and verify the postconditions. The specifics of the test case would depend on the method or line being tested, but the general approach would remain the same.

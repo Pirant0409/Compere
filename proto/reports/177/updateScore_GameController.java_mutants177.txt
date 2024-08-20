@@ -1,0 +1,21 @@
+ The mutated line is saying that if the value is greater than or equal to the highestScore, then update the highestScore. This means that the highestScore can now be equal to the value being passed, which was not the case before. This could potentially lead to incorrect behavior in the program.
+
+ To generate tests that would kill this mutant, we need to find a scenario where the mutated behavior is different from the original behavior. Let's consider some test cases:
+
+ 1. Test with a value less than the highestScore: This test case should pass in both the original and mutated code since the condition in the if statement is not met.
+
+ 2. Test with a value equal to the highestScore: In the original code, this test case would not change the highestScore since the condition in the if statement is not met. However, in the mutated code, the highestScore would be updated to the value being passed, which is incorrect.
+
+ 3. Test with a value greater than the highestScore: In both the original and mutated code, the score is updated with the value being passed. However, in the mutated code, the highestScore is also updated when it should not be, leading to incorrect behavior.
+
+ 4. Test with negative values: In both the original and mutated code, negative values are not allowed since the method takes an int parameter.
+
+ 5. Test with the highestScore being initialized to a value less than the first value passed to the method: In the original code, the highestScore would not be updated since the condition in the if statement is not met. However, in the mutated code, the highestScore would be updated to the first value passed to the method, which is incorrect.
+
+ 6. Test with a large number of values: This test case can help us ensure that the method behaves correctly for a large number of inputs.
+
+ 7. Test with the edge cases: Test with the minimum and maximum values that the int data type can hold, as well as values very close to the minimum and maximum values.
+
+ 8. Test with the same value being passed multiple times: This test case can help us ensure that the highestScore is updated correctly when the same value is passed multiple times.
+
+ 9. Test with concurrent access to the method: If the method is being accessed concurrently, we need to ensure that the highestScore is updated correctly

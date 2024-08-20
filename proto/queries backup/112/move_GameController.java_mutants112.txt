@@ -1,0 +1,13 @@
+ The mutant is allowing null values in the ArrayList. This could lead to NullPointerExceptions when we try to access the ArrayList later in the code. To create a test suite that would kill this mutant, we need to focus on the conditions that would cause the ArrayList to contain a null value.
+
+ First, we need to understand the context of the ArrayList. It is used to store the positions of the tiles that the piece can potentially move to. The ArrayList is initialized with an empty list and then populated with new int arrays as the piece checks each potential move.
+
+ Now, let's consider the conditions that could cause the ArrayList to contain a null value. One possibility is that the grid.getTile(pos) returns null, and this null value is added to the ArrayList. Another possibility is that the ArrayList itself is null when it is passed to a method that requires an ArrayList as an argument.
+
+ To test for the first possibility, we can create test cases where the grid contains null tiles. We can also test for the edge cases where the piece is moving to the first or last position on the grid, as these positions may have null tiles.
+
+ To test for the second possibility, we can create test cases where the method that requires an ArrayList as an argument is called with a null ArrayList. We can also test for the edge cases where the method is called with an empty ArrayList or an ArrayList with only one element.
+
+ In general, to create a test suite that would kill a mutant, we need to focus on the conditions that could cause the mutant behavior and create test cases that cover those conditions. We also need to consider the edge cases and ensure that our tests cover them as well.
+
+ By creating test cases that cover the conditions that could cause the ArrayList to contain a null value, we can ensure that the ArrayList is always initialized with valid data and that the code does not encounter NullPointerExceptions. This will help us kill the mutant and prevent similar mutants from arising in the future.

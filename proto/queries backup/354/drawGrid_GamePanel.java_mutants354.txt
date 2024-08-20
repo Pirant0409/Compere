@@ -1,0 +1,17 @@
+ First, we need to understand the understand the context of the method and the mutated line. The method 'drawGrid' is responsible for drawing a grid on the Graphics2D object 'g'. The mutated line changes the radius of the fillRoundRect method from 15 to -15.
+
+    This mutation can lead to various issues depending on the context. For instance, if the negative radius value is not supported by the Graphics2D class, it might throw an exception. Alternatively, it could result in unexpected drawing behavior, such as drawing outside the intended area or not drawing at all.
+
+    To generate a test suite that would kill this mutant, we need to focus on the following aspects:
+
+    1. Boundary testing: Test the method with the minimum and maximum possible values for the radius. In this case, we should test with a radius of -16 (just below the mutated value) and a radius larger than the grid size.
+
+    2. Input validation: Check if the method handles invalid input, such as a negative radius. This can be done by passing a negative value to the method and verifying that the expected exception is thrown.
+
+    3. Edge cases: Test the method with edge cases, such as the grid size being an odd number or a power of two. These cases can reveal subtle bugs that might not be apparent with regular testing.
+
+    4. Interaction testing: Test the method in the context of the application, i.e., when the game state is running and not running. This will help ensure that the grid is drawn correctly in both scenarios.
+
+    5. Regression testing: Run the existing test suite to ensure that the mutation doesn't affect the functionality of other parts of the application.
+
+    By following these guidelines, you should be able to generate a comprehensive test suite that would kill this mutant and help prevent similar issues in the future. Remember, the goal is to test the behavior of the method under various conditions, not just to cover lines of code.

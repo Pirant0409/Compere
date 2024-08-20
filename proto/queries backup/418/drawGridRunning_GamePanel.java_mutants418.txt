@@ -1,0 +1,21 @@
+ The mutated line is causing the issue, so we need to understand what it does and how it affects the program's behavior.
+
+    The original line is multiplying the column index by the width of a single tile to calculate the x-coordinate for drawing the tile. However, the mutated line is performing a modulo operation instead, which returns the remainder of the division.
+
+    To create a test case that would kill this mutant, we need to find a specific input that would cause the incorrect behavior. Since the mutated line is causing the issue, we should focus on the column index.
+
+    Let's consider the side length of the grid. If the side length is not a multiple of 121, then the modulo operation will return a non-zero value, which will cause the x-coordinate to be calculated incorrectly.
+
+    To generate a test case, we can create a JUnit test with a setup method that initializes the controller and the GameParams with an appropriate side length. Then, in the test method, we can call the drawGridRunning method with a specific column index that would cause the incorrect behavior due to the mutated line.
+
+    For example, if the side length is 122, then the column index 11 would cause the incorrect behavior because 11 % 121 = 11, which is not what we expect.
+
+    To create a test case that would kill this mutant and other similar mutants, follow these steps:
+
+    1. Understand the mutated line and its impact on the program's behavior.
+    2. Find a specific input that would cause the incorrect behavior due to the mutated line.
+    3. Create a JUnit test with a setup method that initializes the necessary objects with the input that would cause the incorrect behavior.
+    4. In the test method, call the method under test with the input that would cause the incorrect behavior.
+    5. Assert that the incorrect behavior occurred, such as an exception being thrown or the output being incorrect.
+
+    By following these steps, you can create a test case that would kill this mutant and other similar mutants that may arise in the future.

@@ -1,0 +1,9 @@
+ The mutated line is affecting the x-coordinate of where the string is drawn. The mutated expression is calculating the x-coordinate as the remainder of the sum of the base value (215 + c * 121) and the difference between the width of the string and half of the tile size, divided by 2.
+
+    To generate a test suite that would kill this mutant, we need to find a test case that would cause the x-coordinate to be out of bounds of the drawing area. This can be achieved by providing a value of 'c' that would result in a negative value for the x-coordinate or a value that would exceed the maximum x-coordinate of the drawing area.
+
+    To find such a value, we need to calculate the maximum and minimum possible values of 'c' based on the given dimensions and the string width. The minimum value of 'c' would be (int) (-(215 + 121 * (width of the largest string)) / 121), and the maximum value would be (int) ((width of the drawing area - 215) / 121).
+
+    Once we have these values, we can create a test case that would pass the minimum or maximum value of 'c' to the 'drawTile' method and verify that an exception is thrown due to the out-of-bounds drawing.
+
+    It's important to note that this approach is not limited to this specific mutant. The same logic can be applied to any mutant that affects the coordinates or sizes of drawn elements, as long as we can calculate the minimum and maximum possible values and verify that the method behaves correctly when these values are provided.

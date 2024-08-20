@@ -1,0 +1,9 @@
+ The mutated line is changing the condition for the loop to continue. In this specific case, it's making the method fillFirstEmptyTile() to continue only when tileAdded is greater than 0. This means that the method will not fill the first empty tile if tileAdded is 0.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would cover the situation where tileAdded is 0. This can be achieved by initializing tileAdded to 0 before calling the fillFirstEmptyTile() method and checking if the method returns false.
+
+    However, this approach is not a general solution for all mutants. Different mutants may change the logic of the method in various ways, and the test cases needed to kill them would depend on the specifics of each mutation.
+
+    A more general approach to test generation is to use a test case generation tool, such as EvoSuite or JTestDB, which can automatically generate test cases based on the code coverage and the program's control flow. These tools can help generate test cases that cover a wide range of scenarios and edge cases, increasing the chances of finding and killing mutants.
+
+    In summary, to generate test cases for mutants, you need to understand the behavior of the mutated code and create test cases that cover the situations where the mutation can affect the method's output. A test case generation tool can help automate this process and generate a comprehensive test suite.

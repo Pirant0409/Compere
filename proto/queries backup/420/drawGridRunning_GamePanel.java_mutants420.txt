@@ -1,0 +1,21 @@
+ The mutated line is causing an issue by subtracting 121 instead of adding it to the column index when calculating the x-coordinate for drawing the grid. This results in the grid being drawn outside the drawing area.
+
+ To generate a test suite that would kill this mutant, follow these steps:
+
+ 1. Identify the boundary conditions: In this case, the boundary conditions are the minimum and maximum values of the column index. The minimum value is 0 and the maximum value is GameParams.sideLength - 1.
+
+ 2. Create test cases that cover these boundary conditions: You should create test cases that test the behavior of the method when the column index is at its minimum and maximum values.
+
+ 3. Create test cases that cover the expected behavior: You should also create test cases that cover the expected behavior of the method, i.e., when the column index is within the valid range.
+
+ 4. Create test cases that cover the exceptional behavior: In this case, the exceptional behavior is when the controller returns a null tile. You should create test cases that cover this behavior as well.
+
+ 5. Create test cases that cover the interaction between different parts of the code: You should create test cases that test the interaction between different parts of the code, such as the interaction between the for loop and the if statement, or the interaction between the drawGridRunning method and the controller.
+
+ 6. Create test cases that cover the edge cases: Edge cases are situations where the input is on the boundary of the valid range or where the input is ambiguous. In this case, an edge case would be a column index that is very close to the minimum or maximum value.
+
+ 7. Create test cases that cover the negative cases: Negative cases are situations where the input is invalid or unexpected. In this case, a negative case would be a column index that is less than 0.
+
+ 8. Create test cases that cover the mutated line: You should create test cases that specifically test the mutated line and its interaction with the rest of the code. In this case, you should create test cases that test the behavior of the method when the column index is at the minimum or maximum value and the mutated line is causing the issue.
+
+ 9. Create test cases that cover the interaction between the mutated line and other parts of the code: You should also create test cases that test

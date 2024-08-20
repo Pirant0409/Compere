@@ -1,0 +1,17 @@
+ First, we need to understand what the method does. The `rowEqual` method checks if the values in a given grid row match the expected values.
+
+    Now, let's focus on the mutated line. The mutated line is `null`. This means that the method call `grid.getRow(row)` is returning `null` instead of an array of `Tile` objects.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover various scenarios where the `getRow` method should not return `null`. Here are some suggestions:
+
+    1. Test with valid grid size and row index: Create a test case where the grid size is known and the row index is valid. This test case should ensure that the `getRow` method returns a non-null array of `Tile` objects.
+
+    2. Test with valid grid size and out-of-bounds row index: Create a test case where the grid size is known, but the row index is out of bounds. This test case should ensure that the `getRow` method returns a null array or throws an exception.
+
+    3. Test with invalid grid size: Create a test case where the grid size is invalid (negative or zero). This test case should ensure that the `getRow` method returns a null array or throws an exception.
+
+    4. Test with null grid: Create a test case where the grid is null. This test case should ensure that the `getRow` method returns a null array or throws an exception.
+
+    5. Test with other unexpected inputs: Depending on the implementation of the `Grid` class, there might be other unexpected inputs that could cause the `getRow` method to return null. Identify these inputs and create test cases to cover them.
+
+    By creating test cases that cover various scenarios where the `getRow` method should not return null, we can ensure that the mutant is killed and the original method behavior is preserved. This approach can be applied to other mutants as well.

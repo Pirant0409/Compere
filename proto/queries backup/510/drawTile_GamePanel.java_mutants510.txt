@@ -1,0 +1,15 @@
+ The mutated line is causing an arithmetic operation error, specifically a modulo operation. This means that the result of the expression (215 % (c * 121)) is not what we expect. In this case, it seems like the mutated line is intended to calculate the x-coordinate of where to draw a tile on the screen.
+
+    To generate a test suite that would kill this mutant, we need to find a test case that would expose this error. Here are some steps to guide you:
+
+    1. Identify the input parameters: In this case, the method takes two parameters: g (Graphics2D), r (int), and c (int).
+
+    2. Create test data: You need to create test data that would cause the mutated line to produce an unexpected result. Since the mutated line is causing a modulo operation error, you can try providing input values that would result in an odd value for c * 121. For example, you can try c = 1 or c = -1.
+
+    3. Create a test case: Write a test case that calls the method with the test data you've created. Make sure to assert that the method behaves correctly, i.e., that the x-coordinate is calculated correctly.
+
+    4. Run the test case: Run the test case and observe the results. If the test case fails, then you've found a test case that kills the mutant. If the test case passes, then you need to modify the test data to create a more challenging test case.
+
+    5. Repeat the process: Keep creating test cases and modifying the input data until you find a test case that kills the mutant. Remember, the goal is to find a test case that exposes the error in the mutated line and ensures that the original line is correct.
+
+    In general, to generate a test suite that would kill any mutant, you need to understand the behavior of the mutated code and create test cases that would expose any unexpected behavior. This involves creating test data that covers various edge cases and boundary values, and writing test cases that assert the expected behavior of the code. By systematically testing the code, you can ensure that it behaves correctly and that any mutants are killed.

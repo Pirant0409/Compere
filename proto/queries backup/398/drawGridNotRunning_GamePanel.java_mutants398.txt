@@ -1,0 +1,13 @@
+ The mutated line is changing the y-coordinate of the last drawString statement from 470 to -470. This means that the text "Click to start a new game" is being drawn outside the visible area of the grid.
+
+ To generate a test suite that would kill this mutant, we need to create test cases that would verify the correct positioning of the text "Click to start a new game". Here are some steps to guide you:
+
+ 1. Create a JUnit test class for the `drawGridNotRunning` method.
+ 2. Initialize the necessary objects, such as a `Graphics2D` object, a `Controller` object, and a `JFrame` object.
+ 3. Set up the JFrame with an appropriate size and a JPanel to draw on.
+ 4. Call the `drawGridNotRunning` method with the `Graphics2D` object as an argument.
+ 5. Use JUnit's assertions to verify that the text "Click to start a new game" is drawn at the correct position.
+ 6. Repeat steps 4 and 5 for different game states (won, over, and not running).
+ 7. Run the test suite and observe the results.
+
+ By creating test cases that verify the correct positioning of the text "Click to start a new game", we can ensure that the mutated line is not alive in the codebase. This approach can be generalized to other mutants as well. The key is to understand the behavior of the mutated code and create test cases that would expose any incorrect behavior.

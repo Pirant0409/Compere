@@ -1,0 +1,15 @@
+ The mutated line is causing the method to behave differently than the original line. In this case, the mutated line is performing multiplication instead of division. This change can lead to unexpected results, which is why it's important to test the method thoroughly.
+
+ To generate a test suite that would kill this mutant, follow these steps:
+
+ 1. Identify the input values that can cause the difference in behavior between the original and mutated lines. In this case, the input values that can cause division vs multiplication are the ones that result in a negative exponent when using the original line.
+
+ 2. Create test cases that cover these input values. For example, you can create test cases with negative numbers, very large numbers, and numbers close to a power of 2.
+
+ 3. Write test cases that verify the expected behavior of the method for these input values. For example, for negative numbers, you would expect the method to throw an exception, as the logarithm of a negative number is undefined. For very large numbers, you would expect the method to return the closest power of 2, and for numbers close to a power of 2, you would expect the method to return the power of 2 itself.
+
+ 4. Run the test suite and observe the results. If the mutant is still alive, meaning that it passes all the test cases, then you need to refine your test cases to cover more edge cases or to make them more specific.
+
+ 5. Repeat the process until the mutant is dead, meaning that it fails at least one test case.
+
+ This approach can be applied to other mutants as well. The key is to understand how the mutation changes the behavior of the code and to create test cases that cover the input values that can cause this difference in behavior.

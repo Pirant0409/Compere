@@ -1,0 +1,13 @@
+ First, we need to understand the context of the method and the mutated line. This method, `drawGrid`, is responsible for drawing the grid on the graphics object `g`. The method checks the game state and based on that, it calls either `drawGridRunning` or `drawGridNotRunning`. The mutated line is a no-op statement, which means it doesn't do anything.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would expose the side effects of the `drawGridRunning` method. Side effects are changes to the state of the system that can be observed outside the method. In this case, the side effect is likely to be the drawing of the grid when the game state is running.
+
+    To create a test case, we need to set up the preconditions, execute the method, and verify the postconditions. Here's a general approach:
+
+    1. Set up the preconditions: Create a `Graphics2D` object and set the game state to running.
+    2. Execute the method: Call the `drawGrid` method with the `Graphics2D` object as an argument.
+    3. Verify the postconditions: Check if the grid has been drawn on the `Graphics2D` object.
+
+    To create a test suite, we need to generate multiple test cases that cover different scenarios. For example, we can test the method when the game state is not running, when the graphics object is null, when the graphics object is not initialized, etc. Each test case should verify that the method behaves correctly under that specific scenario.
+
+    By creating a comprehensive test suite, we can ensure that the no-op statement doesn't have any unintended side effects and that the method behaves correctly under different conditions. This approach can be applied to other mutants as well. The key is to understand the context of the method and the mutated line, and to create test cases that expose the side effects of the method.

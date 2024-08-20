@@ -1,0 +1,29 @@
+ First, we need to understand the context of the method and the mutated line. The method 'drawGridNotRunning' is responsible for drawing the grid and some text on the screen. The mutated line is a no-op statement, which means it doesn't change the program's behavior. However, it's located near the lines that draw the 'You win' and 'You loose' messages, which are conditional statements based on the game state.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would cause the condition in the if and else if statements to change, making the corresponding messages to be drawn instead of the no-op statement.
+
+    Here are some general steps to generate test cases for this method:
+
+    1. Identify the input and expected output of the method. In this case, the input is the Graphics2D object 'g', and the expected output is the grid and the text drawn on the screen.
+
+    2. Create test cases that cover all possible conditions. For example, test cases for 'GameState.won' and 'GameState.over'.
+
+    3. For each test case, create a setup method to initialize the controller's gamestate to the desired condition.
+
+    4. In each test case, call the method 'drawGridNotRunning' with the initialized controller as an argument.
+
+    5. Use assertions to verify that the correct messages are drawn on the screen. For example, use 'assertTextPresent' or 'assertTextEquals' to check the text drawn.
+
+    6. Repeat steps 3 to 5 for all possible conditions.
+
+    7. Run the test suite to check if all test cases pass. If any test case fails, investigate the reason and modify the test case or the method implementation accordingly.
+
+    8. Repeat steps 3 to 7 for other methods and conditions in the program.
+
+    9. Continuously add new test cases and modify existing ones as the program evolves.
+
+    10. Regularly run the test suite to ensure the program's behavior doesn't change unexpectedly.
+
+    11. Refactor the test cases and the code as needed to improve their maintainability and readability.
+
+    12. Continuously improve the test suite by adding more test cases and test coverage to ensure

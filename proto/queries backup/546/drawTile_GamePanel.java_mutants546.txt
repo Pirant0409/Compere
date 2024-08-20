@@ -1,0 +1,17 @@
+ The mutated line is causing the problem, so we need to understand what it does and how it affects the method.
+
+    The original line `int asc = fm.getAscent();` and `int dec = fm.getDescent();` are used to get the ascent and descent of the given font. The ascent is the vertical distance from the baseline to the top of the font, while the descent is the vertical distance from the baseline to the bottom of the font.
+
+    The mutated line `int asc = fm.getAscent(); int dec = asc - dec;` is causing the problem. The second assignment `dec = asc - dec;` is incorrect, as it's trying to subtract the descent from the ascent, which doesn't make sense in this context.
+
+    To generate a test suite that would kill this mutant, we need to find a test case that would expose this incorrect calculation and cause the method to fail.
+
+    Here are some steps to help you generate a test case:
+
+    1. Identify the input values that would cause the method to behave differently based on the mutated line. In this case, we can try different font sizes, font styles, and strings to be drawn.
+    2. Create a test case that covers the edge cases and the expected behavior of the method. For example, you can test the method with a font size of 0, a null Graphics2D object, or a string with a length greater than the available space.
+    3. Run the test case with the mutated code and observe the output. If the test case passes, then the mutated code is not causing any issues, and you need to modify the test case to cover the incorrect calculation.
+    4. Modify the test case to cover the incorrect calculation. For example, you can test the method with a string that has a length greater than the available space and observe if the string is drawn correctly or not.
+    5. Run the test case again with the mutated code. If the test case fails, then you have successfully generated a test suite that would kill the mutant.
+
+    Generalizing it to other mutants: The steps to generate a test suite that would kill a mutant remain the same. You need to understand the mutated line, identify the input values that would cause the method to behave differently based on the mutated

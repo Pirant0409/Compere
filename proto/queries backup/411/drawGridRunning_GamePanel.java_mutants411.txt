@@ -1,0 +1,19 @@
+ The mutated line is causing the loop to continue even when col exceeds the valid range. This could lead to various unexpected behaviors depending on the rest of the code. To create a test suite that can kill this mutant, we need to find a test case that can expose this issue.
+
+ First, we need to understand the boundary conditions of the loop. The loop runs from 0 to GameParams.sideLength-1 for both rows and columns. This means that the valid range for col is 0 to GameParams.sideLength-1. The mutated line col != GameParams.sideLength is causing the loop to continue even when col is equal to GameParams.sideLength.
+
+ To create a test case, we need to find a way to make col equal to GameParams.sideLength. One way to do this is by passing the maximum valid value as an argument to the method. We can then check if the loop terminates correctly or if it continues to run after the valid range.
+
+ Here are the steps to create a test case:
+
+ 1. Create a test class for the drawGridRunning method.
+ 2. Initialize the controller and GameParams object with valid values.
+ 3. Call the drawGridRunning method with the maximum valid value for col.
+ 4. Check if the loop terminates correctly after the valid range.
+ 5. If the loop continues to run, then the test case has failed and the mutant is alive.
+
+ To generalize this approach for other mutants, the key is to understand the boundary conditions and the expected behavior of the code. Once we have that information, we can create test cases that can expose any unexpected behavior caused by the mutated line.
+
+ For example, if the mutated line is related to an array index, we can create a test case by passing the maximum valid index as an argument and checking if the code accesses an element outside the array. If the code does access an element outside the array, then the test case has failed and the mutant is alive.
+
+ In summary, to create a test suite that can kill a mutant, we need to understand the boundary conditions and expected behavior of the code, and then create test cases that can expose any unexpected behavior caused by the mutated line.

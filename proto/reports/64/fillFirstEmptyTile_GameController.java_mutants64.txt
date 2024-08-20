@@ -1,0 +1,13 @@
+ The mutated line is changing the condition for setting the value of 'val'. The original condition was that 'tileAdded' should be a multiple of 10. But the mutated condition is that 'tileAdded' should not be a negative multiple of 10.
+
+    To generate tests that would kill this mutant, we need to find test cases that would cause the condition in the mutated line to fail. In other words, we need to find test cases where 'tileAdded' is a negative multiple of 10.
+
+    To generate tests for other mutants as well, follow these steps:
+
+    1. Understand the mutated line and how it changes the behavior of the method.
+    2. Determine what conditions would cause the mutated line to fail.
+    3. Generate test cases that would exercise those conditions.
+
+    For this particular mutant, we can generate test cases where 'tileAdded' is initialized to a negative number or where the number of tiles added in a single call to 'fillFirstEmptyTile()' is a negative multiple of 10.
+
+    Remember, the goal is to create a comprehensive test suite that covers as many possible scenarios as possible, including edge cases and error conditions. This will help ensure the reliability and robustness of the code.

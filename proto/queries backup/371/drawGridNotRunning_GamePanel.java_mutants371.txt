@@ -1,0 +1,19 @@
+ The mutated line is a no-op statement, which means it doesn't actually do anything. However, it's located in the part of the code that draws the grid and the game's status messages.
+
+    To generate tests that could potentially kill this mutant, we need to consider the following:
+
+    1. Understand the expected behavior of the method: The method `drawGridNotRunning` is responsible for drawing the grid, game status messages, and the "You win!" or "You loose!" message based on the current game state.
+
+    2. Identify the potential impact of the mutated line: Since the mutated line is a no-op statement, it doesn't directly affect the execution of the method. However, it might indirectly impact the drawing of the grid or the game status messages if the method relies on the size or position of the `fillRoundRect` call.
+
+    3. Create tests that cover the method's functionality: To generate tests that could potentially kill the mutant, we need to create tests that cover the method's functionality thoroughly. This includes testing the drawing of the grid, the game status messages, and the correct display of the "You win!" or "You loose!" message based on the game state.
+
+    4. Test the method with different game states: To ensure that the mutant is killed, we need to test the method with different game states, including "won" and "over". This will help us verify that the method behaves correctly when the game state changes.
+
+    5. Test the method with different grid sizes: Since the mutated line is located in the part of the code that draws the grid, it's essential to test the method with different grid sizes to ensure that the mutant doesn't affect the grid's drawing.
+
+    6. Test the method with different font sizes and colors: The method also uses different font sizes and colors for drawing the game status messages and the "You win!" or "You loose!" message. Testing the method with different font sizes and colors will help us ensure that the mutant doesn't affect the appearance of these messages.
+
+    7. Test the method with different game states and grid sizes: Combining the above tests, we should test the method with different game states and grid sizes to ensure that the mutant is killed under various conditions.
+
+    By following these steps,

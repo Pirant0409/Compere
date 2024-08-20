@@ -1,0 +1,28 @@
+ First, we need to understand what this method does. It's responsible for drawing the grid of the game. It does this by iterating through each cell in the grid and either drawing an empty cell or a cell with a tile.
+
+    To generate tests that can potentially kill this mutant, we need to consider the following:
+
+    1. **Edge cases**: Test the boundaries of the grid. What happens when the grid size is 0? What happens when the grid size is very large? Testing these cases can help us uncover any potential issues with the way the grid is being handled.
+    2. **Null pointer exceptions**: Test what happens when the controller's getGrid() method returns null. This can help us ensure that the method is handling null cases correctly.
+    3. **Invalid tile cases**: Test what happens when the controller's getTile() method returns an invalid tile. This can help us ensure that the method is handling unexpected data correctly.
+    4. **Performance testing**: Test the method's performance under heavy loads. This can help us ensure that the method is efficient and can handle large grids without any issues.
+    5. **Corner cases**: Test the method with various combinations of empty and non-empty cells. This can help us ensure that the method is drawing the grid correctly and handling the different combinations of cells.
+
+    To generate tests for these cases, you can use JUnit or another testing framework. Write test methods for each of the above cases and use assertions to verify the expected behavior. For example, you can write a test method to verify that the method correctly handles the edge case when the grid size is 0.
+
+    Here's a general outline of how you can write a test method for this:
+
+    ```java
+    @Test
+    public void testDrawGridRunningWithEmptyGrid() {
+        // Arrange
+        GameParams params = new GameParams(0);
+        Controller controller = new Controller(params);
+        Graphics2D g = mock(Graphics2D.class);
+
+        // Act
+        controller.getView().drawGridRunning(g);
+
+        // Assert
+        verify(g, times(0)).fillRoundRect(anyInt(), anyInt(), anyInt(), anyInt(), anyInt(), anyInt());
+        verify(g, times(0)).drawTile(anyInt(), anyInt());

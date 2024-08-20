@@ -1,0 +1,17 @@
+ The mutated line is a no-op statement, which means it doesn't change the state of the program. However, it's located in a place where it could potentially affect the output of the method.
+
+    To generate a test suite that could potentially kill this mutant, we need to focus on the parts of the code that are sensitive to the font size and the strings being drawn. In this case, the strings "You win !", "You loose !", and "Click to start a new game" are drawn based on the game state, and the font size for the number "2048" is also significant.
+
+    Here are some suggestions for test cases:
+
+    1. Test different game states: Create test cases to check the method's behavior when the game state is won, over, or neither. Make sure the correct strings are drawn in the correct positions for each game state.
+
+    2. Test different font sizes: Create test cases to check the method's behavior with different font sizes for the number "2048". Make sure the number is drawn correctly and is visible.
+
+    3. Test different colors: Create test cases to check the method's behavior with different colors for the background, grid, and text. Make sure the colors are applied correctly and the text is readable.
+
+    4. Test different string contents: Create test cases to check the method's behavior with different string contents for the game state messages. Make sure the strings are drawn correctly and are not truncated or overlapping.
+
+    5. Test different graphics contexts: Create test cases to check the method's behavior with different graphics contexts, such as different screen resolutions or different graphics devices. Make sure the method can adapt to different contexts and still produce the correct output.
+
+    By creating test cases that cover these different scenarios, we can increase the chances of finding a test case that will kill the mutant. Remember, the goal is not just to kill this particular mutant, but to ensure the entire method is functioning correctly in all possible situations.

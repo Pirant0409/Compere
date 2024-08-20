@@ -1,0 +1,18 @@
+ First, we need to understand the context of the method and the mutated line. This method, `drawGridNotRunning`, is responsible for drawing the grid and some text on the screen. The mutated line is at position 0, but since Java uses zero-based indexing, it actually refers to the first line of the method.
+
+    However, the first line is just a method declaration, it doesn't contain any executable code. So, the mutated line can't be directly affecting the method's behavior. Instead, it might be affecting the method call or the state of the variables passed to it.
+
+    To generate a test suite that would kill this mutant, we need to focus on the following aspects:
+
+    1. Input validation: Check if the method is receiving valid inputs. For instance, is the `Graphics2D` object valid? Is the `controller` object in a valid state?
+    2. State verification: Check if the state of the variables and objects before and after the method call is as expected. For example, is the `g` object's color changed correctly? Are the strings drawn at the correct positions?
+    3. Interaction testing: Check if the method interacts correctly with other parts of the system. For instance, does the method update the game state when the game is over or won?
+
+    To test these aspects, you can write test cases that cover various scenarios, such as:
+
+    a. Testing with null or invalid `Graphics2D` object
+    b. Testing with different game states (won, over, running)
+    c. Testing the drawing of various strings at different positions
+    d. Testing the interaction between the method and the controller
+
+    By writing comprehensive test cases that cover these scenarios, you should be able to create a test suite that would kill the mutant and prevent similar issues from occurring in the future. Remember, the goal is to ensure that the method behaves correctly under various conditions, and that it doesn't introduce any unintended side effects.

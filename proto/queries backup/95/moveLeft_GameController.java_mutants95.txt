@@ -1,0 +1,33 @@
+ The mutated line changes the value of the fourth argument of the method 'move' from 4 to -4. This means that the direction of movement is being changed from right to left.
+
+    To generate a test suite that would kill this mutant, we need to focus on the behavior change introduced by the mutation. In this case, the method 'moveLeft' should now move the piece left instead of right when called with the 'checkingAvailableMoves' argument set to true.
+
+    To create a test case that would expose this behavior change, we need to test the method with valid input values and verify that the piece is indeed moved left when the 'checkingAvailableMoves' argument is true.
+
+    Here are some steps to guide you in creating a test case:
+
+    1. Identify the preconditions and postconditions of the method. Preconditions are the conditions that must be met before the method can be called, and postconditions are the expected results after the method has been executed.
+    2. Create test data that covers all possible combinations of preconditions and expected postconditions.
+    3. Write a test case for each combination of preconditions and expected postconditions.
+    4. Verify that the test case fails when the mutated line is present, and passes when the original line is present.
+
+    For example, you could create a test case like this:
+
+    @Test
+    public void testMoveLeft() {
+        // Set up the initial state of the board and the piece to be moved
+        Board board = new Board();
+        Piece piece = new Piece(3, 15);
+        board.placePiece(piece);
+
+        // Call the method with the 'checkingAvailableMoves' argument set to true
+        boolean result = board.moveLeft(true);
+
+        // Verify that the piece has been moved one square to the left
+        assertEquals(2, piece.getX());
+
+        // Verify that the method returns true to indicate a successful move
+        assertTrue(result);
+    }
+
+    By following these steps, you should be able to create a test case that exposes the behavior change introduced by the mutation and kills the mutant. Remember, the key is to focus on the behavior change and verify that the method produces the expected results given the preconditions.

@@ -1,0 +1,17 @@
+ First, we need to understand what the method `resetData()` does. It resets the data of the game to its initial state. The mutated line, marked as <NO-OP>, doesn't seem to do anything, but it might be affecting the behavior of the method in some indirect way.
+
+    To generate a test suite that would kill this mutant, follow these steps:
+
+    1. Identify the behavior of the method before and after the mutation. In this case, the method should set the game state to running after resetting the data.
+
+    2. Write test cases that cover the normal behavior of the method. For example, you could test that the score, highest score, and tileAdded variables are correctly reset to their initial values, and that the game state is set to running.
+
+    3. Write test cases that specifically test the behavior of the mutated line. In this case, you could write a test case that checks that the game state is indeed set to running after the resetData() method is called.
+
+    4. Write test cases that cover edge cases or unusual scenarios. For example, you could test what happens when the method is called multiple times in a row, or when the game state is already running before the method is called.
+
+    5. Run the test suite and observe the results. If the mutant is still alive, analyze the test results to determine which test cases are not effectively killing the mutant. Refine those test cases to make them more effective.
+
+    6. Repeat steps 5 and 6 until the mutant is dead.
+
+    Remember, the goal is not just to kill this particular mutant, but to generate a comprehensive test suite that can effectively detect and prevent similar mutants from arising in the future.

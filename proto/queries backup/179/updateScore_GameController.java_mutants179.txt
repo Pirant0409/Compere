@@ -1,0 +1,17 @@
+ First, we need to understand the behavior of the original method. The method `updateScore` takes an integer value as an argument and updates the `score` and `highestScore` variables accordingly. The `highestScore` is updated only if the new value is greater than the current highest score.
+
+    Now, let's focus on the mutated line. The mutated line is a no-op, which means it doesn't do anything. In this case, it doesn't affect the `score` variable. However, it might have unintended side effects on other parts of the code, which could lead to incorrect behavior.
+
+    To generate a test suite that would kill this mutant, we need to find a test case that would expose the side effect, if any, and cause the mutant to behave differently than the original method. Here are the steps to generate such a test case:
+
+    1. Identify the preconditions and postconditions of the method. Preconditions are the conditions that must be true before the method is called, and postconditions are the conditions that must be true after the method is called. In this case, the precondition is that the `value` argument is valid, and the postconditions are that `score` and `highestScore` are updated correctly.
+
+    2. Create test cases that cover various scenarios. For example, test cases for positive and negative values, zero value, and values greater than the current highest score.
+
+    3. Test the method with the mutated line and observe the behavior. If the mutant doesn't affect the observable behavior of the method, you might need to look for side effects on other parts of the code.
+
+    4. Use a code coverage tool to identify the parts of the code that are not covered by your test cases. Focus on the uncovered parts and create test cases to cover them.
+
+    5. Repeat steps 3 and 4 until all the code is covered, and the mutant is killed.
+
+    Remember, the goal is to create a comprehensive test suite that covers all possible scenarios and exposes any unintended side effects of the mutated code. This approach can be applied to other mutants as well.

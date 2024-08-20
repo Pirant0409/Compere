@@ -1,0 +1,19 @@
+ First, we need to understand the method and its purpose. This method, `getCol`, returns an array of tiles in a given column.
+
+    Now, let's focus on the mutated line. The mutated line is differentiates from the original line by having a value of 1 instead of 0. This change might seem insignificant, but it could lead to unexpected behavior in the program.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would expose the error caused by this mutation. Here are some steps to guide you:
+
+    1. Identify the input that would cause the mutated method to behave differently from the original method. In this case, the input is the column number.
+
+    2. Create test cases that cover the edge cases and boundary values of the input. For example, test cases with the minimum and maximum valid column numbers, as well as invalid column numbers.
+
+    3. Create test cases that cover different scenarios of the tiles in the game board. For instance, test cases with empty tiles, tiles with different values, and tiles with specific combinations.
+
+    4. Create test cases that cover the interaction between the `getCol` method and other methods in the program. This will help ensure that the method behaves correctly when used in the context of the entire program.
+
+    5. Run the test suite and observe the results. If the mutant is still alive, analyze the test cases that passed and identify any weaknesses or gaps in the test coverage. Refine the test cases to address these issues and rerun the test suite.
+
+    6. Repeat the process until the mutant is killed. Remember, the goal is to create a comprehensive test suite that covers all possible scenarios and edge cases, not just the one that kills the mutant in this particular instance.
+
+    By following these steps, you'll be able to generate a test suite that not only kills this mutant but also helps ensure the overall quality and reliability of the program.

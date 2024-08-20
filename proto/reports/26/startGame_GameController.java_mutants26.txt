@@ -1,0 +1,18 @@
+ First, we need to understand what this mutation does to the original method. The mutated line changes the condition for the for loop, causing it to iterate more times than intended. This means that more tiles will be filled than the number specified in GameParams.nbStartTileFilled.
+
+ To create a test suite that would kill this mutant, we need to write tests that cover the expected behavior of the method. In this case, we want to ensure that the method only fills the specified number of tiles at the start of the game.
+
+ Here's a general approach to generating tests:
+
+ 1. Identify the inputs and expected outputs of the method. In this case, the input is an empty game state, and the expected output is a game state with the specified number of filled tiles.
+
+ 2. Write tests that cover the expected behavior for various edge cases and normal scenarios. For example, you could write tests to ensure that:
+   a. The method starts the game correctly when the gamestate is empty.
+   b. The method fills the correct number of tiles when GameParams.nbStartTileFilled is a small number.
+   c. The method fills the correct number of tiles when GameParams.nbStartTileFilled is a large number.
+   d. The method does not fill any tiles when GameParams.nbStartTileFilled is zero.
+
+ 3. Write tests that cover the unexpected behavior caused by the mutation. In this case, you could write tests to ensure that:
+   a. The method does not fill more tiles than specified when the mutation is present.
+
+ Remember, the goal is to create a comprehensive test suite that covers both the expected and unexpected behavior of the method. This will help ensure that the mutated code does not survive in the future.

@@ -1,0 +1,17 @@
+ First, we need to understand what the method does. It's a drawing method that sets the color, fills a round rectangle, draws some strings, and sets the color again. The mutated line is at position 0, but since Java uses zero-based indexing, it actually means the method declaration line. This method doesn't take any arguments, so it's not related to the mutation.
+
+    To generate tests for this method, we need to consider the following:
+    1. The method's preconditions: Are there any specific conditions that must be met before the method can be called? In this case, it seems there are no preconditions.
+    2. The method's postconditions: What should the method do after it's executed? In this case, it should draw the grid and some strings based on the game state.
+    3. The method's side effects: Does the method change any external state or data? In this case, it changes the graphics context by setting colors and drawing strings.
+
+    To test the method, we need to create a test suite that covers all the possible scenarios and checks the method's postconditions and side effects. Here's a general approach:
+
+    a. Create a test class for the method.
+    b. Use JUnit or another testing framework to write test cases.
+    c. Write a test case for the normal game state (controller.getGamestate() != GameState.won, controller.getGamestate() != GameState.over). This test case should check that the grid is drawn correctly and the "Click to start a new game" and "(Use arrow keys to move tiles)" strings are displayed.
+    d. Write a test case for the won game state (controller.getGamestate() == GameState.won). This test case should check that the grid is drawn correctly and the "You win!" string is displayed instead of the "Click to start a new game" string.
+    e. Write a test case for the over game state (controller.getGamestate() == GameState.over). This test case should check that the grid is drawn correctly and the "You loose!" string is displayed instead of the "Click to start a new game" string.
+    f. Run the test suite and make sure all the test cases pass.
+
+    If the mutant still surv

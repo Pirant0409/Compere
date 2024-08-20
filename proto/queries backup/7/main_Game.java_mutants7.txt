@@ -1,0 +1,22 @@
+ First, we need to understand what the mutated line is doing. The mutated line is creating an instance of the GameController class using the default constructor, which takes no arguments.
+
+    Now, let's consider what the original line does. The original line is also creating an instance of the GameController class, but it's not using the default constructor. Instead, it's using the no-argument constructor that's provided by the Java compiler when no constructors are explicitly defined in the class.
+
+    The difference between the two lines is that the mutated line is explicitly creating an instance of the GameController class using the default constructor, while the original line is implicitly using the default constructor.
+
+    To generate a test suite that would kill this mutant, we need to find a way to ensure that the default constructor of the GameController class is not called when creating a new instance of the class.
+
+    One way to achieve this is by defining a constructor in the GameController class that takes some arguments, and then modifying the code to pass those arguments when creating a new instance of the class.
+
+    For example, if we add a constructor to the GameController class that takes an int argument, we can modify the main method to pass that argument when creating a new instance of the GameController class.
+
+    Here's a general approach to generating a test suite for this situation:
+
+    1. Identify the difference between the mutated and original lines.
+    2. Understand the implications of that difference on the behavior of the code.
+    3. Find a way to ensure that the behavior of the mutated line is different from the original line.
+    4. Write test cases that exercise the behavior of the code and verify that the mutated line produces the expected different behavior.
+
+    In this case, the difference is the use of the default constructor vs. an explicitly defined constructor. To ensure that the default constructor is not called, we can define a constructor that takes an argument and modify the code to pass that argument when creating a new instance of the GameController class. Then, we can write test cases that verify the behavior of the code with and without the argument to ensure that the mutated line produces the expected different behavior.
+
+    Keep in mind that this is just one approach to generating a test suite for this situation. There may be other ways to ensure that the default constructor is not called, and other

@@ -1,0 +1,16 @@
+ The mutated line changes the value of 'val' from 2 to -2. This could potentially affect the behavior of the method 'fillFirstEmptyTile()'.
+
+    First, we need to understand the original method's behavior. The method iterates through the grid to find the first empty tile and fills it with a new tile of value 2 if the number of tiles added is not a multiple of 10. If it is, then the new tile's value is set to 4.
+
+    Now, let's consider the impact of the mutation. The method will still follow the same logic, but the value of 'val' will be -2 instead of 2 or 4. This could lead to unexpected behavior, as the grid might end up with tiles of negative values.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover the following scenarios:
+
+    1. Test when the method successfully fills an empty tile with a value of 2 when the number of tiles added is not a multiple of 10.
+    2. Test when the method successfully fills an empty tile with a value of 4 when the number of tiles added is a multiple of 10.
+    3. Test when the method fails to find an empty tile and returns false.
+    4. Test when the method fills an empty tile with a negative value (-2) due to the mutation.
+
+    To create these test cases, you would need to write test methods that cover these scenarios and assert the expected behavior for each one. Remember, the goal is to ensure that the mutant is killed, meaning that the test suite should fail when the mutated code is executed.
+
+    In summary, to generate a test suite that would kill a mutant, you need to understand the original method's behavior, consider the impact of the mutation, and create test cases that cover various scenarios to ensure the mutated code fails.

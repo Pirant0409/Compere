@@ -1,0 +1,22 @@
+ The mutated line is causing the issue, but we want to understand why it's alive despite the error it introduces.
+
+ First, let's analyze the original code. The method `drawGridRunning` is responsible for drawing the grid of a game. It uses a nested for loop to iterate through each cell in the grid. The condition for the inner loop is `col < GameParams.sideLength`. This means that the loop will only iterate through valid column indices.
+
+ Now, let's examine the mutated line. The condition for the inner loop is now `col <= GameParams.sideLength`. This means that the loop will also iterate through one additional invalid column index (the last one) since `GameParams.sideLength` is the total number of columns, including the borders.
+
+ The mutant is alive because it's drawing something on the last invalid column, which is not supposed to be drawn. This could be an empty space, a tile, or any other graphical element. The test suite that keeps the mutant alive is not checking for this edge case.
+
+ To generate a test suite that would kill this mutant, you need to write test cases that cover all possible edge cases. In this scenario, you should write a test case that checks the behavior of the method when the loop iterates through the last invalid column.
+
+ Here are some general guidelines for generating test cases that cover edge cases:
+
+ 1. Test the method with valid input: Make sure that the method behaves correctly when given valid input.
+ 2. Test the method with boundary input: Test the method with input that is at the boundary of the valid range.
+ 3. Test the method with negative input: Test the method with input that is below the valid range.
+ 4. Test the method with maximum input: Test the method with input that is at the maximum of the valid range.
+ 5. Test the method with null input: Test the method with null input, if applicable.
+ 6. Test the method with exceptional input: Test the method with input that would cause an exception to be thrown.
+
+ In this specific case, you should write a test case that checks the behavior of the method when the inner loop iterates through the last invalid column. This test case should verify that the method does not draw anything on the last invalid column.
+
+ To write this test case, you can use a testing framework

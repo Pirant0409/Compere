@@ -1,0 +1,31 @@
+ The mutated line is causing an issue by using the modulus operator (%), which is changing the calculation of the x and y coordinates for drawing the tile. This means that the position of the tile on the grid is not being calculated correctly.
+
+ To generate a test suite that would kill this mutant, follow these steps:
+
+ 1. Understand the expected behavior: The method `drawTile` is responsible for drawing a tile on the grid based on its value. The x and y coordinates are calculated based on the grid position (r, c) and the tile value. The tile's value is obtained from the controller's grid.
+
+ 2. Create test cases that cover various edge cases and normal behavior:
+   a. Test with valid grid positions (r, c) that result in valid tile values.
+   b. Test with valid grid positions (r, c) that result in tile values at the edges of the color palette.
+   c. Test with invalid grid positions (r, c) that result in out-of-bounds tile values.
+   d. Test with invalid grid positions (r, c) that result in negative or zero values.
+
+ 3. Create test cases that cover the mutated behavior:
+   a. Test with valid grid positions (r, c) where the modulus operation changes the x and y coordinates.
+   b. Test with various tile values and observe the position of the tile on the grid.
+
+ 4. Verify the test results:
+   a. The test suite should pass for all valid grid positions and tile values.
+   b. The test suite should fail for the grid positions where the mutated behavior changes the x and y coordinates.
+
+ 5. Refactor the test cases if necessary:
+   a. If the test cases are too complex or redundant, refactor them to make them more readable and maintainable.
+
+ 6. Repeat the process for other mutants:
+   a. Analyze the mutated code and understand its impact on the program's behavior.
+   b. Create test cases that cover various edge cases and normal behavior for the mutated code.
+   c. Create test cases that cover the mutated behavior.
+   d. Verify the test results.
+   e. Refactor the test cases if necessary.
+
+ Remember, the goal is to create a comprehensive test suite that covers various edge

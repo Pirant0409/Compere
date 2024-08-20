@@ -1,0 +1,13 @@
+ First, we need to understand what the mutated line means. A <NO-OP> instruction is a no-operation instruction, which means it doesn't actually do anything when executed. In this context, it's being added to the line that sets the frame's resizability.
+
+    Now, let's consider how this mutation might affect the behavior of the program. The original line sets the frame to be resizable, meaning the user can change the size of the window. With the mutation, the frame remains unchanged, retaining its original size.
+
+    To create a test suite that would kill this mutant, we need to find a test case that checks the frame's resizability and verifies that it is indeed changeable. Here's a general approach to creating such a test case:
+
+    1. Create a JFrame subclass for testing purposes, with some helper methods to make testing easier.
+    2. Instantiate the GameFrame (or whatever the name of the JFrame class is) and perform the action that sets the resizability.
+    3. Write an assertion to check if the frame's resizability has been set correctly.
+    4. Write another test case to check if the frame's size can be changed after setting it to be resizable.
+    5. Run the test suite and observe the results.
+
+    By following this approach, you should be able to create a test suite that kills this mutant and can also be adapted to test other mutants that might affect the frame's resizability. Remember, the key is to understand the behavior of the code and write tests that validate that behavior.

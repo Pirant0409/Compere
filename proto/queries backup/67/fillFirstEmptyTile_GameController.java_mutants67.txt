@@ -1,0 +1,19 @@
+ First, we need to understand the behavior of the original method. The method `fillFirstEmptyTile()` is supposed to fill the first empty tile in the grid with a value of 2 by default, but if the number of tiles added is a multiple of 10, it should fill the empty tile with a value of 4 instead.
+
+    Now, let's see what the mutated line does. The mutated line is a subtraction of 4 from the original line number. This suggests that the mutated code might be located 4 lines before the original code.
+
+    To generate a test suite that would kill this mutant, we need to find a test case that would cause the mutated code to behave differently from the original code. Here are some steps to guide you:
+
+    1. Analyze the code around the mutated line. In this case, the mutated line is not directly related to the logic of the method, so it's likely that the mutation affects the variables or the state of the object before the method is called.
+
+    2. Check the preconditions of the method. In this case, the method `fillFirstEmptyTile()` does not have any explicit preconditions, but we can assume that the grid should not be empty and the `tileAdded` variable should be less than the maximum number of tiles that can be added to the grid.
+
+    3. Generate test cases that cover different scenarios. For example, you can test the method with an empty grid, a grid with some tiles already added, and a grid with a multiple of 10 tiles added.
+
+    4. Use a testing framework to write and run the test cases. For example, you can use JUnit to write and run the test cases in Java.
+
+    5. Analyze the test results. If the mutant is still alive, you need to refine your test cases to cover more scenarios or to test the method in more detail.
+
+    6. Repeat the process until the mutant is killed.
+
+    In general, to generate a test suite that would kill a mutant, you need to understand the behavior of the original code, identify the location of the mutation, and generate test cases that cover different scenarios and test the method in detail. You can use a testing framework to write and run the test cases, and analyze the test results to refine your test cases

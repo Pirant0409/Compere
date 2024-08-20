@@ -1,0 +1,12 @@
+ First, we need to understand the context of the method and the mutated line. The method 'drawGridNotRunning' is responsible for drawing the grid and some text on the screen. The mutated line is the one where the string "2048" is drawn at the position (310, 270).
+
+    Now, let's consider how we can generate tests to kill this mutant. The mutant is alive because some test suite is not able to detect the incorrect string being drawn at the wrong position. To generate tests that can kill this mutant, we need to focus on the following aspects:
+
+    1. Input validation: We should test the method with invalid input to ensure that it behaves correctly when given incorrect data. For example, we can test the method with a null Graphics2D object, or with an invalid game state.
+    2. Output verification: We should test the method by verifying the output it produces. In this case, we want to ensure that the string "2048" is drawn at the correct position (310, 270) when the game state is 'won'. We can also test the method when the game state is 'over' or 'not running' to ensure that the correct messages are drawn at the correct positions.
+    3. Edge cases: We should test the method with edge cases to ensure that it behaves correctly when the input is at the limits of its valid range. For example, we can test the method with the minimum and maximum possible values for the game state.
+    4. Interaction testing: We should test the method by simulating the interaction between the method and other parts of the system. For example, we can test the method by simulating a user click to start a new game and verifying that the correct text is drawn at the correct position.
+
+    To generate tests that can kill other mutants, we would follow a similar approach. We would focus on input validation, output verification, edge cases, and interaction testing to ensure that the method behaves correctly under various conditions. We would also need to consider the specific context of the method and the mutated line to determine the most effective tests to use.
+
+    By following this approach, we can generate a comprehensive test suite that can help us detect and kill various mutants in the code.

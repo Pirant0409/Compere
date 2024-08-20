@@ -1,0 +1,17 @@
+ First, we need to understand what the method does and how the mutated line affects it.
+
+    The afterMove() method is called after a move is made in the game. It checks if the highest score in the game has reached or exceeded the target score. If it has, the game ends with a win. If not, the method clears any merged tiles, fills the first empty tile with a new tile, and checks if there are any moves left available. If there are no moves left, the game ends with a loss.
+
+    The mutated line, marked as <NO-OP>, is a no-operation statement. It doesn't do anything. In this case, it's added to the clearMerged() call. This means that the clearMerged() method is still being called, but the tiles that should have been cleared are not actually being cleared.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover the different scenarios where the clearMerged() method should be executed and verify that the tiles are indeed cleared. Here are some steps to help guide you in creating such test cases:
+
+    1. Create test cases for the scenario where the highest score has not yet reached the target score and there are merged tiles that need to be cleared. This can be done by setting up a game state with merged tiles and verifying that the clearMerged() method is called and the tiles are indeed cleared.
+
+    2. Create test cases for the scenario where the highest score has reached the target score and the game should end with a win. In this case, you should verify that the clearMerged() method is not called and the game state is set to won.
+
+    3. Create test cases for the scenario where the highest score has reached the target score but there are still moves available. In this case, the game state should be set to won, but the clearMerged() method should not be called.
+
+    4. Create test cases for the scenario where the highest score has exceeded the target score and the game should end with a loss. In this case, you should verify that the clearMerged() method is called and the tiles are indeed cleared, but the game state should be set to loss instead of win.
+
+    By creating test cases that cover these different scenarios, you can ensure that the clearMerged() method is working correctly and that the

@@ -1,0 +1,56 @@
+[2024-04-20 01:02:28] This is codeql execute queries -J-Xmx1800M --off-heap-ram=1632 --verbosity=progress --logdir=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\2048database\log --evaluator-log-level=5 --threads=8 --warnings=show --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml -- C:\Users\32491\Documents\Uni\MA2\Memoire\proto\2048database\db-java path:C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\200\getBody.ql
+[2024-04-20 01:02:28] Calling plumbing command: codeql resolve queries --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml --format=json -- path:C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\200\getBody.ql
+[2024-04-20 01:02:28] [PROGRESS] resolve queries> Recording pack reference getting-started/codeql-extra-queries-java-1 at C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries.
+[2024-04-20 01:02:28] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\Users\\32491\\Documents\\Uni\\MA2\\Memoire\\proto\\queries\\200\\getBody.ql"
+                      ]
+[2024-04-20 01:02:28] Refusing fancy output: The terminal is not an xterm: 
+[2024-04-20 01:02:28] Creating executor with 8 threads.
+[2024-04-20 01:02:29] Calling plumbing command: codeql resolve extensions --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml path:C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\200\getBody.ql
+[2024-04-20 01:02:29] Calling plumbing command: codeql resolve queries --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml --allow-library-packs --format startingpacks -- path:C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\200\getBody.ql
+[2024-04-20 01:02:29] [PROGRESS] resolve queries> Recording pack reference getting-started/codeql-extra-queries-java-1 at C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries.
+[2024-04-20 01:02:29] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\Users\\32491\\Documents\\Uni\\MA2\\Memoire\\proto\\queries"
+                      ]
+[2024-04-20 01:02:29] Calling plumbing command: codeql resolve extensions-by-pack --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml -- C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] getting-started/codeql-extra-queries-java-1: not 1.0.0 {root: getting-started/codeql-extra-queries-java-1@1.0.0}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DERIVATION] getting-started/codeql-extra-queries-java-1: 1.0.0 {getting-started/codeql-extra-queries-java-1: not 1.0.0 {root: getting-started/codeql-extra-queries-java-1@1.0.0}}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] getting-started/codeql-extra-queries-java-1: * [*], codeql/java-all: not * [*] {dependency: getting-started/codeql-extra-queries-java-1@* [*] requires codeql/java-all@^0.8.9}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DECISION 1] getting-started/codeql-extra-queries-java-1: 1.0.0
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/java-all: * [*] {getting-started/codeql-extra-queries-java-1: * [*], codeql/java-all: not * [*] {dependency: getting-started/codeql-extra-queries-java-1@* [*] requires codeql/java-all@^0.8.9}}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/java-all@* [*] requires codeql/dataflow@0.2.0}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/mad: not * [*] {dependency: codeql/java-all@* [*] requires codeql/mad@0.2.9}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/rangeanalysis: not * [*] {dependency: codeql/java-all@* [*] requires codeql/rangeanalysis@0.0.8}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/regex: not * [*] {dependency: codeql/java-all@* [*] requires codeql/regex@0.2.9}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/threat-models: not * [*] {dependency: codeql/java-all@* [*] requires codeql/threat-models@0.0.8}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/java-all@* [*] requires codeql/tutorial@0.2.9}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/typetracking: not * [*] {dependency: codeql/java-all@* [*] requires codeql/typetracking@0.2.9}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/util: not * [*] {dependency: codeql/java-all@* [*] requires codeql/util@0.2.9}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DECISION 2] codeql/java-all: 0.8.9
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/util: * [*] {codeql/java-all: * [*], codeql/util: not * [*] {dependency: codeql/java-all@* [*] requires codeql/util@0.2.9}}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/typetracking: * [*] {codeql/java-all: * [*], codeql/typetracking: not * [*] {dependency: codeql/java-all@* [*] requires codeql/typetracking@0.2.9}}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/tutorial: * [*] {codeql/java-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/java-all@* [*] requires codeql/tutorial@0.2.9}}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/threat-models: * [*] {codeql/java-all: * [*], codeql/threat-models: not * [*] {dependency: codeql/java-all@* [*] requires codeql/threat-models@0.0.8}}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/regex: * [*] {codeql/java-all: * [*], codeql/regex: not * [*] {dependency: codeql/java-all@* [*] requires codeql/regex@0.2.9}}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/rangeanalysis: * [*] {codeql/java-all: * [*], codeql/rangeanalysis: not * [*] {dependency: codeql/java-all@* [*] requires codeql/rangeanalysis@0.0.8}}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/mad: * [*] {codeql/java-all: * [*], codeql/mad: not * [*] {dependency: codeql/java-all@* [*] requires codeql/mad@0.2.9}}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/dataflow: * [*] {codeql/java-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/java-all@* [*] requires codeql/dataflow@0.2.0}}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@0.2.9}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@0.2.9}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/util: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/util@0.2.9}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DECISION 3] codeql/dataflow: 0.2.0
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/ssa: * [*] {codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@0.2.9}}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DECISION 4] codeql/mad: 0.2.9
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/rangeanalysis: * [*], codeql/util: not * [*] {dependency: codeql/rangeanalysis@* [*] requires codeql/util@0.2.9}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DECISION 5] codeql/rangeanalysis: 0.0.8
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/regex: * [*], codeql/util: not * [*] {dependency: codeql/regex@* [*] requires codeql/util@0.2.9}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DECISION 6] codeql/regex: 0.2.9
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/ssa: * [*], codeql/util: not * [*] {dependency: codeql/ssa@* [*] requires codeql/util@0.2.9}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DECISION 7] codeql/ssa: 0.2.9
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DECISION 8] codeql/threat-models: 0.0.8
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DECISION 9] codeql/tutorial: 0.2.9
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/typetracking: * [*], codeql/util: not * [*] {dependency: codeql/typetracking@* [*] requires codeql/util@0.2.9}
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DECISION 10] codeql/typetracking: 0.2.9
+[2024-04-20 01:02:29] [SPAMMY] resolve extensions-by-pack> [DECISION 11] codeql/util: 0.2.9

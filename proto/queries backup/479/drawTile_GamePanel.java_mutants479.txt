@@ -1,0 +1,11 @@
+ The mutated line is causing an arithmetic operation error, specifically a division by zero. This can only happen if r is equal to zero. To create a test case that would kill this mutant, we need to ensure that r is never equal to zero when this method is called.
+
+ One way to do this is to add a check at the beginning of the method to ensure r is not zero. This check can be implemented as a simple if statement.
+
+ Another way to approach this is to modify the test data to include values of r that are not zero. This can be done by generating test data that covers a wide range of valid and invalid values for r and c.
+
+ To generalize this approach to other mutants, the key is to understand the behavior of the mutated code and identify the conditions that would cause it to fail. Once you have identified these conditions, you can create test cases that ensure these conditions are not met.
+
+ For example, if a mutant involves a comparison operation, you can create test cases that cover a wide range of values to ensure that the comparison always returns the expected result. If a mutant involves a mathematical operation, you can create test cases that cover edge cases and invalid inputs to ensure that the operation is always performed correctly.
+
+ The key is to think systematically and methodically about the behavior of the mutated code and the conditions that could cause it to fail, and then create test cases that ensure these conditions are not met.

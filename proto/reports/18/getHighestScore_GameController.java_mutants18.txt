@@ -1,0 +1,16 @@
+ First, we need to understand the behavior of the original method. The method `getHighestScore()` simply returns the value of the instance variable `highestScore`.
+
+    Now, let's focus on the mutated line. The mutated line is just the name of the instance variable `highestScore`. Since the mutated line is at line 0, it seems that the method body is empty. However, we cannot assume that based on the given information alone.
+
+    To generate a test suite that would kill this mutant, we need to find a way to ensure that the method returns the correct value of `highestScore`. Here are some steps you can follow:
+
+    1. Create test cases that set the value of `highestScore` before calling the method.
+    2. Create test cases that call the method with different values of `highestScore` and verify that the method returns the correct value.
+    3. Create test cases that call the method multiple times and verify that the method always returns the same value.
+    4. Create test cases that call the method after setting the value of `highestScore` to different values and verify that the method returns the correct value based on the last set value.
+
+    These steps will help you ensure that the method is behaving correctly and that the mutated line is not affecting the behavior of the method. However, it's important to note that these steps are not specific to this particular mutant, but can be applied to any mutant that affects the return value of a method.
+
+    Additionally, you may want to consider testing other aspects of the method, such as its input validation, edge cases, and error handling, depending on the complexity of the method and the requirements of the system.
+
+    Remember, the goal is to ensure that the method behaves correctly and consistently, regardless of any mutations that may be introduced.

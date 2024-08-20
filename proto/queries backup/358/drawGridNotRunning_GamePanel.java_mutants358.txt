@@ -1,0 +1,17 @@
+ The mutated line is a no-op statement, which means it doesn't change the state of the program. However, it's located right before a line that does change the state - setting the color of the Graphics2D object.
+
+    To create a test that would kill this mutant, we need to find a test case where the absence of the original line causes the method to behave differently than expected. In other words, we need to find a test case where the method's output or side effects depend on the initial color of the Graphics2D object.
+
+    Here are some general steps to generate such a test case:
+
+    1. Understand the method's contract: What is the method supposed to do? What are its inputs and outputs? What are the preconditions and postconditions?
+
+    2. Identify the parts of the method that depend on the initial color: In this case, it's the line where the color of the Graphics2D object is set.
+
+    3. Create test data that exercises the method's dependencies: You can create test data that sets the initial color of the Graphics2D object to different values and checks if the method's output or side effects are affected.
+
+    4. Write a test case that checks the method's behavior with and without the mutated line: You can write a test case that calls the method twice - once with the original line and once with the mutated line - and compares their outputs or side effects.
+
+    5. Verify that the test case fails when the mutated line is present: If the test case passes when the mutated line is present, then it's not effective in killing the mutant. You may need to adjust the test data or the test case itself to make it sensitive to the mutated line.
+
+    6. Repeat the process for other mutants: The same general steps can be applied to other mutants as well. The key is to understand how the mutated line affects the method's behavior and to create test data that exercises that dependency.

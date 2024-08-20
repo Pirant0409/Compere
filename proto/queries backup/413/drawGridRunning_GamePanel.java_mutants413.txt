@@ -1,0 +1,57 @@
+ First, we need to understand what this method does. It's responsible for drawing the grid of the game. It does this by iterating through each cell in the grid and either drawing an empty cell or a cell with a tile.
+
+    To test this method effectively, we need to test all possible scenarios:
+    1. Test when the grid is empty (all cells are null)
+    2. Test when the grid contains tiles
+    3. Test when the Graphics2D object is null
+    4. Test when the controller object is null
+    5. Test when the GameParams object is null or has incorrect side length
+
+    To generate tests for these scenarios, we can use JUnit and Mockito. Here's a general outline of how to set up the tests:
+
+    Step 1: Create a test class for the method
+    public class DrawGridRunningTest {
+        // ...
+    }
+
+    Step 2: Import the necessary libraries
+    import org.junit.jupiter.api.*;
+    import static org.mockito.Mockito.*;
+
+    Step 3: Create mock objects for the dependencies
+    @Mock
+    private Controller controller;
+
+    @Mock
+    private GameParams gameParams;
+
+    Step 4: Initialize the mocks and the test subject
+    @BeforeEach
+    public void setUp() {
+        // Initialize the mocks
+        MockitoAnnotations.initMocks(this);
+
+        // Initialize the test subject
+        DrawingPanel drawingPanel = new DrawingPanel();
+        drawingPanel.setController(controller);
+        drawingPanel.setGameParams(gameParams);
+    }
+
+    Step 5: Write the test cases
+    // Test when the grid is empty
+    @Test
+    public void testEmptyGrid() {
+        // Set up the mocks to return an empty grid
+        when(controller.getGrid()).thenReturn(new Grid[GameParams.sideLength][GameParams.sideLength]);
+
+        // Call the method under test
+        drawingPanel.drawGridRunning(mock(Graphics2D.class));
+
+        // Verify that the correct number of empty cells were drawn
+        // ...
+    }
+
+    // Test when the grid contains tiles
+    @Test
+    public void testGridWithTiles() {
+        // Set up the

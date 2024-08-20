@@ -1,0 +1,17 @@
+ The mutated line is calculating the width of the string and subtracting it from 106 instead of adding it to the x coordinate. This will cause the string to be drawn outside the bounds of the rectangle.
+
+ To generate a test suite that would kill this mutant, we need to create test cases that will provide input values that will cause the string to be drawn outside the bounds of the rectangle. Here are some general steps to generate such test cases:
+
+ 1. Identify the input parameters of the method and their expected ranges. In this case, the method takes two integer parameters r and c. The expected range for these parameters is not explicitly stated, but we can assume that they represent row and column indices in a grid. Therefore, we can generate test cases for all possible valid values of r and c.
+
+ 2. Generate test cases for edge cases. For example, we can test the method with the minimum and maximum possible values of r and c, as well as values that are very close to the edges.
+
+ 3. Generate test cases for invalid input. For example, we can test the method with negative values of r and c, or values that are out of the expected range.
+
+ 4. Generate test cases for special input. For example, we can test the method with input values that will cause the string to be very long or very short, or with input values that will cause the string to contain special characters.
+
+ 5. Generate test cases for interaction between input parameters. For example, we can test the method with input values that will cause the string to be drawn in different positions in the grid, or with input values that will cause the strings to overlap.
+
+ 6. Run the test suite and observe the results. If the mutant is killed, then we have successfully generated a test suite that covers all possible edge cases, invalid input, special input, and interaction between input parameters. If the mutant is not killed, then we need to refine our test cases and repeat the process until the mutant is killed.
+
+ In summary, to generate a test suite that would kill a mutant, we need to create test cases that provide input values that will cause the mutated code to behave differently from the original code. We can do this by testing the method with edge cases, invalid input, special input, and interaction between input parameters. We need to run the test suite and observe the results, and ref

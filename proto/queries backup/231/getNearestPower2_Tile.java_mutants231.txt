@@ -1,0 +1,15 @@
+ First, we need to understand the original method and its purpose. The getNearestPower2 method calculates the nearest power of 2 for a given input value. It does this by calculating the log base 2 of the input value, rounding the result to the nearest integer, and then raising 2 to that power.
+
+    Now, let's examine the mutated line. The mutated line changes the value of the base from 2 to -2. This is an error, as the logarithm function cannot be calculated with a negative base.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would expose this error. Here's a general approach:
+
+    1. Identify edge cases: Test the method with various edge cases, such as minimum and maximum input values, zero, and negative numbers.
+
+    2. Test with non-power-of-2 numbers: Test the method with numbers that are not powers of 2, to ensure that the method correctly calculates the nearest power of 2.
+
+    3. Test with rounding edge cases: Test the method with inputs that result in rounding edge cases, such as inputs that result in a power of 2 with a fractional part of 0.5 or 0.5.
+
+    4. Test with invalid inputs: Test the method with invalid inputs, such as null or non-numeric inputs, to ensure that the method handles such cases appropriately.
+
+    By testing the method with these cases, we can ensure that the mutant is killed and the original method behavior is preserved. This approach can be applied to other mutants as well, by understanding the behavior of the original method and creating test cases that expose any deviations from that behavior.

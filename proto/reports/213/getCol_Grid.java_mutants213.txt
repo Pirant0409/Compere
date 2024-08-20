@@ -1,0 +1,13 @@
+ First, we need to understand the purpose of the method and the context in which it is used. This method, `getCol`, returns an array of tiles in a given column. The array `tiles` is a 2D array representing the game board.
+
+    Now, let's analyze the mutated line. The mutated line is `-1`, which is an invalid index for a 2D array. This means that the mutated method will try to access an element outside the bounds of the array `tiles`.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover all possible edge cases and boundary conditions. Here are some test cases that would help us achieve that:
+
+    1. Test with a valid column index: Test the method with a valid column index within the range of the board size.
+    2. Test with a negative column index: Test the method with a negative column index to ensure that it doesn't access elements outside the array bounds.
+    3. Test with a column index equal to the board size: Test the method with a column index equal to the board size to ensure that it doesn't access elements outside the array bounds.
+    4. Test with a null board: Test the method with a null board to ensure that it throws an appropriate exception.
+    5. Test with a partially filled board: Test the method with a partially filled board to ensure that it returns the correct tiles for the given column.
+
+    By testing these cases, we can ensure that the method behaves correctly and kills the mutant. Remember, the goal is to create a comprehensive test suite that covers all possible edge cases and boundary conditions. This approach will help you in testing other mutants as well.

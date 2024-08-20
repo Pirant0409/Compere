@@ -1,0 +1,105 @@
+[2024-04-19 14:32:27] This is codeql execute queries -J-Xmx1800M --off-heap-ram=1632 --verbosity=progress --logdir=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\2048database\log --evaluator-log-level=5 --threads=8 --warnings=show --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml -- C:\Users\32491\Documents\Uni\MA2\Memoire\proto\2048database\db-java path:C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql
+[2024-04-19 14:32:27] Calling plumbing command: codeql resolve queries --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml --format=json -- path:C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql
+[2024-04-19 14:32:27] [PROGRESS] resolve queries> Recording pack reference (anonymous QL pack at C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql) at C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26.
+[2024-04-19 14:32:27] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\Users\\32491\\Documents\\Uni\\MA2\\Memoire\\proto\\queries\\26\\getBody.ql"
+                      ]
+[2024-04-19 14:32:27] Refusing fancy output: The terminal is not an xterm: 
+[2024-04-19 14:32:27] Creating executor with 8 threads.
+[2024-04-19 14:32:27] Calling plumbing command: codeql resolve extensions --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml path:C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql
+[2024-04-19 14:32:27] Calling plumbing command: codeql resolve queries --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml --allow-library-packs --format startingpacks -- path:C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql
+[2024-04-19 14:32:27] [PROGRESS] resolve queries> Recording pack reference (anonymous QL pack at C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql) at C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26.
+[2024-04-19 14:32:27] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\Users\\32491\\Documents\\Uni\\MA2\\Memoire\\proto\\queries\\26"
+                      ]
+[2024-04-19 14:32:27] Calling plumbing command: codeql resolve extensions-by-pack --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml -- C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26
+[2024-04-19 14:32:27] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] <anonymous pack>: not 0.0.0 {root: <anonymous pack>@0.0.0}
+[2024-04-19 14:32:27] [SPAMMY] resolve extensions-by-pack> [DERIVATION] <anonymous pack>: 0.0.0 {<anonymous pack>: not 0.0.0 {root: <anonymous pack>@0.0.0}}
+[2024-04-19 14:32:27] [SPAMMY] resolve extensions-by-pack> [DECISION 1] <anonymous pack>: 0.0.0
+[2024-04-19 14:32:27] Plumbing command codeql resolve extensions-by-pack completed:
+                      {
+                        "models" : [ ],
+                        "data" : { },
+                        "threatModels" : { },
+                        "extensionPacks" : [ ]
+                      }
+[2024-04-19 14:32:27] Plumbing command codeql resolve extensions completed:
+                      {
+                        "models" : [ ],
+                        "data" : { },
+                        "threatModels" : { },
+                        "extensionPacks" : [ ]
+                      }
+[2024-04-19 14:32:27] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml --query=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql --format=json
+[2024-04-19 14:32:27] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql.
+[2024-04-19 14:32:27] [DETAILS] resolve library-path> Found no pack; trying after symlink resolution with C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql.
+[2024-04-19 14:32:27] [DETAILS] resolve library-path> Found enclosing pack '26' at C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26.
+[2024-04-19 14:32:27] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\32491\.codeql\compile-cache.
+[2024-04-19 14:32:27] [DETAILS] resolve library-path> Resolving library dependencies from C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql.
+[2024-04-19 14:32:27] [SPAMMY] resolve library-path> [INCOMPATIBILITY] <anonymous pack>: not 0.0.0 {root: <anonymous pack>@0.0.0}
+[2024-04-19 14:32:27] [SPAMMY] resolve library-path> [DERIVATION] <anonymous pack>: 0.0.0 {<anonymous pack>: not 0.0.0 {root: <anonymous pack>@0.0.0}}
+[2024-04-19 14:32:27] [SPAMMY] resolve library-path> [DECISION 1] <anonymous pack>: 0.0.0
+[2024-04-19 14:32:27] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26 resolved OK.
+[2024-04-19 14:32:27] [DETAILS] resolve library-path> Found no dbscheme through dependencies.
+[2024-04-19 14:32:27] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\32491\\Documents\\Uni\\MA2\\Memoire\\proto\\queries\\26"
+                        ],
+                        "compilationCache" : [
+                          "C:\\Users\\32491\\.codeql\\compile-cache"
+                        ],
+                        "relativeName" : "26\\getBody.ql",
+                        "possibleAdvice" : "There should probably be a qlpack.yml file declaring dependencies in C:\\Users\\32491\\Documents\\Uni\\MA2\\Memoire\\proto\\queries\\26 or an enclosing directory.",
+                        "qlPackName" : "26"
+                      }
+[2024-04-19 14:32:27] [PROGRESS] execute queries> Compiling query plan for C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql.
+[2024-04-19 14:32:27] [DETAILS] execute queries> Resolving imports for C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql.
+[2024-04-19 14:32:28] Resolved file set for C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql hashes to e6614f721918967dc57ac4bae7d36af0c2bca57c.
+[2024-04-19 14:32:28] [DETAILS] execute queries> Checking QL for C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql.
+[2024-04-19 14:32:28] ExternalModuleBindingPass ...
+[2024-04-19 14:32:28] ExternalModuleBindingPass time: 00:00.002
+[2024-04-19 14:32:28] CollectInstantiationsPass ...
+[2024-04-19 14:32:28] CollectInstantiationsPass time: 00:00.020
+[2024-04-19 14:32:28] Ambiguity checks ...
+[2024-04-19 14:32:28] Ambiguity checks time: 00:00.032
+[2024-04-19 14:32:28] Ql checks ...
+[2024-04-19 14:32:28] Ql checks time: 00:00.093
+[2024-04-19 14:32:28] [ERROR] execute queries> ERROR: Could not resolve module java. There should probably be a qlpack.yml file declaring dependencies in C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26 or an enclosing directory. (C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql:9,9-13)
+[2024-04-19 14:32:28] [ERROR] execute queries> ERROR: Could not resolve type Method (C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\26\getBody.ql:12,7-13)
+[2024-04-19 14:32:28] Sequence stamp origin is -6194330907911208869
+[2024-04-19 14:32:28] Pausing evaluation to close the cache at sequence stamp o+0
+[2024-04-19 14:32:28] The disk cache is freshly trimmed; leave it be.
+[2024-04-19 14:32:28] Unpausing evaluation
+[2024-04-19 14:32:28] [WARN] Failed to delete C:\Users\32491\Documents\Uni\MA2\Memoire\proto\2048database\db-java\default\strings\2 (attempt 1)
+                             java.nio.file.FileSystemException: C:\Users\32491\Documents\Uni\MA2\Memoire\proto\2048database\db-java\default\strings\2: The process cannot access the file because it is being used by another process
+                             	at java.base/sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+                             	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+                             	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+                             	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
+                             	at java.base/sun.nio.fs.AbstractFileSystemProvider.delete(Unknown Source)
+                             	at java.base/java.nio.file.Files.delete(Unknown Source)
+                             	at com.semmle.util.files.FileUtil8.delete(FileUtil8.java:361)
+                             	at com.semmle.util.files.FileUtil8.deleteIfExists(FileUtil8.java:394)
+                             	at com.semmle.util.files.FileUtil8.lambda$deleteWithRetries$10(FileUtil8.java:628)
+                             	at com.semmle.util.files.FileUtil8.performWithRetries(FileUtil8.java:559)
+                             	at com.semmle.util.files.FileUtil8.deleteWithRetries(FileUtil8.java:627)
+                             	at com.semmle.inmemory.util.DiskPool.deleteFiles(DiskPool.java:278)
+                             	at com.semmle.inmemory.util.SequentialDiskPool.deleteFiles(SequentialDiskPool.java:15)
+                             	at com.semmle.inmemory.stringpool.IntensionalGeneration.deleteFiles(IntensionalGeneration.java:79)
+                             	at com.semmle.inmemory.stringpool.StringPool.closePool(StringPool.java:425)
+                             	at com.semmle.inmemory.MemoryBackend.close(MemoryBackend.java:190)
+                             	at com.semmle.cli2.ql.EvaluationCommon.close(EvaluationCommon.java:231)
+                             	at com.semmle.cli2.execute.ExecuteQueriesCommand.executeSubcommand(ExecuteQueriesCommand.java:413)
+                             	at com.semmle.cli2.picocli.SubcommandCommon.lambda$executeSubcommandWithMessages$5(SubcommandCommon.java:803)
+                             	at com.semmle.cli2.picocli.SubcommandCommon.withCompilationMessages(SubcommandCommon.java:442)
+                             	at com.semmle.cli2.picocli.SubcommandCommon.executeSubcommandWithMessages(SubcommandCommon.java:801)
+                             	at com.semmle.cli2.picocli.SubcommandCommon.toplevelMain(SubcommandCommon.java:685)
+                             	at com.semmle.cli2.picocli.SubcommandCommon.call(SubcommandCommon.java:666)
+                             	at com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:237)
+                             	at com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:257)
+                             	at com.semmle.cli2.CodeQL.main(CodeQL.java:115)
+[2024-04-19 14:32:29] This NaiveBuddyAllocator requested 0 eviction rounds.
+[2024-04-19 14:32:29] Exiting with code 2

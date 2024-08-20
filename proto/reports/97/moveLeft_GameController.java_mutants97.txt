@@ -1,0 +1,19 @@
+ First, we need to understand the context of the method and the mutated line. This method, `moveLeft`, is checking if there is an available move to the left based on some conditions. The mutated line is the fourth argument of the `move` method, which is the direction to move. The original value of this argument is `-1`, which means moving to the left. However, the mutant has been kept alive by some test suite with a different value.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover all possible scenarios where the `moveLeft` method could be called and the fourth argument of the `move` method should be `-1`. We also need to test what happens when the fourth argument is not `-1`.
+
+    Here are some general steps to generate test cases:
+
+    1. Identify all possible input values and combinations of input values for the method. In this case, we have one input value, `checkingAvailableMoves`, which is a boolean value. We can test it with `true` and `false`.
+
+    2. For each input value, create test cases that cover all possible scenarios for the mutated line. In this case, we want to test when the mutated line is `-1` and when it's not.
+
+    3. Design test cases that exercise the method under different conditions. For example, you could test the method when `checkingAvailableMoves` is `true` and when it's `false`. You could also test the method with different initial positions and board sizes.
+
+    4. Write test cases that verify the expected behavior of the method. For example, you could write a test case that checks if the method returns `true` when there is an available move to the left and `false` when there isn't.
+
+    5. Write test cases that verify the expected behavior of the method when the mutated line is not `-1`. This will help ensure that the method behaves correctly when it's called with unexpected input.
+
+    6. Run the test suite and verify that all test cases pass. If any test case fails, you may need to modify the method or the test case to make it pass.
+
+    7. Repeat the process for other mutants. The steps above can be applied to other mutants as well. Just identify the mut

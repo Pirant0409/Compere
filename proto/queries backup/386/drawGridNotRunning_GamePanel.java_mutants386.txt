@@ -1,0 +1,28 @@
+ First, we need to understand the context of the method and the mutated line. This method, `drawGridNotRunning`, is responsible for drawing the grid and some text on the screen. The mutated line is at position 0, which is not valid in Java. This is an error and we can use it to our advantage to create test cases that will expose this error.
+
+    To generate test cases, we need to identify the preconditions and postconditions of the method. Preconditions are the conditions that must be true before the method is called, and postconditions are the conditions that must be true after the method is called. In this case, the precondition is that the `Graphics2D` object `g` is not null, and the postcondition is that the grid and text are drawn correctly on the screen.
+
+    Now, let's create a test case that violates the precondition. We can pass a null `Graphics2D` object to the method and check if an `NullPointerException` is thrown. Here's how to write the test case:
+
+    ```java
+    @Test(expected = NullPointerException.class)
+    public void testDrawGridNotRunningWithNullGraphics2D() {
+        Graphics2D g = null;
+        controller = new Controller();
+        DrawingPanel drawingPanel = new DrawingPanel();
+        drawingPanel.setController(controller);
+        drawingPanel.paintComponent(g, controller);
+        // The test case will fail if an NullPointerException is not thrown
+    }
+    ```
+
+    This test case will fail if the `drawGridNotRunning` method does not throw a `NullPointerException` when called with a null `Graphics2D` object. By adding this test case to the test suite, we can ensure that the method behaves correctly when given an invalid input.
+
+    Now, let's create a test case that checks the postcondition. We can create a mock `Controller` object and check if the grid and text are drawn correctly on the screen. Here's how to write the test case:
+
+    ```java
+    @Test
+    public void testDrawGridNotRunning() {
+        Graphics2D g = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB).getGraphics();
+        controller = new MockController();
+        Drawing

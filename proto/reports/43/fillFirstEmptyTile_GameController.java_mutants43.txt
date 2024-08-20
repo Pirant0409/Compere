@@ -1,0 +1,23 @@
+ First, we need to understand what the original code is doing. The method `fillFirstEmptyTile()` is trying to find the first empty tile in the grid and fill it with a new tile. The size of the grid is defined by `GameParams.sideLength`.
+
+    Now, let's focus on the mutated line. The mutated line is `GameParams.sideLength % GameParams.sideLength`. This line is calculated by taking the side length of the grid and applying the modulus operator twice. In other words, it's calculating the remainder of the side length when it's divided by itself.
+
+    The original line, on the other hand, is multiplying the side length by itself, resulting in the total number of tiles in the grid.
+
+    To generate a test suite that would kill this mutant, we need to find a test case that would expose the incorrect behavior of the mutated line.
+
+    Let's consider the following test case:
+
+    Test case: Create a grid with a side length that is a perfect square and has an odd number of tiles.
+
+    Explanation: If the side length is a perfect square, then the total number of tiles in the grid (calculated by multiplying the side length by itself) will be equal to the square of the side length. However, the mutated line will calculate the remainder of the side length when it's divided by itself, which will always be zero for a perfect square. This means that the loop condition in the `fillFirstEmptyTile()` method will never be met, and the method will always return false, even when there is an empty tile in the grid.
+
+    To generate a test suite that would kill other mutants as well, follow these steps:
+
+    1. Understand the original code and its behavior.
+    2. Understand the mutated code and its behavior.
+    3. Identify the difference between the original and mutated code.
+    4. Create test cases that would expose the incorrect behavior of the mutated code.
+    5. Repeat steps 3-4 for each mutant.
+
+    In summary, to generate a test suite that would kill a mutant, you need to understand the original and mutated code, identify the difference between them, and create test cases that would expose the incorrect behavior of the mutated code.

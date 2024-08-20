@@ -1,0 +1,14 @@
+ First, we need to understand what the method does. It's a drawGrid method that takes a Graphics2D object as an argument and draws a grid on the screen. The method checks the game state and calls either drawGridRunning or drawGridNotRunning based on the state.
+
+    Now, let's focus on the mutated line. The mutated line is -100, which means the starting x-coordinate of the fillRoundRect method call is being decreased by 100. This change could potentially affect the size and position of the grid that is being drawn.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover the following scenarios:
+
+    1. Test the method when the game state is running and the grid is drawn correctly.
+    2. Test the method when the game state is not running and no grid is drawn.
+    3. Test the method when the game state is not running, but the mutated line causes the grid to be drawn outside the screen boundaries.
+    4. Test the method when the game state is running, but the mutated line causes the grid to be drawn outside the screen boundaries.
+
+    To create these test cases, you can use JUnit or any other testing framework. You would create a test class for the drawGrid method and write test methods for each scenario. In each test method, you would set up the necessary conditions (game state, controller, graphics context, etc.) and then call the drawGrid method. You would then use assertions to verify that the grid is drawn correctly based on the given game state.
+
+    By covering these scenarios, you would have a comprehensive test suite that would help identify and kill this mutant as well as other similar mutants that may arise in the future. Remember, the key to effective testing is thorough coverage of all possible scenarios.

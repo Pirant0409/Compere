@@ -1,0 +1,17 @@
+ First, we need to understand the behavior of the original method and the mutated line.
+
+    Original method: The updateScore method takes an integer value as an argument and updates the highestScore and score variables accordingly. The method checks if the new value is greater than the highestScore, if so, it updates the highestScore with the new value. Then, it adds the new value to the current score.
+
+    Mutated line: The mutated line changes the comparison operator from ">" to "!=". This means that the method will update the highestScore only if the new value is not equal to the highestScore.
+
+    To generate a test suite that would kill this mutant, we need to find test cases that would expose the incorrect behavior of the mutated method.
+
+    Testing strategy: We can use a combination of boundary value testing, equal value testing, and negative testing.
+
+    Boundary value testing: Test the method with the minimum and maximum possible values for the input. For example, test with the smallest possible integer value and the largest possible integer value.
+
+    Equal value testing: Test the method with a value equal to the highestScore. This will help us check if the method correctly handles the case where the new value is equal to the highestScore.
+
+    Negative testing: Test the method with negative values. This will help us check if the method correctly handles invalid inputs.
+
+    To summarize, to generate a test suite that would kill this mutant and other similar mutants, we need to test the method with various input values, including boundary values, equal values, and negative values. This will help us expose the incorrect behavior of the mutated method and ensure the correctness of the original method.

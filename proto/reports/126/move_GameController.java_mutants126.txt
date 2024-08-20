@@ -1,0 +1,15 @@
+ The mutant line changes the step calculation in the for loop from step = GameParams.sideLength - 1 to step = 1. This means that the loop will iterate from step = 1 to step = GameParams.sideLength - 1 instead of from step = GameParams.sideLength - 1 to step = 0.
+
+    This change might affect the behavior of the method in several ways. First, it could potentially allow the method to move a piece more times than it should, which could lead to an invalid game state. Second, it could cause the method to miss some valid moves that were previously being checked.
+
+    To create a test suite that would kill this mutant, you would need to write tests that cover the following scenarios:
+
+    1. Test that the method does not move a piece more times than it should when the mutation is present. This can be done by providing input that would cause the method to iterate the maximum number of times and checking that the method returns false or does not make any invalid moves.
+    2. Test that the method does not miss any valid moves when the mutation is present. This can be done by providing input that would cause the method to iterate the minimum number of times and checking that it returns true for all valid moves.
+    3. Test that the method behaves correctly when the mutation is not present. This can be done by providing input that would cause the method to iterate the correct number of times and checking that it returns true for all valid moves and false for all invalid moves.
+
+    To write these tests, you would need to create test cases that cover various input scenarios and check the output of the method against the expected results. You would also need to use a testing framework to run the tests and check for any failures.
+
+    In general, when generating a test suite for a method, you should aim to cover as many input scenarios as possible, including edge cases and invalid inputs. You should also test the method's behavior with and without any mutations to ensure that it is functioning correctly in all cases.
+
+    Remember, the goal is not just to kill this particular mutant, but to create a comprehensive test suite that can detect and prevent any potential mutations that might arise in the future.

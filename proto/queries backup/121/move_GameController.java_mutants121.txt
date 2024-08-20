@@ -1,0 +1,16 @@
+ The mutated line is causing the loop to iterate when step should be zero. This means that the loop is not terminating as expected. To create a test case that would kill this mutant, we need to find a scenario where the loop should not iterate when step is zero.
+
+    First, let's understand the purpose of the loop. The loop is used to check the next possible position for a move. The variable 'step' represents the number of positions to move forward from the current position. When step is zero, it means we are checking the current position itself, which should not be considered as a valid move.
+
+    To create a test case, we need to find a scenario where the method should not make a move from the current position. One such scenario could be when the game is not running. In the method, there is a check for the game state before making a move. If the game state is not running, the method should not make any moves.
+
+    So, we can create a test case that checks if the method does not make a move when the game state is not running. Here are the steps to create the test case:
+
+    1. Create a test class for the 'move' method.
+    2. Initialize the game state to 'GameState.notRunning'.
+    3. Call the 'move' method with valid input parameters.
+    4. Assert that the method returns false.
+
+    By doing this, we are ensuring that the loop does not iterate when step is zero, as expected. This test case will also help in catching similar mutants in the future, where the loop is iterating when it should not.
+
+    Remember, the key to effective testing is understanding the code and the expected behavior, and then creating test cases that validate those expectations.

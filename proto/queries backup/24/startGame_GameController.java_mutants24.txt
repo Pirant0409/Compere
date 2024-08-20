@@ -1,0 +1,19 @@
+ First, we need to understand the context of the method and the mutated line. The method 'startGame()' initializes the game by setting up the game state, resetting data, creating a new grid, and filling the first 'GameParams.nbStartTileFilled' number of empty tiles with pieces.
+
+    The mutated line (line 1) is where the problem lies. It seems that the condition in the if statement is not being checked correctly, allowing the method to proceed even when 'gamestate' is not 'running'.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover different scenarios and edge cases. Here are some guidelines:
+
+    1. Test the happy path: Create a test case that tests the method when 'gamestate' is indeed 'running'. This test case should ensure that the method proceeds as expected and does not throw any exceptions.
+
+    2. Test the sad path: Create a test case that tests the method when 'gamestate' is not 'running'. This test case should ensure that the method does not proceed and throws an appropriate exception.
+
+    3. Test edge cases: Create test cases that test the method with different values of 'GameParams.nbStartTileFilled'. This will help ensure that the method correctly handles different scenarios and does not have any unintended side effects.
+
+    4. Test the order of operations: Create test cases that test the method in different orders, such as resetting data after creating the grid or filling tiles before resetting data. This will help ensure that the method is correctly sequencing its operations.
+
+    5. Test the state of the grid: Create test cases that test the state of the grid after the method is called. This will help ensure that the method is correctly filling the tiles and that the grid is in the expected state.
+
+    6. Test the state of other game data: Create test cases that test the state of other game data, such as 'gamestate', after the method is called. This will help ensure that the method is correctly setting the game state and that other game data is not being unintentionally modified.
+
+    7. Test the method with invalid input: Create test cases that test the method with invalid input, such as a negative value for 'GameParams.nbStartTileFilled'. This will help ensure that the

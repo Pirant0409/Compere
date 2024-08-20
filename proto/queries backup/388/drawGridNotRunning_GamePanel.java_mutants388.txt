@@ -1,0 +1,19 @@
+ First, we need to understand the context of the code snippet. This method, `drawGridNotRunning`, is responsible for drawing the grid and some text on the screen. The text includes the game status message, "You win!" or "You loose!", depending on the game state.
+
+Now, let's focus on the mutated line. The mutated line is a no-op statement, which means it doesn't do anything. In this case, it's an empty line. This line was added to the method without changing the existing logic.
+
+To generate a test suite that would kill this mutant, we need to create test cases that would expose the side-effects of the original code. Side-effects refer to any changes made to the state of the program or external resources. In this case, the side-effect is the drawing of the text on the screen.
+
+Here's a general approach to generate test cases:
+
+1. Identify the preconditions: These are the conditions that must be true before the method is called. In this case, the precondition is that the Graphics2D object, g, is not null.
+
+2. Identify the expected outputs: These are the results that should be produced by the method when it's called with the given preconditions. In this case, the expected output is the drawing of the text "You win!" at the specified position when the game state is won.
+
+3. Create test cases: Write test cases that cover different scenarios and edge cases. For example, test cases for different game states (won, over, and running), different font sizes, and different text positions.
+
+4. Verify the test results: Run the test suite and check if the test cases pass. If a test case fails, investigate the reason and modify the test case or the code accordingly.
+
+5. Repeat the process: Continue creating and modifying test cases until all mutants are killed.
+
+In summary, to generate a test suite that would kill the mutant, we need to create test cases that cover the expected behavior of the method and verify the test results. The focus should be on the side-effects of the code, which in this case is the drawing of text on the screen.

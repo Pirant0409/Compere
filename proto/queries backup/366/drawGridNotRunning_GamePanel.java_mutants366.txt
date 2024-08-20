@@ -1,0 +1,12 @@
+ The mutated line changes the width and height of the fillRoundRect method call from 469 to -469. This means that the method is trying to draw a rectangle with a negative width and height.
+
+    Now, to create a test suite that would kill this mutant, we need to find a test case that would expose this error. Here are some steps to guide you:
+
+    1. Create a test case that calls the drawGridNotRunning method with a valid Graphics2D object.
+    2. Check the state of the Graphics2D object before and after the method call to ensure that the drawing operation did not cause any unexpected side effects.
+    3. Verify that the method correctly sets the color and font properties before drawing the strings.
+    4. Verify that the method correctly determines the game state and draws the appropriate message based on that state.
+    5. Verify that the method correctly sets the color and font properties before drawing the click-to-start and arrow keys instructions.
+    6. Finally, check the dimensions of the filled rectangle before and after the method call. If the dimensions have changed unexpectedly, then the test case has failed and the mutant has been killed.
+
+    In general, to generate a test suite for a method, you should create test cases that cover all possible paths through the method and verify that the method behaves correctly at each step. This can be done by checking the input and output of the method, as well as the state of any variables or objects that the method interacts with. Additionally, it's important to test edge cases and error conditions to ensure that the method handles unexpected inputs gracefully.

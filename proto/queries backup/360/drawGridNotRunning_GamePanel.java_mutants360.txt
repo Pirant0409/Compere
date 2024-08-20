@@ -1,0 +1,46 @@
+ The mutant line changes the starting x-coordinate of the grid drawing from 215 to -215. This means that the grid is being drawn outside the visible area of the window. To create a test suite that would kill this mutant, we need to write tests that check the following:
+
+    1. The grid is being drawn within the visible area of the window.
+    2. The grid dimensions are correct.
+    3. The grid colors are correct.
+    4. The game state messages are displayed correctly based on the game state.
+
+To write tests for these checks, we can use JUnit and Mockito. Here's a general idea of how to approach this:
+
+Step 1: Create a test class for the `drawGridNotRunning` method.
+```java
+import org.junit.jupiter.api.*;
+import static org.mockito.Mockito.*;;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class DrawGridTest {
+    private Graphics2D mockGraphics;
+    private Controller controller;
+
+    @BeforeEach
+    public void setup() {
+        mockGraphics = mock(Graphics2D.class);
+        controller = new Controller();
+    }
+
+    // Test methods will be added here
+}
+```
+
+Step 2: Write a test method to check if the grid is drawn within the visible area.
+```java
+@Test
+public void testGridIsDrawnWithinVisibleArea() {
+    // Set up the mock graphics to return a specific width and height
+    when(mockGraphics.getWidth()).thenReturn(800);
+    when(mockGraphics.getHeight()).thenReturn(600);
+
+    // Call the method under test
+    drawGridNotRunning(mockGraphics, controller);
+
+    // Check if the grid is drawn within the visible area
+    verify(mockGraphics, times(1)).fillRoundRect(anyInt(), anyInt(), anyInt(), anyInt(), anyInt(), anyInt());
+    verify(mockGraphics, times(1)).setColor(ColorPalette.startColor);
+    verify(mockGraphics, times(1)).setColor(ColorPalette.gridColor);
+    verify(mockGraphics, times(1)).setFont(any(Font.class));
+    verify(

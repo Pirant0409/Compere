@@ -1,0 +1,16 @@
+ The mutated line is causing an issue by subtracting the product of r and 121 instead of adding it. This means that the y-coordinate for drawing the tile is being calculated incorrectly.
+
+    To generate tests that would kill this mutant, we need to focus on the y-coordinate calculation. We want to ensure that the y-coordinate is correctly calculated based on the row number r.
+
+    Here are some steps to generate tests:
+
+    1. Identify the boundary values for the row number r. These could be the minimum and maximum possible values for r.
+    2. Create test cases with these boundary values. For example, you could create a test case with r = 0 and another with r = the maximum possible value.
+    3. Create test cases with values that are close to the boundary values. For example, you could create a test case with r = -1 or r = the maximum possible value + 1.
+    4. Create test cases with values that are likely to cause issues. For example, you could create a test case with r = the square root of a large number.
+    5. Create test cases with a mix of positive and negative values for r.
+    6. Create test cases with values that would cause the y-coordinate to be outside the bounds of the drawing area.
+    7. Create test cases with values that would cause the tile to overlap with other tiles.
+    8. Create test cases with values that would cause the tile to be drawn in an unexpected location.
+
+    By creating these test cases, we can ensure that the mutated line is corrected and that the y-coordinate is correctly calculated based on the row number r. This approach can be generalized to other mutants as well. The key is to focus on the specific issue caused by the mutation and to create test cases that would expose that issue.

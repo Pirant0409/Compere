@@ -1,0 +1,12 @@
+ First, we need to understand what the method does. It's an equals method, which is used to compare the equality of two objects. In this case, the objects are instances of Tile class. The method checks if the other object is null, then checks if the classes of both objects are the same, and finally checks if the values of both objects are equal.
+
+    Now, let's focus on the mutated line. The mutated line changes the comparison operator from "==" to ">=". This means that the method will now consider two Tiles as equal if one of them has a greater value than the other. This is not the expected behavior for an equals method.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would expose the incorrect behavior of the mutated equals method. Here are some steps to guide you:
+
+    1. Create test cases with different classes: Since the original method checks if the classes of both objects are the same, we need to test with different classes to ensure that the method behaves correctly.
+    2. Create test cases with null objects: The original method returns false if the other object is null. We need to test this behavior with the mutated method as well.
+    3. Create test cases with equal values: The original method returns true if the values of both objects are equal. We need to test this behavior with the mutated method as well.
+    4. Create test cases with different values: Since the mutated method considers two objects as equal if one has a greater value than the other, we need to test this behavior with different values to ensure that the method behaves incorrectly.
+
+    To summarize, to generate a test suite that would kill this mutant and other similar mutants, we need to create test cases that cover different classes, null objects, equal values, and different values. This will help us expose any incorrect behavior and ensure that the code functions as intended.

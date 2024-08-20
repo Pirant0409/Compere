@@ -1,0 +1,12 @@
+ The mutated line is subtracting 2 from the result of (106 - fm.stringWidth(s)). This change could potentially affect the positioning of the string "s" that is being drawn.
+
+    To generate a test suite that would kill this mutant, we need to focus on the string "s" and its positioning. Here are some steps to guide you:
+
+    1. Identify the input values that would cause the string width to be very close to or equal to 108. This would make the difference between the original and mutated line significant.
+    2. Create test cases with these input values and verify that the string is drawn correctly in the original implementation.
+    3. For the mutated implementation, verify that the string is drawn outside the intended rectangle or overlaps with other strings.
+    4. If the test cases pass for the original implementation and fail for the mutated implementation, then you have successfully generated test cases that would kill the mutant.
+
+    In general, to generate test cases for mutants, you should focus on the changes made in the mutated line and the potential impact on the program's behavior. This could involve checking input/output values, boundary conditions, and interactions with other parts of the code.
+
+    Remember, the goal is to create test cases that would expose the differences between the original and mutated implementations, and help identify any unintended consequences of the mutation.

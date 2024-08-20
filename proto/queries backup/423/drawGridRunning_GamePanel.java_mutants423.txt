@@ -1,0 +1,31 @@
+ The mutated line is causing an arithmetic shift of the column index in the x-coordinate of the grid drawing. This means that the grid drawing is starting from an incorrect position, leading to incorrect grid rendering.
+
+ To generate a test suite that would kill this mutant, follow these steps:
+
+ 1. Understand the expected behavior: The method `drawGridRunning` is responsible for drawing the grid based on the current state of the game's grid. The grid should be drawn correctly, with no misalignments or incorrect colors.
+
+ 2. Create test cases that cover the edge cases:
+   a. Test the method with an empty grid (all cells are null).
+   b. Test the method with a grid containing only one cell.
+   c. Test the method with a grid containing cells in all possible positions.
+
+ 3. Create test cases that cover the incorrect behavior:
+   a. Test the method with a grid where the column index is negative.
+   b. Test the method with a grid where the column index is equal to the side length.
+   c. Test the method with a grid where the row index is negative or greater than the side length.
+
+ 4. Create test cases that cover the boundary conditions:
+   a. Test the method with a grid where the first column is being drawn.
+   b. Test the method with a grid where the last column is being drawn.
+   c. Test the method with a grid where the first row is being drawn.
+   d. Test the method with a grid where the last row is being drawn.
+
+ 5. Create test cases that cover the interaction between cells:
+   a. Test the method with a grid where two cells are next to each other horizontally.
+   b. Test the method with a grid where two cells are next to each other vertically.
+
+ 6. Create test cases that cover the interaction between the grid and the drawing area:
+   a. Test the method with a grid that is smaller than the drawing area.
+   b. Test the method with a grid that is larger than the drawing area.
+
+ 7. Run the test suite and analyze the results. If the mutant is still alive, analyze the test cases that passed and identify any potential weaknesses in the test suite. Refine the test suite by adding more test cases or modifying existing ones to cover those weaknesses

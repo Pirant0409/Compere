@@ -1,0 +1,11 @@
+ The mutated line changes the size of the fillRoundRect method call from 106 to -106. This means that the method is trying to draw a rectangle with a negative width or height. This is not possible in the real world, and it's not possible in Java either.
+
+    To generate a test suite that would kill this mutant, we need to find a test case that would expose this illegal operation. One way to do this is to test the edge cases of the grid size and tile value.
+
+    First, we should test the extreme cases of the grid size. We can create a test case that checks the behavior of the method when the row and column indices are at the minimum and maximum values. This will ensure that the method behaves correctly when dealing with the boundaries of the grid.
+
+    Next, we should test the extreme cases of the tile value. We can create a test case that checks the behavior of the method when the tile value is at the minimum and maximum possible values. This will ensure that the method behaves correctly when dealing with the extreme tile values.
+
+    Finally, we should test the interaction between the grid size and tile value. We can create a test case that checks the behavior of the method when the grid size is at the minimum or maximum values and the tile value is at the minimum or maximum possible values. This will ensure that the method behaves correctly when dealing with the extreme combinations of grid size and tile value.
+
+    In general, to generate a test suite that would kill any mutant, we need to test the edge cases, boundary conditions, and interaction between different parts of the code. We should also ensure that our test cases cover all possible paths through the code and that they exercise all possible conditions. By doing so, we can increase the chances of finding and killing any mutant that might be present in the code.

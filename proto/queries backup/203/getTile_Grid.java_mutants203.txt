@@ -1,0 +1,38 @@
+ First, we need to understand what the method does and how it's supposed to behave. This method returns the Tile object located at the given row and column in a 2D array of Tiles.
+
+    Now, let's examine the mutated line. The mutated line uses the sum of row and column multiplied by the side length of the game board instead of dividing the position by the side length. This change will likely result in an out-of-bounds error, as the calculated position will be larger than the actual size of the array.
+
+    To generate a test suite that can kill this mutant, we need to create test cases that cover various edge cases and boundary conditions. Here's a list of test cases that can help us achieve that:
+
+    1. Test valid positions within the array bounds:
+        Test the method with valid row and column values that fall within the array bounds.
+
+    2. Test positions at the edges of the array:
+        Test the method with row and column values that are at the edges of the array.
+
+    3. Test positions beyond the array bounds:
+        Test the method with row and column values that are beyond the array bounds.
+
+    4. Test positions with negative values:
+        Test the method with negative row and column values.
+
+    5. Test positions with zero values:
+        Test the method with row and column values equal to zero.
+
+    6. Test positions with large values:
+        Test the method with row and column values larger than the actual size of the array.
+
+    7. Test positions with invalid values:
+        Test the method with invalid row and column values, such as non-integer values or values that are not within the acceptable range.
+
+    8. Test the method with null GameParams object:
+        Test the method with a null GameParams object to ensure that it handles this exception properly.
+
+    9. Test the method with empty tiles array:
+        Test the method with an empty tiles array to ensure that it handles this exception properly.
+
+    10. Test the method with different Tile subclasses:
+        Test the method with different subclasses of the Tile class to ensure that it can handle various types of Tiles.
+
+    11. Test the method with concurrent access:
+        Test the method with multiple threads accessing the tiles array concurrently to

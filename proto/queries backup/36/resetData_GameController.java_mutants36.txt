@@ -1,0 +1,39 @@
+ First, we need to understand what this method does. The `resetData()` method resets the data of an object, specifically it sets the score, highest score, game state, and tile added counter to their initial values.
+
+    Now, let's focus on the mutated line. A <NO-OP> statement is a placeholder for a line of code that does nothing. In this case, it seems that the mutated line is empty, and it doesn't affect the execution of the method. However, this doesn't mean that it's harmless.
+
+    The mutated line is located where the original line sets the highest score to zero. This means that the mutant version of the method doesn't reset the highest score when it should.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover the following scenarios:
+
+    1. Test the method when the highest score is already zero before calling it.
+    2. Test the method when the highest score is a positive number before calling it.
+    3. Test the method when the highest score is a negative number before calling it.
+
+    By testing these scenarios, we can ensure that the method behaves correctly and sets the highest score to zero when it should.
+
+    To create a test case, you would typically write a JUnit test method that calls the `resetData()` method and asserts that the highest score has been reset to zero.
+
+    Here's a general approach to writing a test case:
+
+    1. Import the necessary dependencies, such as JUnit and the class under test.
+    2. Write a test method with an appropriate name and annotations.
+    3. Initialize an instance of the class under test.
+    4. Call the method you want to test and save the return value or the state of the object.
+    5. Use JUnit assertions to check that the method has behaved correctly.
+
+    For example:
+
+    ```java
+    import org.junit.Test;
+    import static org.junit.Assert.*;
+
+    public class MyClassTest {
+
+        @Test
+        public void testResetData() {
+            MyClass myObject = new MyClass();
+            myObject.resetData();
+            assertEquals(0, myObject.getHighestScore());
+        }
+   

@@ -1,0 +1,15 @@
+ The mutated line is causing the loop to iterate one more time than it should. This could potentially lead to accessing an out-of-bounds position in the grid, or other unexpected behavior.
+
+    To create a test suite that would kill this mutant, we need to focus on the condition that makes the mutation harmful. In this case, it's the fact that the loop is iterating one more time than intended.
+
+    First, we need to understand the normal behavior of the method. The method checks all possible moves for a given piece, and returns true if it finds a valid move. The loop iterates from the start position to the end position, with a step size defined by 'nextPosIncr'. The condition 'step > 0' ensures that the loop doesn't iterate when step is zero, which is the first position.
+
+    Now, let's see how the mutation changes the behavior. The mutated line 'step >= 0' causes the loop to iterate one more time than intended, because it doesn't stop when step is zero. This could potentially lead to accessing an out-of-bounds position in the grid, or other unexpected behavior.
+
+    To create a test suite that would kill this mutant, we need to focus on test cases that expose this unexpected behavior. Here are some suggestions:
+
+    1. Test case for the edge of the grid: Create a test case where the piece is at the edge of the grid, and the step size is such that the mutated loop would iterate one more time than intended, causing an out-of-bounds access.
+    2. Test case for invalid moves: Create test cases where the method is supposed to find an invalid move, but the mutated loop causes it to check one more position than intended, potentially finding a valid move where there shouldn't be one.
+    3. Test case for different grid sizes: Create test cases with different grid sizes, to ensure that the mutation doesn't cause unexpected behavior in different scenarios.
+    4. Test case for different piece types: Create test cases with different piece types, to ensure that the mutation doesn't cause unexpected behavior depending on the type of piece.
+    5. Test case for different game states: Create test cases where the game state is not 'running', to ensure that the mutation doesn't cause unexpected behavior when the method shouldn't be

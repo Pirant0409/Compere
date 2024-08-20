@@ -1,0 +1,15 @@
+ First, we need to understand the context of the method and the mutated line. This method, `drawGridRunning`, is responsible for drawing the grid of a game. It does this by iterating through each cell in the grid and either drawing an empty cell or a cell containing a tile. The mutated line is the condition in the if statement that checks if the current cell is empty.
+
+    To generate tests that would kill this mutant, we need to find a way to ensure that the condition in the if statement is not met, i.e., that the current cell is not empty. One way to do this is by creating a test case where we set the value of a cell to be something other than null before calling the `drawGridRunning` method.
+
+    However, it's important to note that this approach only works for this specific mutant and the specific implementation of the method. To create tests that would kill any mutant, we need to focus on the behavior of the code and the expected output.
+
+    Here are some general guidelines for generating tests that would kill mutants:
+
+    1. Understand the behavior of the code: What is the method supposed to do? What are the inputs and outputs? What are the expected side effects?
+    2. Identify the conditions that would cause the mutated line to be executed: In this case, the mutated line is executed when the current cell is empty.
+    3. Create test cases that violate those conditions: In this case, we can create a test case where we set the value of a cell to be something other than null before calling the `drawGridRunning` method.
+    4. Verify that the output of the method is different from the expected output: In this case, we would expect the method to draw a tile instead of an empty cell.
+    5. Repeat the process for other mutants: The same general approach can be applied to other mutants, but the specific details will depend on the behavior of the code and the implementation of the mutated line.
+
+    By following these guidelines, we can create test cases that would kill a wide range of mutants, not just the one you provided.

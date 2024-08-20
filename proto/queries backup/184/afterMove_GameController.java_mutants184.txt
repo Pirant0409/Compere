@@ -1,0 +1,13 @@
+ First, we need to understand the context of the method and the mutated line. The method 'afterMove()' is called after a move is made in the game. It checks if the highest score achieved in the game is less than the target score. If it is, then it clears the merged tiles, fills the first empty tile, and checks if there are no more moves available. If there are no more moves, then the game state is set to 'GameState.over'. If the highest score is equal to the target score, then the game state is set to 'GameState.won'.
+
+    The mutated line is a no-op statement, which means it does nothing. It doesn't affect the flow of the program or the variables. However, it can potentially affect the behavior of the program when it interacts with the external world, such as the game state or the user interface.
+
+    To generate a test suite that would kill this mutant, we need to focus on the conditions that would cause the method to behave differently when the mutated line is present compared to when it is not. Since the mutated line is a no-op statement, it doesn't change the flow of the program or the variables directly. However, it can indirectly affect the behavior of the method by changing the state of the game or the user interface.
+
+    To test this, we need to design test cases that cover the different scenarios of the method and check if the mutated line affects the expected behavior. Here are some steps to guide you in generating test cases:
+
+    1. Identify the preconditions of the method: What are the conditions that must be true before the method can be called? In this case, the method is called after a move is made, so the precondition is that a move has been made.
+
+    2. Identify the postconditions of the method: What are the conditions that should be true after the method is called? In this case, the postconditions are that the game state is set to 'GameState.over' if the highest score is less than the target score and there are no more moves available, or that the game state is set to 'GameState.won' if the highest score is equal to the target score.
+
+    3. Design test cases that cover the different scenarios: For each scenario, design a test case that sets up the preconditions and checks the postconditions. Make sure

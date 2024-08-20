@@ -1,0 +1,17 @@
+ First, we need to understand the context of the method and the mutated line. This method, `moveLeft`, is checking if there is an available move to the left based on some given conditions. The mutated line is the argument passed to the `move` method for the horizontal direction, which is now set to -15 instead of the original 15.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would expose the incorrect behavior of the method when the horizontal direction is set to an incorrect value, such as -15.
+
+    Here are some general steps to generate effective test cases for this situation:
+
+    1. Identify the input parameters: In this case, the method `moveLeft` takes one boolean parameter `checkingAvailableMoves`. However, the mutated line is related to the horizontal direction, which is a separate parameter in the `move` method. So, we need to focus on the horizontal direction as our input parameter.
+
+    2. Determine the expected behavior: When the horizontal direction is set to a valid value, the method should return true if there is an available move in that direction, and false otherwise. With the mutated line, the horizontal direction is set to an incorrect value (-15), so the expected behavior is that the method should always return false.
+
+    3. Create test cases that cover edge cases and invalid inputs: We should create test cases that cover edge cases and invalid inputs to ensure that the method behaves correctly under various conditions. For example, we could test the method with the minimum and maximum possible values for the horizontal direction, as well as negative and very large values.
+
+    4. Create test cases that cover the normal behavior: We should also create test cases that cover the normal behavior of the method, i.e., when the horizontal direction is set to a valid value. This will help us ensure that the method works correctly under normal conditions, even if we have already tested the incorrect behavior with the mutated line.
+
+    5. Verify the test results: Once we have generated our test cases, we should run them and verify that the method behaves correctly under all conditions. If the method fails any of our test cases, we may need to refactor the code or adjust our test cases to better cover the edge cases and invalid inputs.
+
+    By following these steps, we can generate a test suite that would kill the

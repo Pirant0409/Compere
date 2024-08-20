@@ -1,0 +1,19 @@
+ First, we need to understand what the method does. The `resetData()` method resets the data of an object, specifically it sets the score, highest score, game state, and tile added counter to their initial values.
+
+    Now, let's focus on the mutated line. The mutated line is a no-op statement, which means it doesn't do anything. In this case, it doesn't affect the variable `tileAdded` because it's already being set to 0 in the original line. However, this doesn't mean that the mutant is harmless.
+
+    To generate a test suite that would kill this mutant, we need to find a scenario where the mutated line changes the behavior of the method compared to the original line. In other words, we need to find a test case where the mutated line introduces a bug.
+
+    To do this, we need to understand the context of the `tileAdded` variable. Based on the method name and the variable name, it seems that the `tileAdded` counter is related to the number of tiles added to the game. So, we should test the method with different scenarios involving the addition and removal of tiles.
+
+    Here are some suggestions for test cases:
+
+    1. Test the method when no tiles are added before calling it.
+    2. Test the method when tiles are added before and after calling it.
+    3. Test the method when tiles are removed before calling it.
+    4. Test the method when tiles are removed after calling it.
+    5. Test the method with different initial values for `tileAdded`.
+
+    For each test case, we should verify that the `tileAdded` counter is reset to 0 in the method, regardless of the mutated line. If the mutant introduces a bug that causes the `tileAdded` counter to behave differently in any of these test cases, then we have found a test case that can kill the mutant.
+
+    In general, to generate a test suite that can kill mutants, we need to test the method with different scenarios that cover all possible paths and edge cases. We should also verify that each mutated line doesn't change the behavior of the method compared to the original line. By doing this, we can ensure that the method is functioning correctly and that any mutants are killed.

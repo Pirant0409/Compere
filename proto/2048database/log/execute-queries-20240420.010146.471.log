@@ -1,0 +1,232 @@
+[2024-04-20 01:01:46] This is codeql execute queries -J-Xmx1800M --off-heap-ram=1632 --verbosity=progress --logdir=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\2048database\log --evaluator-log-level=5 --threads=8 --warnings=show --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml -- C:\Users\32491\Documents\Uni\MA2\Memoire\proto\2048database\db-java path:C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\199\getBody.ql
+[2024-04-20 01:01:46] Calling plumbing command: codeql resolve queries --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml --format=json -- path:C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\199\getBody.ql
+[2024-04-20 01:01:47] [PROGRESS] resolve queries> Recording pack reference getting-started/codeql-extra-queries-java-1 at C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries.
+[2024-04-20 01:01:47] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\Users\\32491\\Documents\\Uni\\MA2\\Memoire\\proto\\queries\\199\\getBody.ql"
+                      ]
+[2024-04-20 01:01:47] Refusing fancy output: The terminal is not an xterm: 
+[2024-04-20 01:01:47] Creating executor with 8 threads.
+[2024-04-20 01:01:47] Calling plumbing command: codeql resolve extensions --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml path:C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\199\getBody.ql
+[2024-04-20 01:01:47] Calling plumbing command: codeql resolve queries --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml --allow-library-packs --format startingpacks -- path:C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries\199\getBody.ql
+[2024-04-20 01:01:47] [PROGRESS] resolve queries> Recording pack reference getting-started/codeql-extra-queries-java-1 at C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries.
+[2024-04-20 01:01:47] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\Users\\32491\\Documents\\Uni\\MA2\\Memoire\\proto\\queries"
+                      ]
+[2024-04-20 01:01:47] Calling plumbing command: codeql resolve extensions-by-pack --qlconfig-file=C:\Users\32491\Documents\Uni\MA2\Memoire\proto\qlconfig.yml -- C:\Users\32491\Documents\Uni\MA2\Memoire\proto\queries
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] getting-started/codeql-extra-queries-java-1: not 1.0.0 {root: getting-started/codeql-extra-queries-java-1@1.0.0}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DERIVATION] getting-started/codeql-extra-queries-java-1: 1.0.0 {getting-started/codeql-extra-queries-java-1: not 1.0.0 {root: getting-started/codeql-extra-queries-java-1@1.0.0}}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] getting-started/codeql-extra-queries-java-1: * [*], codeql/java-all: not * [*] {dependency: getting-started/codeql-extra-queries-java-1@* [*] requires codeql/java-all@^0.8.9}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DECISION 1] getting-started/codeql-extra-queries-java-1: 1.0.0
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/java-all: * [*] {getting-started/codeql-extra-queries-java-1: * [*], codeql/java-all: not * [*] {dependency: getting-started/codeql-extra-queries-java-1@* [*] requires codeql/java-all@^0.8.9}}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/java-all@* [*] requires codeql/dataflow@0.2.0}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/mad: not * [*] {dependency: codeql/java-all@* [*] requires codeql/mad@0.2.9}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/rangeanalysis: not * [*] {dependency: codeql/java-all@* [*] requires codeql/rangeanalysis@0.0.8}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/regex: not * [*] {dependency: codeql/java-all@* [*] requires codeql/regex@0.2.9}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/threat-models: not * [*] {dependency: codeql/java-all@* [*] requires codeql/threat-models@0.0.8}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/java-all@* [*] requires codeql/tutorial@0.2.9}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/typetracking: not * [*] {dependency: codeql/java-all@* [*] requires codeql/typetracking@0.2.9}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/java-all: * [*], codeql/util: not * [*] {dependency: codeql/java-all@* [*] requires codeql/util@0.2.9}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DECISION 2] codeql/java-all: 0.8.9
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/util: * [*] {codeql/java-all: * [*], codeql/util: not * [*] {dependency: codeql/java-all@* [*] requires codeql/util@0.2.9}}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/typetracking: * [*] {codeql/java-all: * [*], codeql/typetracking: not * [*] {dependency: codeql/java-all@* [*] requires codeql/typetracking@0.2.9}}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/tutorial: * [*] {codeql/java-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/java-all@* [*] requires codeql/tutorial@0.2.9}}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/threat-models: * [*] {codeql/java-all: * [*], codeql/threat-models: not * [*] {dependency: codeql/java-all@* [*] requires codeql/threat-models@0.0.8}}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/regex: * [*] {codeql/java-all: * [*], codeql/regex: not * [*] {dependency: codeql/java-all@* [*] requires codeql/regex@0.2.9}}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/rangeanalysis: * [*] {codeql/java-all: * [*], codeql/rangeanalysis: not * [*] {dependency: codeql/java-all@* [*] requires codeql/rangeanalysis@0.0.8}}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/mad: * [*] {codeql/java-all: * [*], codeql/mad: not * [*] {dependency: codeql/java-all@* [*] requires codeql/mad@0.2.9}}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/dataflow: * [*] {codeql/java-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/java-all@* [*] requires codeql/dataflow@0.2.0}}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@0.2.9}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@0.2.9}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/util: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/util@0.2.9}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DECISION 3] codeql/dataflow: 0.2.0
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/ssa: * [*] {codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@0.2.9}}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DECISION 4] codeql/mad: 0.2.9
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/rangeanalysis: * [*], codeql/util: not * [*] {dependency: codeql/rangeanalysis@* [*] requires codeql/util@0.2.9}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DECISION 5] codeql/rangeanalysis: 0.0.8
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/regex: * [*], codeql/util: not * [*] {dependency: codeql/regex@* [*] requires codeql/util@0.2.9}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DECISION 6] codeql/regex: 0.2.9
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/ssa: * [*], codeql/util: not * [*] {dependency: codeql/ssa@* [*] requires codeql/util@0.2.9}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DECISION 7] codeql/ssa: 0.2.9
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DECISION 8] codeql/threat-models: 0.0.8
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DECISION 9] codeql/tutorial: 0.2.9
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/typetracking: * [*], codeql/util: not * [*] {dependency: codeql/typetracking@* [*] requires codeql/util@0.2.9}
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DECISION 10] codeql/typetracking: 0.2.9
+[2024-04-20 01:01:47] [SPAMMY] resolve extensions-by-pack> [DECISION 11] codeql/util: 0.2.9
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\android.app.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 77 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 103 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\android.content.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sourceModel: 31 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 24 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 154 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\android.database.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 7 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 11 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\android.database.sqlite.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 52 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 30 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\android.net.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 60 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\android.os.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sourceModel: 2 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 122 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\android.support.v4.app.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 11 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\android.util.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sourceModel: 16 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 6 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\android.webkit.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sourceModel: 2 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 3 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\android.widget.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sourceModel: 1 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\androidx.core.app.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 47 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 95 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\androidx.fragment.app.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 11 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\androidx.slice.builders.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 88 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\androidx.slice.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sourceModel: 5 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 2 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\ch.ethz.ssh2.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 2 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\cn.hutool.core.codec.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.alibaba.druid.sql.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.alibaba.druid.sql.repository.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.alibaba.fastjson2.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.amazonaws.auth.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 2 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.auth0.jwt.algorithms.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 6 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.azure.identity.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 3 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.esotericsoftware.kryo.io.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.esotericsoftware.kryo5.io.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.fasterxml.jackson.core.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.fasterxml.jackson.databind.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 8 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 2 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.google.common.base.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 4 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 87 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.google.common.cache.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 17 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.google.common.collect.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 553 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.google.common.flogger.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 29 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.google.common.io.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 10 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 73 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.google.gson.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 52 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.hubspot.jinjava.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 2 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.jcraft.jsch.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 5 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.microsoft.sqlserver.jdbc.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 4 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.mitchellbosecke.pebble.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 2 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.mongodb.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 10 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.opensymphony.xwork2.ognl.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 3 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.rabbitmq.client.impl.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sourceModel: 3 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 3 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.rabbitmq.client.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sourceModel: 18 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 4 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.sshtools.j2ssh.authentication.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 3 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.sun.crypto.provider.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 19 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.sun.jndi.ldap.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 4 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.sun.net.httpserver.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 3 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.sun.net.ssl.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 3 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.sun.rowset.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 3 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.sun.security.auth.module.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 2 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.sun.security.ntlm.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 5 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.sun.security.sasl.digest.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 3 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.thoughtworks.xstream.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.trilead.ssh2.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 13 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.unboundid.ldap.sdk.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 17 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\com.zaxxer.hikari.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 2 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\dummy.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sourceModel: 0 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 0 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 0 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:neutralModel: 0 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\experimental\android.webkit.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSummaryModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\experimental\com.google.common.io.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSinkModel: 6 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\experimental\com.jcraft.jsch.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSinkModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\experimental\com.jfinal.core.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSourceModel: 23 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\experimental\dummy.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSourceModel: 0 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSinkModel: 0 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSummaryModel: 0 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\experimental\io.undertow.server.handlers.resource.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSummaryModel: 3 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\experimental\jakarta.servlet.http.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSourceModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\experimental\java.io.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSummaryModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\experimental\java.lang.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSinkModel: 1 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSummaryModel: 2 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\experimental\java.nio.file.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSummaryModel: 5 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\experimental\java.util.concurrent.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSinkModel: 2 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\experimental\javax.servlet.http.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSourceModel: 1 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSourceModel: 5 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\experimental\org.apache.logging.log4j.message.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSummaryModel: 4 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\experimental\org.apache.logging.log4j.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSinkModel: 357 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\experimental\org.springframework.core.io.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSinkModel: 4 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:experimentalSummaryModel: 3 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\flexjson.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\freemarker.cache.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 1 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\freemarker.template.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 7 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\generated\javax.portlet.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 61 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:neutralModel: 118 tuples.
+[2024-04-20 01:01:48] [PROGRESS] resolve extensions-by-pack> Loading data extensions in C:\Users\32491\Downloads\codeql\qlpacks\codeql\java-all\0.8.9\ext\generated\jenkins-json-lib.model.yml.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:sinkModel: 2 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:summaryModel: 338 tuples.
+[2024-04-20 01:01:48] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/java-all:neutralModel: 243 tuples.

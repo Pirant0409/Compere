@@ -1,0 +1,21 @@
+ First, we need to understand what the method does. This method returns the Tile object located at the given row and column position in the 2D array of Tiles.
+
+    Now, let's focus on the mutated line. The mutated line uses the subtraction operator instead of the division operator. This means that the result of this line will be the position with the offset of sideLength in the negative direction.
+
+    To create a test suite that would kill this mutant, we need to find a test case that would expose the incorrect behavior of the mutated line. Let's consider the following steps:
+
+    1. Identify the boundary conditions: Find the minimum and maximum valid values for row and col.
+    2. Test the method with valid inputs: Test the method with inputs that are within the valid range.
+    3. Test the method with invalid inputs: Test the method with inputs that are outside the valid range.
+    4. Test the method with edge cases: Test the method with inputs that are at the edge of the valid range.
+
+    Let's apply these steps to our current situation:
+
+    1. Identify the boundary conditions: The minimum valid value for row is 0, and the maximum valid value is the number of rows - 1. The minimum valid value for col is 0, and the maximum valid value is the number of columns - 1.
+    2. Test the method with valid inputs: Test the method with inputs that are within the valid range. For example, test the method with (0, 0), (2, 2), etc.
+    3. Test the method with invalid inputs: Test the method with inputs that are outside the valid range. For example, test the method with (-1, 0), (3, 3), etc.
+    4. Test the method with edge cases: Test the method with inputs that are at the edge of the valid range. For example, test the method with (0, 0), (0, GameParams.sideLength - 1), (GameParams.sideLength - 1, 0), etc.
+
+    By testing the method with these inputs, we can find a test case that would expose the incorrect behavior of the mutated line and kill the mutant.
+
+    It's important to note that this approach can be applied to other mutants as well. The key

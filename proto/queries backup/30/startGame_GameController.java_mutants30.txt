@@ -1,0 +1,23 @@
+ First, we need to understand what the original code does and what the mutated code does.
+
+    The original code initializes the grid object with an argument 'tiles'. This argument is not present in the mutated code, which means the mutated code initializes the grid without any argument.
+
+    Now, let's consider the impact of this change on the behavior of the method. The grid is a crucial data structure in the game, and its initialization is an essential part of the game setup. If the grid is not initialized correctly, the game may not function properly or may even crash.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that cover the following scenarios:
+
+    1. Test when the gamestate is not running, and the grid should be initialized.
+    2. Test when the gamestate is running, and the grid should not be re-initialized.
+    3. Test edge cases, such as when nbStartTileFilled is 0 or the maximum value.
+
+    To create these test cases, we need to write test methods that cover the different scenarios and assert that the grid is initialized or not initialized as expected. We can use JUnit or any other testing framework to write and run these test cases.
+
+    Here's a general approach to writing test cases for this method:
+
+    1. Write a test method for the scenario when the gamestate is not running, and the grid should be initialized.
+    2. Write a test method for the scenario when the gamestate is running, and the grid should not be re-initialized.
+    3. Write test methods for edge cases, such as when nbStartTileFilled is 0 or the maximum value.
+
+    In each test method, we can use the assertions provided by the testing framework to check the state of the grid and the gamestate before and after the method call. We can also use mocking or stubbing to isolate the behavior of the method under test and make it easier to test.
+
+    By writing test cases that cover these scenarios, we can ensure that the mutated code, as well as any other similar mutants, are killed, and the original behavior of the method is preserved.

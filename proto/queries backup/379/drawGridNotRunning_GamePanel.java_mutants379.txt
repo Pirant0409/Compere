@@ -1,0 +1,13 @@
+ First, we need to understand the behavior of the original method. The method is responsible for drawing the grid and some text on the given Graphics2D object. It checks the game state and based on that, it draws different text messages.
+
+    Now, let's see what the mutated line does. It subtracts 270 from the y-coordinate of the string "You win !" or "You loose !" that is being drawn. This means that the text is being drawn below the intended position.
+
+    To generate a test suite that would kill this mutant, we need to test the correct positioning of the text messages. Here are some suggestions:
+
+    1. Test the positioning of the text messages when the game is won or lost. You can create a test case that checks the position of the text messages in the drawing canvas and asserts that they are drawn at the expected position.
+    2. Test the positioning of the other text messages as well. For example, you can test the position of the text "Click to start a new game" and "Use arrow keys to move tiles".
+    3. Test the behavior of the method when the game state is neither won nor lost. In this case, no text messages should be drawn.
+    4. Test the behavior of the method when the Graphics2D object is null. In this case, an exception should be thrown.
+    5. Test the behavior of the method when the controller object is null. In this case, an exception should be thrown.
+
+    By testing these different scenarios, you should be able to create a test suite that would kill the mutant and prevent similar mutations from occurring in the future. Remember, the key to effective testing is thoroughness and attention to detail.

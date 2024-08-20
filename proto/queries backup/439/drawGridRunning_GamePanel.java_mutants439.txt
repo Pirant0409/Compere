@@ -1,0 +1,15 @@
+ The mutated line changes the value of the radius of the round rectangle from 106 to -106. This means that the width and height of the rectangle will be negative. In Java, you cannot draw a rectangle with negative dimensions. Therefore, the mutant version of the method will not be able to draw the grid correctly.
+
+ To generate a test suite that would kill this mutant, you need to create test cases that cover all possible scenarios where the method is supposed to draw a rectangle with valid and invalid dimensions. Here are some suggestions:
+
+ 1. Test with valid dimensions: Create a test case that checks if the method can correctly draw a grid with valid dimensions. This can be done by initializing the controller with a valid grid and calling the method with this controller.
+
+ 2. Test with empty grid: Create a test case that checks if the method can correctly draw an empty grid. This can be done by initializing the controller with an empty grid and calling the method.
+
+ 3. Test with grid containing tiles: Create a test case that checks if the method can correctly draw a grid with tiles. This can be done by initializing the controller with a grid containing tiles and calling the method.
+
+ 4. Test with negative dimensions: Create a test case that checks if the method throws an exception when called with negative dimensions. This can be done by initializing the controller with a grid that has negative dimensions and calling the method.
+
+ 5. Test with null controller: Create a test case that checks if the method throws an exception when called with a null controller.
+
+ By covering all these scenarios, you will have a comprehensive test suite that can kill this mutant and other similar mutants that may arise in the future. Remember, the key to effective testing is thorough coverage of all possible scenarios.

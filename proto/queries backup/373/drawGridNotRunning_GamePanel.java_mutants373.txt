@@ -1,0 +1,18 @@
+ First, we need to understand what the method does. This method is responsible for drawing the grid and some text on the screen. The mutated line is at position 0, which is not valid in Java. It seems like there is a mistake in the code.
+
+    To generate a test suite that would kill this mutant, we need to create test cases that would expose this error. Here are some steps to guide you:
+
+    1. Create a test class for the method `drawGridNotRunning`.
+    2. Use JUnit or any other testing framework to write test cases.
+    3. Write a test case that checks if the method correctly draws the grid and text on the screen.
+    4. Write another test case that checks if the method throws an exception when an invalid argument is passed to it.
+    5. Run the test suite and observe the results.
+
+    In general, to generate a test suite for any method, follow these steps:
+
+    1. Understand the method's functionality and its inputs and outputs.
+    2. Write test cases that cover all possible scenarios, including edge cases and error conditions.
+    3. Use a testing framework to write and run the test cases.
+    4. Observe the test results and make sure that the method behaves as expected under all conditions.
+
+    Remember, the goal is to write tests that cover all possible scenarios and expose any errors or bugs in the code. Happy testing!
