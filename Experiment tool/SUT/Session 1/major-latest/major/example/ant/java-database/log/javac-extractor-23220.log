@@ -1,0 +1,13 @@
+[2024-04-03 16:28:16] [javac-extractor-23220] Starting extraction for:
+                                              sun.java.command=com.semmle.extractor.java.JavaExtractor --jdk-version -1 --javac-args @@@C:\Users\32491\Documents\Uni\MA2\Memoire\major-latest\major\example\ant\java-database\log\ext\javac.args
+                                              user.dir=C:\Users\32491\Documents\Uni\MA2\Memoire\major-latest\major\example\ant
+[2024-04-03 16:28:16] [javac-extractor-23220] Compilation name C:/Users/32491/Documents/Uni/MA2/Memoire/major-latest/major/example/ant/java-database/trap/java/diagnostics/diagnostic.trap.gz
+[2024-04-03 16:28:18] [javac-extractor-23220] Annotation processor class 'lombok.launch.AnnotationProcessorHider$AnnotationProcessor' initialized.
+[2024-04-03 16:28:18] [javac-extractor-23220] Annotation processor class 'lombok.launch.AnnotationProcessorHider$ClaimingProcessor' initialized.
+[2024-04-03 16:28:19] [javac-extractor-23220] Processing file C:\Users\32491\Documents\Uni\MA2\Memoire\major-latest\major\example\ant\src\triangle\Triangle.java
+[2024-04-03 16:28:27] [javac-extractor-23220] Processing JAR file: C:/Program Files (x86)/OpenLogic/jdk-8.0.402.06-hotspot/jre/lib/rt.jar
+[2024-04-03 16:28:27] [javac-extractor-23220] Javac init time: 2.1s
+[2024-04-03 16:28:27] [javac-extractor-23220] Javac attr time: 0.0s
+[2024-04-03 16:28:27] [javac-extractor-23220] Extractor time: 8.1s
+[2024-04-03 16:28:27] [javac-extractor-23220] Other time: 0.3s
+[2024-04-03 16:28:27] [javac-extractor-23220] Total time: 10.6s

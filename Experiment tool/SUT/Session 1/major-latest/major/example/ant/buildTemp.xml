@@ -1,0 +1,42 @@
+<project name="TriangleProject" default="run">
+
+    <!-- Define properties -->
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="bin"/>
+    <property name="test.dir" value="test"/>
+    <property name="classes.dir" value="${build.dir}"/>
+    <property name="main-class" value="triangle.Triangle"/>
+
+    <!-- Clean target -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <!-- Compile target -->
+    <target name="compile" depends="clean">
+        <mkdir dir="${classes.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}"/>
+    </target>
+
+    <!-- Run target -->
+    <target name="run" depends="compile">
+        <java classname="${main-class}" classpath="${classes.dir}"/>
+    </target>
+
+    <!-- Test target -->
+    <target name="test" depends="compile">
+        <junit printsummary="on">
+            <classpath>
+                <pathelement location="${classes.dir}"/>
+                <pathelement path="${java.class.path}"/>
+            </classpath>
+            <formatter type="brief" usefile="false"/>
+            <batchtest todir="${build.dir}">
+                <fileset dir="${test.dir}">
+                    <include name="**/TestSuite.class"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+</project>

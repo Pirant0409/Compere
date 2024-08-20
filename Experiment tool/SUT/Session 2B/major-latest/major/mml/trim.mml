@@ -1,0 +1,19 @@
+targetOp{
+    BIN(>)->{>=,!=,FALSE};
+    BIN(<)->{<=,!=,FALSE};
+    BIN(>=)->{>,==,TRUE};
+    BIN(<=)->{<,==,TRUE};
+    BIN(==)->{<=,>=,FALSE,LHS,RHS};
+    BIN(!=)->{<,>,TRUE,LHS,RHS};
+    // Define the replacements for COR
+    BIN(&&)->{==,LHS,RHS,FALSE};
+    BIN(||)->{!=,LHS,RHS,TRUE};
+    // Define the type of statement that STD should delete
+    DEL(RETURN);
+
+    // Enable the STD, COR, and ROR mutation operators
+    STD;
+    COR;
+    ROR;
+}
+targetOp<"com.api.jsonata4java.expressions.functions.TrimFunction::invoke(ExpressionsVisitor,Function_callContext)">;

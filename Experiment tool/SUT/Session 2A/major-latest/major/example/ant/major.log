@@ -1,0 +1,876 @@
+[04/24 16:09:13] [INFOS  ] org.mutationtesting.major.plugin.MajorPluginTaskListener.<init>:
+    Created MajorPluginTaskListener with options: [export.mutants]
+[04/24 16:09:13] [INFOS  ] org.mutationtesting.major.plugin.MajorPluginTaskListener.initMutator:
+    No mutator provided: using default mutation provider
+[04/24 16:09:13] [INFOS  ] org.mutationtesting.major.mutation.Mutator.initOperatorSymbols:
+    Initializing operator symbols for opcode mapping
+[04/24 16:09:13] [INFOS  ] org.mutationtesting.major.mutation.Mutator.mutateTree:
+    Mutating tree: Env[AttrContext[Scope[super, this]],outer=Env[AttrContext[Scope[triangle.Triangle]]]]
+[04/24 16:09:13] [INFOS  ] org.mutationtesting.major.mutation.Mutator.visitClassDef:
+    CLASS: triangle.Triangle
+[04/24 16:09:13] [INFOS  ] org.mutationtesting.major.mutation.Mutator.visitMethodDef:
+    METHOD: <init>([])null
+[04/24 16:09:13] [INFOS  ] org.mutationtesting.major.mutation.Mutator.visitClassDef:
+    CLASS: triangle.Triangle$Type
+[04/24 16:09:13] [INFOS  ] org.mutationtesting.major.mutation.Mutator.visitMethodDef:
+    METHOD: <init>([])null
+[04/24 16:09:13] [INFOS  ] org.mutationtesting.major.mutation.Mutator.visitMethodDef:
+    METHOD: classify([int a, int b, int c])Type
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 1: Triangle.classify(line 11, col 26)
+            mutation operator group:   LVR
+            mutation operator:         0 |==> POS
+            original:                  0 
+            mutant:                    1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 2
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 2: Triangle.classify(line 11, col 26)
+            mutation operator group:   LVR
+            mutation operator:         0 |==> NEG
+            original:                  0 
+            mutant:                    -1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 3
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 3: Triangle.classify(line 11, col 23)
+            mutation operator group:   ROR
+            mutation operator:         <=(int,int) |==> <(int,int)
+            original:                  a <= 0 
+            mutant:                    a < 0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 4
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 4: Triangle.classify(line 11, col 23)
+            mutation operator group:   ROR
+            mutation operator:         <=(int,int) |==> ==(int,int)
+            original:                  a <= 0 
+            mutant:                    a == 0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 5
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 5: Triangle.classify(line 11, col 36)
+            mutation operator group:   LVR
+            mutation operator:         0 |==> POS
+            original:                  0 
+            mutant:                    1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 6
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 6: Triangle.classify(line 11, col 36)
+            mutation operator group:   LVR
+            mutation operator:         0 |==> NEG
+            original:                  0 
+            mutant:                    -1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 7
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 7: Triangle.classify(line 11, col 33)
+            mutation operator group:   ROR
+            mutation operator:         <=(int,int) |==> <(int,int)
+            original:                  b <= 0 
+            mutant:                    b < 0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 8
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 8: Triangle.classify(line 11, col 33)
+            mutation operator group:   ROR
+            mutation operator:         <=(int,int) |==> ==(int,int)
+            original:                  b <= 0 
+            mutant:                    b == 0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 9
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 9: Triangle.classify(line 11, col 28)
+            mutation operator group:   COR
+            mutation operator:         ||(boolean,boolean) |==> !=(boolean,boolean)
+            original:                  a <= 0 || b <= 0 
+            mutant:                    a <= 0 != b <= 0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 10
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 10: Triangle.classify(line 11, col 46)
+            mutation operator group:   LVR
+            mutation operator:         0 |==> POS
+            original:                  0 
+            mutant:                    1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 11
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 11: Triangle.classify(line 11, col 46)
+            mutation operator group:   LVR
+            mutation operator:         0 |==> NEG
+            original:                  0 
+            mutant:                    -1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 12
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 12: Triangle.classify(line 11, col 43)
+            mutation operator group:   ROR
+            mutation operator:         <=(int,int) |==> <(int,int)
+            original:                  c <= 0 
+            mutant:                    c < 0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 13
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 13: Triangle.classify(line 11, col 43)
+            mutation operator group:   ROR
+            mutation operator:         <=(int,int) |==> ==(int,int)
+            original:                  c <= 0 
+            mutant:                    c == 0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 14
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 14: Triangle.classify(line 11, col 38)
+            mutation operator group:   COR
+            mutation operator:         ||(boolean,boolean) |==> !=(boolean,boolean)
+            original:                  a <= 0 || b <= 0 || c <= 0 
+            mutant:                    (a <= 0 || b <= 0) != c <= 0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 15
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutantSTD:
+    Logging mutantSTD 15: (STD) return Type.INVALID; -> <NO-OP>
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 16
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 16: Triangle.classify(line 13, col 25)
+            mutation operator group:   LVR
+            mutation operator:         0 |==> POS
+            original:                  0 
+            mutant:                    1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 17
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 17: Triangle.classify(line 13, col 25)
+            mutation operator group:   LVR
+            mutation operator:         0 |==> NEG
+            original:                  0 
+            mutant:                    -1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 18
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 18: Triangle.classify(line 14, col 23)
+            mutation operator group:   ROR
+            mutation operator:         ==(int,int) |==> <=(int,int)
+            original:                  a == b 
+            mutant:                    a <= b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 19
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 19: Triangle.classify(line 14, col 23)
+            mutation operator group:   ROR
+            mutation operator:         ==(int,int) |==> >=(int,int)
+            original:                  a == b 
+            mutant:                    a >= b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 20
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 20: Triangle.classify(line 15, col 41)
+            mutation operator group:   LVR
+            mutation operator:         POS |==> 0
+            original:                  1 
+            mutant:                    0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 21
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 21: Triangle.classify(line 15, col 41)
+            mutation operator group:   LVR
+            mutation operator:         POS |==> NEG
+            original:                  1 
+            mutant:                    -1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 22
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 22: Triangle.classify(line 15, col 39)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> %(int,int)
+            original:                  trian + 1 
+            mutant:                    trian % 1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 23
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 23: Triangle.classify(line 15, col 39)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> *(int,int)
+            original:                  trian + 1 
+            mutant:                    trian * 1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 24
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 24: Triangle.classify(line 15, col 39)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> -(int,int)
+            original:                  trian + 1 
+            mutant:                    trian - 1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 25
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 25: Triangle.classify(line 15, col 39)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> /(int,int)
+            original:                  trian + 1 
+            mutant:                    trian / 1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 26
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutantSTD:
+    Logging mutantSTD 26: (STD) trian = trian + 1; -> <NO-OP>
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 27
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 27: Triangle.classify(line 16, col 23)
+            mutation operator group:   ROR
+            mutation operator:         ==(int,int) |==> <=(int,int)
+            original:                  a == c 
+            mutant:                    a <= c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 28
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 28: Triangle.classify(line 16, col 23)
+            mutation operator group:   ROR
+            mutation operator:         ==(int,int) |==> >=(int,int)
+            original:                  a == c 
+            mutant:                    a >= c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 29
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 29: Triangle.classify(line 17, col 41)
+            mutation operator group:   LVR
+            mutation operator:         POS |==> 0
+            original:                  2 
+            mutant:                    0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 30
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 30: Triangle.classify(line 17, col 41)
+            mutation operator group:   LVR
+            mutation operator:         POS |==> NEG
+            original:                  2 
+            mutant:                    -2
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 31
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 31: Triangle.classify(line 17, col 39)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> %(int,int)
+            original:                  trian + 2 
+            mutant:                    trian % 2
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 32
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 32: Triangle.classify(line 17, col 39)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> *(int,int)
+            original:                  trian + 2 
+            mutant:                    trian * 2
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 33
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 33: Triangle.classify(line 17, col 39)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> -(int,int)
+            original:                  trian + 2 
+            mutant:                    trian - 2
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 34
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 34: Triangle.classify(line 17, col 39)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> /(int,int)
+            original:                  trian + 2 
+            mutant:                    trian / 2
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 35
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutantSTD:
+    Logging mutantSTD 35: (STD) trian = trian + 2; -> <NO-OP>
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 36
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 36: Triangle.classify(line 18, col 23)
+            mutation operator group:   ROR
+            mutation operator:         ==(int,int) |==> <=(int,int)
+            original:                  b == c 
+            mutant:                    b <= c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 37
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 37: Triangle.classify(line 18, col 23)
+            mutation operator group:   ROR
+            mutation operator:         ==(int,int) |==> >=(int,int)
+            original:                  b == c 
+            mutant:                    b >= c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 38
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 38: Triangle.classify(line 19, col 41)
+            mutation operator group:   LVR
+            mutation operator:         POS |==> 0
+            original:                  3 
+            mutant:                    0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 39
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 39: Triangle.classify(line 19, col 41)
+            mutation operator group:   LVR
+            mutation operator:         POS |==> NEG
+            original:                  3 
+            mutant:                    -3
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 40
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 40: Triangle.classify(line 19, col 39)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> %(int,int)
+            original:                  trian + 3 
+            mutant:                    trian % 3
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 41
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 41: Triangle.classify(line 19, col 39)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> *(int,int)
+            original:                  trian + 3 
+            mutant:                    trian * 3
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 42
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 42: Triangle.classify(line 19, col 39)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> -(int,int)
+            original:                  trian + 3 
+            mutant:                    trian - 3
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 43
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 43: Triangle.classify(line 19, col 39)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> /(int,int)
+            original:                  trian + 3 
+            mutant:                    trian / 3
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 44
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutantSTD:
+    Logging mutantSTD 44: (STD) trian = trian + 3; -> <NO-OP>
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 45
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 45: Triangle.classify(line 20, col 30)
+            mutation operator group:   LVR
+            mutation operator:         0 |==> POS
+            original:                  0 
+            mutant:                    1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 46
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 46: Triangle.classify(line 20, col 30)
+            mutation operator group:   LVR
+            mutation operator:         0 |==> NEG
+            original:                  0 
+            mutant:                    -1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 47
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 47: Triangle.classify(line 20, col 27)
+            mutation operator group:   ROR
+            mutation operator:         ==(int,int) |==> <=(int,int)
+            original:                  trian == 0 
+            mutant:                    trian <= 0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 48
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 48: Triangle.classify(line 20, col 27)
+            mutation operator group:   ROR
+            mutation operator:         ==(int,int) |==> >=(int,int)
+            original:                  trian == 0 
+            mutant:                    trian >= 0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 49
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 49: Triangle.classify(line 21, col 31)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> %(int,int)
+            original:                  a + b 
+            mutant:                    a % b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 50
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 50: Triangle.classify(line 21, col 31)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> *(int,int)
+            original:                  a + b 
+            mutant:                    a * b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 51
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 51: Triangle.classify(line 21, col 31)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> -(int,int)
+            original:                  a + b 
+            mutant:                    a - b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 52
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 52: Triangle.classify(line 21, col 31)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> /(int,int)
+            original:                  a + b 
+            mutant:                    a / b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 53
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 53: Triangle.classify(line 21, col 35)
+            mutation operator group:   ROR
+            mutation operator:         <=(int,int) |==> <(int,int)
+            original:                  a + b <= c 
+            mutant:                    a + b < c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 54
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 54: Triangle.classify(line 21, col 35)
+            mutation operator group:   ROR
+            mutation operator:         <=(int,int) |==> ==(int,int)
+            original:                  a + b <= c 
+            mutant:                    a + b == c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 55
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 55: Triangle.classify(line 21, col 45)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> %(int,int)
+            original:                  a + c 
+            mutant:                    a % c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 56
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 56: Triangle.classify(line 21, col 45)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> *(int,int)
+            original:                  a + c 
+            mutant:                    a * c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 57
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 57: Triangle.classify(line 21, col 45)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> -(int,int)
+            original:                  a + c 
+            mutant:                    a - c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 58
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 58: Triangle.classify(line 21, col 45)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> /(int,int)
+            original:                  a + c 
+            mutant:                    a / c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 59
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 59: Triangle.classify(line 21, col 49)
+            mutation operator group:   ROR
+            mutation operator:         <=(int,int) |==> <(int,int)
+            original:                  a + c <= b 
+            mutant:                    a + c < b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 60
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 60: Triangle.classify(line 21, col 49)
+            mutation operator group:   ROR
+            mutation operator:         <=(int,int) |==> ==(int,int)
+            original:                  a + c <= b 
+            mutant:                    a + c == b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 61
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 61: Triangle.classify(line 21, col 40)
+            mutation operator group:   COR
+            mutation operator:         ||(boolean,boolean) |==> !=(boolean,boolean)
+            original:                  a + b <= c || a + c <= b 
+            mutant:                    a + b <= c != a + c <= b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 62
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 62: Triangle.classify(line 21, col 59)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> %(int,int)
+            original:                  b + c 
+            mutant:                    b % c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 63
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 63: Triangle.classify(line 21, col 59)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> *(int,int)
+            original:                  b + c 
+            mutant:                    b * c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 64
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 64: Triangle.classify(line 21, col 59)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> -(int,int)
+            original:                  b + c 
+            mutant:                    b - c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 65
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 65: Triangle.classify(line 21, col 59)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> /(int,int)
+            original:                  b + c 
+            mutant:                    b / c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 66
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 66: Triangle.classify(line 21, col 63)
+            mutation operator group:   ROR
+            mutation operator:         <=(int,int) |==> <(int,int)
+            original:                  b + c <= a 
+            mutant:                    b + c < a
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 67
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 67: Triangle.classify(line 21, col 63)
+            mutation operator group:   ROR
+            mutation operator:         <=(int,int) |==> ==(int,int)
+            original:                  b + c <= a 
+            mutant:                    b + c == a
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 68
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 68: Triangle.classify(line 21, col 54)
+            mutation operator group:   COR
+            mutation operator:         ||(boolean,boolean) |==> !=(boolean,boolean)
+            original:                  a + b <= c || a + c <= b || b + c <= a 
+            mutant:                    (a + b <= c || a + c <= b) != b + c <= a
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 69
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutantSTD:
+    Logging mutantSTD 69: (STD) return Type.INVALID; -> <NO-OP>
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 70
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutantSTD:
+    Logging mutantSTD 70: (STD) return Type.SCALENE; -> <NO-OP>
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 71
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 71: Triangle.classify(line 25, col 29)
+            mutation operator group:   LVR
+            mutation operator:         POS |==> 0
+            original:                  3 
+            mutant:                    0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 72
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 72: Triangle.classify(line 25, col 29)
+            mutation operator group:   LVR
+            mutation operator:         POS |==> NEG
+            original:                  3 
+            mutant:                    -3
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 73
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 73: Triangle.classify(line 25, col 27)
+            mutation operator group:   ROR
+            mutation operator:         >(int,int) |==> !=(int,int)
+            original:                  trian > 3 
+            mutant:                    trian != 3
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 74
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 74: Triangle.classify(line 25, col 27)
+            mutation operator group:   ROR
+            mutation operator:         >(int,int) |==> >=(int,int)
+            original:                  trian > 3 
+            mutant:                    trian >= 3
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 75
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutantSTD:
+    Logging mutantSTD 75: (STD) return Type.EQUILATERAL; -> <NO-OP>
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 76
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 76: Triangle.classify(line 27, col 30)
+            mutation operator group:   LVR
+            mutation operator:         POS |==> 0
+            original:                  1 
+            mutant:                    0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 77
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 77: Triangle.classify(line 27, col 30)
+            mutation operator group:   LVR
+            mutation operator:         POS |==> NEG
+            original:                  1 
+            mutant:                    -1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 78
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 78: Triangle.classify(line 27, col 27)
+            mutation operator group:   ROR
+            mutation operator:         ==(int,int) |==> <=(int,int)
+            original:                  trian == 1 
+            mutant:                    trian <= 1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 79
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 79: Triangle.classify(line 27, col 27)
+            mutation operator group:   ROR
+            mutation operator:         ==(int,int) |==> >=(int,int)
+            original:                  trian == 1 
+            mutant:                    trian >= 1
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 80
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 80: Triangle.classify(line 27, col 37)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> %(int,int)
+            original:                  a + b 
+            mutant:                    a % b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 81
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 81: Triangle.classify(line 27, col 37)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> *(int,int)
+            original:                  a + b 
+            mutant:                    a * b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 82
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 82: Triangle.classify(line 27, col 37)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> -(int,int)
+            original:                  a + b 
+            mutant:                    a - b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 83
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 83: Triangle.classify(line 27, col 37)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> /(int,int)
+            original:                  a + b 
+            mutant:                    a / b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 84
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 84: Triangle.classify(line 27, col 41)
+            mutation operator group:   ROR
+            mutation operator:         >(int,int) |==> !=(int,int)
+            original:                  a + b > c 
+            mutant:                    a + b != c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 85
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 85: Triangle.classify(line 27, col 41)
+            mutation operator group:   ROR
+            mutation operator:         >(int,int) |==> >=(int,int)
+            original:                  a + b > c 
+            mutant:                    a + b >= c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 86
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 86: Triangle.classify(line 27, col 32)
+            mutation operator group:   COR
+            mutation operator:         &&(boolean,boolean) |==> ==(boolean,boolean)
+            original:                  trian == 1 && a + b > c 
+            mutant:                    trian == 1 == a + b > c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 87
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutantSTD:
+    Logging mutantSTD 87: (STD) return Type.ISOSCELES; -> <NO-OP>
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 88
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 88: Triangle.classify(line 29, col 35)
+            mutation operator group:   LVR
+            mutation operator:         POS |==> 0
+            original:                  2 
+            mutant:                    0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 89
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 89: Triangle.classify(line 29, col 35)
+            mutation operator group:   LVR
+            mutation operator:         POS |==> NEG
+            original:                  2 
+            mutant:                    -2
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 90
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 90: Triangle.classify(line 29, col 32)
+            mutation operator group:   ROR
+            mutation operator:         ==(int,int) |==> <=(int,int)
+            original:                  trian == 2 
+            mutant:                    trian <= 2
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 91
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 91: Triangle.classify(line 29, col 32)
+            mutation operator group:   ROR
+            mutation operator:         ==(int,int) |==> >=(int,int)
+            original:                  trian == 2 
+            mutant:                    trian >= 2
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 92
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 92: Triangle.classify(line 29, col 42)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> %(int,int)
+            original:                  a + c 
+            mutant:                    a % c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 93
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 93: Triangle.classify(line 29, col 42)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> *(int,int)
+            original:                  a + c 
+            mutant:                    a * c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 94
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 94: Triangle.classify(line 29, col 42)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> -(int,int)
+            original:                  a + c 
+            mutant:                    a - c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 95
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 95: Triangle.classify(line 29, col 42)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> /(int,int)
+            original:                  a + c 
+            mutant:                    a / c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 96
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 96: Triangle.classify(line 29, col 46)
+            mutation operator group:   ROR
+            mutation operator:         >(int,int) |==> !=(int,int)
+            original:                  a + c > b 
+            mutant:                    a + c != b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 97
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 97: Triangle.classify(line 29, col 46)
+            mutation operator group:   ROR
+            mutation operator:         >(int,int) |==> >=(int,int)
+            original:                  a + c > b 
+            mutant:                    a + c >= b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 98
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 98: Triangle.classify(line 29, col 37)
+            mutation operator group:   COR
+            mutation operator:         &&(boolean,boolean) |==> ==(boolean,boolean)
+            original:                  trian == 2 && a + c > b 
+            mutant:                    trian == 2 == a + c > b
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 99
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutantSTD:
+    Logging mutantSTD 99: (STD) return Type.ISOSCELES; -> <NO-OP>
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 100
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 100: Triangle.classify(line 31, col 35)
+            mutation operator group:   LVR
+            mutation operator:         POS |==> 0
+            original:                  3 
+            mutant:                    0
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 101
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 101: Triangle.classify(line 31, col 35)
+            mutation operator group:   LVR
+            mutation operator:         POS |==> NEG
+            original:                  3 
+            mutant:                    -3
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 102
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 102: Triangle.classify(line 31, col 32)
+            mutation operator group:   ROR
+            mutation operator:         ==(int,int) |==> <=(int,int)
+            original:                  trian == 3 
+            mutant:                    trian <= 3
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 103
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 103: Triangle.classify(line 31, col 32)
+            mutation operator group:   ROR
+            mutation operator:         ==(int,int) |==> >=(int,int)
+            original:                  trian == 3 
+            mutant:                    trian >= 3
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 104
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 104: Triangle.classify(line 31, col 42)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> %(int,int)
+            original:                  b + c 
+            mutant:                    b % c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 105
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 105: Triangle.classify(line 31, col 42)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> *(int,int)
+            original:                  b + c 
+            mutant:                    b * c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 106
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 106: Triangle.classify(line 31, col 42)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> -(int,int)
+            original:                  b + c 
+            mutant:                    b - c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 107
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 107: Triangle.classify(line 31, col 42)
+            mutation operator group:   AOR
+            mutation operator:         +(int,int) |==> /(int,int)
+            original:                  b + c 
+            mutant:                    b / c
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 108
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 108: Triangle.classify(line 31, col 46)
+            mutation operator group:   ROR
+            mutation operator:         >(int,int) |==> !=(int,int)
+            original:                  b + c > a 
+            mutant:                    b + c != a
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 109
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 109: Triangle.classify(line 31, col 46)
+            mutation operator group:   ROR
+            mutation operator:         >(int,int) |==> >=(int,int)
+            original:                  b + c > a 
+            mutant:                    b + c >= a
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 110
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 110: Triangle.classify(line 31, col 37)
+            mutation operator group:   COR
+            mutation operator:         &&(boolean,boolean) |==> ==(boolean,boolean)
+            original:                  trian == 3 && b + c > a 
+            mutant:                    trian == 3 == b + c > a
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 111
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutantSTD:
+    Logging mutantSTD 111: (STD) return Type.ISOSCELES; -> <NO-OP>
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.nextMutant:
+    Creating mutant 112
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.mutation.Mutator.logMutant:
+    Logging mutant 112: Triangle.classify(line 33, col 28)
+            mutation operator group:   EVR
+            mutation operator:         <MEMBER_SELECT(triangle.Triangle.Type)> |==> <DEFAULT>
+            original:                  Type.INVALID 
+            mutant:                    null
+[04/24 16:09:14] [INFOS  ] org.mutationtesting.major.plugin.MajorPluginTaskListener.mutate:
+    Generated 112 mutants (218 ms)
