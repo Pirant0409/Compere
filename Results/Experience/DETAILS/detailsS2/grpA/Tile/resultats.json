@@ -1,0 +1,234 @@
+{
+    "230": {
+        "file": "Tile",
+        "statuses": {
+            "KILLED": 4
+        }
+    },
+    "231": {
+        "file": "Tile",
+        "statuses": {
+            "KILLED": 4
+        }
+    },
+    "232": {
+        "file": "Tile",
+        "statuses": {
+            "KILLED": 4
+        }
+    },
+    "233": {
+        "file": "Tile",
+        "statuses": {
+            "KILLED": 4
+        }
+    },
+    "234": {
+        "file": "Tile",
+        "statuses": {
+            "KILLED": 3,
+            "LIVE": 1
+        }
+    },
+    "235": {
+        "file": "Tile",
+        "statuses": {
+            "KILLED": 4
+        }
+    },
+    "236": {
+        "file": "Tile",
+        "statuses": {
+            "KILLED": 4
+        }
+    },
+    "237": {
+        "file": "Tile",
+        "statuses": {
+            "KILLED": 4
+        }
+    },
+    "241": {
+        "file": "Tile",
+        "statuses": {
+            "KILLED": 4
+        }
+    },
+    "242": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 3,
+            "KILLED": 1
+        }
+    },
+    "243": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 1,
+            "KILLED": 3
+        }
+    },
+    "244": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 1,
+            "KILLED": 3
+        }
+    },
+    "245": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 1,
+            "KILLED": 2,
+            "LIVE": 1
+        }
+    },
+    "246": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 2,
+            "KILLED": 2
+        }
+    },
+    "247": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 2,
+            "KILLED": 2
+        }
+    },
+    "248": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 1,
+            "KILLED": 3
+        }
+    },
+    "249": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 1,
+            "KILLED": 3
+        }
+    },
+    "250": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 2,
+            "KILLED": 2
+        }
+    },
+    "251": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 2,
+            "KILLED": 2
+        }
+    },
+    "252": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 2,
+            "KILLED": 2
+        }
+    },
+    "253": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 2,
+            "KILLED": 2
+        }
+    },
+    "254": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 2,
+            "KILLED": 2
+        }
+    },
+    "255": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 2,
+            "KILLED": 2
+        }
+    },
+    "256": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 2,
+            "KILLED": 2
+        }
+    },
+    "257": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 2,
+            "KILLED": 2
+        }
+    },
+    "258": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 2,
+            "KILLED": 2
+        }
+    },
+    "259": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 1,
+            "KILLED": 3
+        }
+    },
+    "260": {
+        "file": "Tile",
+        "statuses": {
+            "UNCOV": 4
+        }
+    },
+    "261": {
+        "file": "Tile",
+        "statuses": {
+            "KILLED": 1,
+            "UNCOV": 3
+        }
+    },
+    "262": {
+        "file": "Tile",
+        "statuses": {
+            "KILLED": 1,
+            "UNCOV": 3
+        }
+    },
+    "263": {
+        "file": "Tile",
+        "statuses": {
+            "KILLED": 2,
+            "UNCOV": 2
+        }
+    },
+    "264": {
+        "file": "Tile",
+        "statuses": {
+            "KILLED": 2,
+            "UNCOV": 2
+        }
+    },
+    "265": {
+        "file": "Tile",
+        "statuses": {
+            "KILLED": 2,
+            "UNCOV": 1,
+            "LIVE": 1
+        }
+    },
+    "266": {
+        "file": "Tile",
+        "statuses": {
+            "KILLED": 2,
+            "UNCOV": 1,
+            "LIVE": 1
+        }
+    }
+}

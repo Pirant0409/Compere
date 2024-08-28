@@ -1,0 +1,32 @@
+{
+    "228": {
+        "file": "Grid",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 4
+            },
+            "GrpB": {
+                "KILLED": 2,
+                "UNCOV": 1
+            }
+        }
+    },
+    "229": {
+        "file": "Grid",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 4
+            },
+            "GrpB": {
+                "KILLED": 2,
+                "UNCOV": 1
+            }
+        }
+    }
+}

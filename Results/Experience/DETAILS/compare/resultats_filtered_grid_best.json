@@ -1,0 +1,56 @@
+{
+    "212": {
+        "file": "Grid",
+        "statuses": {
+            "S1": {
+                "UNCOV": 6,
+                "LIVE": 1
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "LIVE": 1
+            },
+            "GrpB": {
+                "KILLED": 1,
+                "LIVE": 1,
+                "UNCOV": 1
+            }
+        }
+    },
+    "214": {
+        "file": "Grid",
+        "statuses": {
+            "S1": {
+                "UNCOV": 6,
+                "LIVE": 1
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "LIVE": 1
+            },
+            "GrpB": {
+                "KILLED": 1,
+                "LIVE": 1,
+                "UNCOV": 1
+            }
+        }
+    },
+    "216": {
+        "file": "Grid",
+        "statuses": {
+            "S1": {
+                "UNCOV": 6,
+                "LIVE": 1
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "LIVE": 1
+            },
+            "GrpB": {
+                "KILLED": 1,
+                "LIVE": 1,
+                "UNCOV": 1
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "243": {
+        "file": "Tile",
+        "statuses": {
+            "S1": {
+                "UNCOV": 4,
+                "KILLED": 3
+            },
+            "GrpA": {
+                "UNCOV": 1,
+                "KILLED": 3
+            },
+            "GrpB": {
+                "UNCOV": 3
+            }
+        }
+    },
+    "244": {
+        "file": "Tile",
+        "statuses": {
+            "S1": {
+                "UNCOV": 4,
+                "KILLED": 3
+            },
+            "GrpA": {
+                "UNCOV": 1,
+                "KILLED": 3
+            },
+            "GrpB": {
+                "UNCOV": 3
+            }
+        }
+    },
+    "260": {
+        "file": "Tile",
+        "statuses": {
+            "S1": {
+                "UNCOV": 6,
+                "KILLED": 1
+            },
+            "GrpA": {
+                "UNCOV": 4
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "KILLED": 1
+            }
+        }
+    }
+}

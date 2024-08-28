@@ -1,0 +1,466 @@
+{
+    "16": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 2,
+                "KILLED": 2
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "22": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "24": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "25": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "27": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "28": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "37": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "38": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "39": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "41": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "43": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "45": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "46": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "49": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "50": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "51": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "54": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "58": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "59": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "60": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "61": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "62": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "64": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "66": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "67": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "68": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "69": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "70": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    },
+    "72": {
+        "file": "GameController",
+        "statuses": {
+            "S1": {
+                "UNCOV": 7
+            },
+            "GrpA": {
+                "UNCOV": 3,
+                "KILLED": 1
+            },
+            "GrpB": {
+                "UNCOV": 2,
+                "LIVE": 1
+            }
+        }
+    }
+}

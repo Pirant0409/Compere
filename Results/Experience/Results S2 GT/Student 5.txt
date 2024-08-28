@@ -1,0 +1,27 @@
+MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Mutants retained: 252
+    [junit] MAJOR: Mutants covered:  20 (7,94%)
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Run mutation analysis with 20 mutant(s) and 1 test(s).
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: [1;34m1/1 - be.unamur.game2048.Test2048 (12ms / 20):[0m
+    [junit] MAJOR: 80 (20 / 20 / 20) -> AVG-RTPM: 4ms
+    [junit] MAJOR: Mutants killed (FAIL-EXC-TIME) / live: 20 (1-19-0) / 0
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Summary:
+    [junit] MAJOR: 
+    [junit] MAJOR: Analysis time                 : 0,08 seconds
+    [junit] MAJOR: Mutation score                : 7,94% (100,00%)
+    [junit] MAJOR: Mutants killed (FAIL-EXC-TIME): 20 (1-19-0)
+    [junit] MAJOR: Mutants live                  : 0
+    [junit] MAJOR: Mutant executions             : 20
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Export summary of results to summary.csv
+    [junit] MAJOR: Export mutant details to details.csv
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: [1;34mDone![0m
+    [junit] MAJOR: ------------------------------------------------------------
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
